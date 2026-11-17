@@ -3,6 +3,8 @@ game/.godot/
 dist/
 *.log
 .DS_Store
+__pycache__/
+*.py[cod]
 
 # Unreferenced superseded prototype assets; originals stay in desktop project.
 game/assets/creek-psb/

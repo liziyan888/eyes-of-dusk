@@ -12,7 +12,9 @@ self.addEventListener("fetch",function(event){
  const request=event.request;
  if(request.method!=="GET"||new URL(request.url).origin!==self.location.origin)return;
  const url=new URL(request.url);
- const asset=url.pathname.includes("/game-data/")||/\.(wasm|js|png)$/.test(url.pathname);
+ // Only immutable URLs are cache-first. Artwork and engine files without a
+ // version must remain fresh after publishing an update at the same URL.
+ const asset=url.pathname.includes("/game-data/")||(/\.(wasm|js|png)$/.test(url.pathname)&&url.searchParams.has("v"));
  if(!asset)return;
  event.respondWith((async function(){
   const cache=await caches.open(CACHE_NAME);
