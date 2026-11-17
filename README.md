@@ -2,7 +2,7 @@
 
 Godot 4.7.2 完整互动阅读游戏的网页发行工程。
 
-公开体验入口：<https://jzjz225.github.io/eyes-of-dusk/>
+公开体验入口：<https://liziyan888.github.io/eyes-of-dusk/>
 
 ## 内容
 
