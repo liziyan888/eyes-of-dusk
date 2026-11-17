@@ -1,0 +1,329 @@
+{
+  "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景3\\场景三.psb",
+  "source_size": [
+    6656,
+    2496
+  ],
+  "design_size": [
+    1920,
+    720
+  ],
+  "reference_camera": 320,
+  "horizon_y": 565.0,
+  "layers": [
+    {
+      "id": "sky",
+      "name": "01_天空",
+      "path": "res://assets/inn-psd/sky.png",
+      "psd_bbox": [
+        0,
+        0,
+        6656,
+        2496
+      ],
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1919.9999999999998,
+      "h": 719.9999999999999,
+      "f": 0.02,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "a5f6c673407fc7e56c2299e507253a2b9c19e3b050b2598ba168cb34572d96a2"
+    },
+    {
+      "id": "clouds",
+      "name": "02_云层",
+      "path": "res://assets/inn-psd/clouds.png",
+      "psd_bbox": [
+        0,
+        0,
+        6656,
+        1761
+      ],
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1919.9999999999998,
+      "h": 507.98076923076917,
+      "f": 0.05,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "da8f1203c53f9d77963c89a5a3cdab8971215a1992efe46286fd1a93d8c160d0"
+    },
+    {
+      "id": "far",
+      "name": "03_远山",
+      "path": "res://assets/inn-psd/far.png",
+      "psd_bbox": [
+        0,
+        1313,
+        6656,
+        1996
+      ],
+      "x": 0.0,
+      "y": 378.74999999999994,
+      "w": 1919.9999999999998,
+      "h": 197.01923076923075,
+      "f": 0.12,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "a9d642b6856daafaef42021ee5c5d1ef67c4c632a067fdc8866981e031c5d7fd"
+    },
+    {
+      "id": "near",
+      "name": "04_近山",
+      "path": "res://assets/inn-psd/near.png",
+      "psd_bbox": [
+        0,
+        1416,
+        6656,
+        1996
+      ],
+      "x": 0.0,
+      "y": 408.46153846153845,
+      "w": 1919.9999999999998,
+      "h": 167.3076923076923,
+      "f": 0.2,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "92b45b156aa8d4bee20030dd40750612e33276d89750cdcbd82965f577224c55"
+    },
+    {
+      "id": "forest",
+      "name": "05_树林",
+      "path": "res://assets/inn-psd/forest.png",
+      "psd_bbox": [
+        0,
+        1321,
+        6656,
+        2166
+      ],
+      "x": 0.0,
+      "y": 381.05769230769226,
+      "w": 1919.9999999999998,
+      "h": 243.74999999999997,
+      "f": 0.35,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "367cdfa684dc72594a53c67b880e57a00094ef6c6a44346fa7729acdf46d787f"
+    },
+    {
+      "id": "ground",
+      "name": "06_草地",
+      "path": "res://assets/inn-psd/ground.png",
+      "psd_bbox": [
+        0,
+        2120,
+        6656,
+        2886
+      ],
+      "x": 0.0,
+      "y": 611.5384615384614,
+      "w": 1919.9999999999998,
+      "h": 220.96153846153845,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "1c21fde94d5ee8cdd8e5a44f2db03b132045eed093024a0320d2c152eee470bf"
+    },
+    {
+      "id": "house",
+      "name": "07_房屋",
+      "path": "res://assets/inn-psd/house.png",
+      "psd_bbox": [
+        3976,
+        1416,
+        6447,
+        2394
+      ],
+      "x": 1146.923076923077,
+      "y": 408.46153846153845,
+      "w": 712.7884615384614,
+      "h": 282.1153846153846,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "82c3b2facd7aa2af5d8a2e214be37de9dfdceeb33d1e388d80cd8dc26810ae89"
+    },
+    {
+      "id": "robot",
+      "name": "08_机器人",
+      "path": "res://assets/inn-psd/robot.png",
+      "psd_bbox": [
+        4741,
+        2166,
+        4907,
+        2394
+      ],
+      "x": 1367.5961538461538,
+      "y": 624.8076923076923,
+      "w": 47.88461538461538,
+      "h": 65.76923076923076,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "pixel_sha256": "2788f8e85cad261b45af52818b319b2eceabd0840035d64a952ea6150b96916f"
+    }
+  ],
+  "verification": {
+    "canvas": [
+      6656,
+      2496
+    ],
+    "max_pixel_difference": 237,
+    "mean_pixel_difference": 19.767925575953576,
+    "source_sha256": "8cdcc7ce0211c3bae6bbda858ad96cd95d62d640e9484991463825aaea2b5966",
+    "preserved_other_layer_positions": [
+      {
+        "id": "sky",
+        "runtime_bbox": [
+          0,
+          0,
+          6656,
+          2496
+        ],
+        "incoming_bbox": [
+          0,
+          -114,
+          6656,
+          2382
+        ]
+      },
+      {
+        "id": "clouds",
+        "runtime_bbox": [
+          0,
+          0,
+          6656,
+          1761
+        ],
+        "incoming_bbox": [
+          0,
+          -114,
+          6656,
+          1647
+        ]
+      },
+      {
+        "id": "far",
+        "runtime_bbox": [
+          0,
+          1313,
+          6656,
+          1996
+        ],
+        "incoming_bbox": [
+          0,
+          1199,
+          6656,
+          1882
+        ]
+      },
+      {
+        "id": "near",
+        "runtime_bbox": [
+          0,
+          1416,
+          6656,
+          1996
+        ],
+        "incoming_bbox": [
+          0,
+          1302,
+          6656,
+          1882
+        ]
+      },
+      {
+        "id": "house",
+        "runtime_bbox": [
+          3976,
+          1416,
+          6447,
+          2394
+        ],
+        "incoming_bbox": [
+          3976,
+          1302,
+          6447,
+          2280
+        ]
+      },
+      {
+        "id": "robot",
+        "runtime_bbox": [
+          4741,
+          2166,
+          4907,
+          2394
+        ],
+        "incoming_bbox": [
+          4741,
+          2052,
+          4907,
+          2280
+        ]
+      }
+    ]
+  },
+  "point_bindings": {
+    "s3-door": {
+      "x": 5039.3759615384615,
+      "y": 682.1134615384615,
+      "layer_id": "house",
+      "layer_anchor": [
+        192.4528846153846,
+        273.651923076923
+      ],
+      "previous_psd_position": [
+        4965.625,
+        660
+      ],
+      "action_only": true,
+      "approach_radius": 145,
+      "interact_radius": 80
+    },
+    "s3-dinner": {
+      "x": 5091.538461538462,
+      "y": 690.576923076923,
+      "layer_id": "robot",
+      "layer_anchor": [
+        23.94230769230769,
+        65.76923076923076
+      ],
+      "previous_psd_position": [
+        5101.09375,
+        628.125
+      ],
+      "action_only": true,
+      "approach_radius": 70,
+      "interact_radius": 65
+    },
+    "s3-sunset": {
+      "x": 5480,
+      "y": 660,
+      "action_only": true,
+      "approach_radius": 150,
+      "interact_radius": 90
+    }
+  },
+  "last_partial_update": {
+    "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景3\\场景三.psb",
+    "source_sha256": "1a382ab5726f06aa5be08415dc8d4a1b8e2cd7e58ad17b0cca47fe9ca340d242",
+    "replaced": [
+      "forest"
+    ],
+    "incoming_bbox": [
+      0,
+      1314,
+      6656,
+      2159
+    ],
+    "runtime_bbox": [
+      0,
+      1321,
+      6656,
+      2166
+    ],
+    "placement_policy": "Preserve calibrated runtime position, size and horizon"
+  }
+}

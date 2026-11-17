@@ -1,0 +1,636 @@
+{
+  "version": 2,
+  "base": [
+    1280,
+    720
+  ],
+  "asset_mode": "Approved panorama, polished flower frames, original layered grass and birds, clean creek and wind frames",
+  "review": "Latest user correction: grass only returns to original layered artwork; flower polish, quiet completion, visible gated curls and 180s score remain",
+  "pages": [
+    {
+      "id": "panorama",
+      "kind": "panorama",
+      "title": "午后 · 草原",
+      "hint": "按住并缓缓左右拖动，环顾草原",
+      "background": "res://assets/grassland-v2/00-background.png",
+      "target": [
+        0.5,
+        0.48
+      ],
+      "layers": [
+        {
+          "id": "cloud-a",
+          "file": "res://assets/grassland-v2/cloud.png",
+          "at": [
+            0.45,
+            0.18
+          ],
+          "width": 530,
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "motion": "cloud",
+          "depth": 0.15,
+          "drift": 3.0
+        },
+        {
+          "id": "cloud-b",
+          "file": "res://assets/grassland-v2/cloud.png",
+          "at": [
+            0.84,
+            0.25
+          ],
+          "width": 280,
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "motion": "cloud",
+          "depth": 0.1,
+          "drift": 2.0
+        },
+        {
+          "id": "grass-left",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.07,
+            1.14
+          ],
+          "width": 240,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "depth": 1.0
+        },
+        {
+          "id": "grass-right",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.92,
+            1.14
+          ],
+          "width": 250,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "depth": 1.2
+        }
+      ],
+      "archived_narration": "我带着她的眼睛在草原上转了一天。",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "再往远处看看，好吗？我想知道，这片草原到底有多大。"
+        },
+        {
+          "who": "我",
+          "text": "好，我慢慢转过去。你想看哪里，就告诉我。"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "原来，天边还连着那么远的山……"
+        },
+        {
+          "who": "我",
+          "text": "不急，我们今天有一整天。"
+        }
+      ],
+      "gesture_label": "慢慢环顾",
+      "motion_media": {
+        "mode": "panorama",
+        "video": "res://assets/grassland-motion/panorama.ogv",
+        "duration": 5.166667,
+        "rect": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "marker": [
+          0.87,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "flower",
+      "kind": "flower",
+      "title": "午后 · 每一朵野花",
+      "hint": "按住花朵附近，轻轻碰一碰；松开后看它回弹",
+      "background": "res://assets/grassland-v2/01-background.png",
+      "target": [
+        0.6,
+        0.55
+      ],
+      "hand": {
+        "width": 640,
+        "contact": [
+          0.6,
+          0.55
+        ],
+        "rest": [
+          1.03,
+          0.9
+        ]
+      },
+      "layers": [
+        {
+          "id": "wildflower",
+          "file": "res://assets/grassland-v2/flower.png",
+          "at": [
+            0.6,
+            0.94
+          ],
+          "width": 250,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "flower",
+          "head": [
+            0.5,
+            0.2
+          ]
+        },
+        {
+          "id": "grass-left",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.06,
+            1.15
+          ],
+          "width": 250,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass"
+        }
+      ],
+      "archived_narration": "她渴望地看草原上的每一朵野花，每一棵小草……",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "等一下，那朵黄色的小花……能让我再靠近一点吗？"
+        },
+        {
+          "who": "我",
+          "text": "这朵？我轻轻碰一下，不把它摘下来。"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "你看，它又慢慢站起来了！"
+        },
+        {
+          "who": "我",
+          "text": "嗯。就让它留在这里，继续晒太阳吧。"
+        }
+      ],
+      "gesture_label": "轻触花朵",
+      "motion_media": {
+        "mode": "frames",
+        "manifest": "res://assets/grassland-flower-polished-frames/manifest.json",
+        "duration": 5,
+        "rect": [
+          560,
+          180,
+          720,
+          540
+        ],
+        "marker": [
+          0.6,
+          0.555
+        ],
+        "source_video": "res://assets/grassland-motion/flower.ogv",
+        "alpha": "baked RGBA PNG sequence; all frames preserve source canvas offsets",
+        "foreground_layers": [
+          {
+            "file": "res://assets/grassland-v2/grass-clump.png",
+            "rect": [
+              670,
+              470,
+              190,
+              285
+            ],
+            "alpha_cutoff": 0.72,
+            "alpha_feather": 0.07
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunlight",
+      "kind": "grass",
+      "title": "阳光渐移 · 草叶之间",
+      "hint": "轻点白圈，轻轻拨开草叶",
+      "background": "res://assets/grassland-v2/02-background.png",
+      "target": [
+        0.52,
+        0.59
+      ],
+      "hand": {
+        "width": 560,
+        "contact": [
+          0.55,
+          0.59
+        ],
+        "rest": [
+          1.03,
+          0.94
+        ]
+      },
+      "layers": [
+        {
+          "id": "grass-mid",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.49,
+            1.09
+          ],
+          "width": 295,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "phase": 1.4
+        }
+      ],
+      "archived_narration": "看草丛中跃动的每一缕阳光……",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "草叶中间有一小片亮光，在跳呢。"
+        },
+        {
+          "who": "我",
+          "text": "我把草轻轻拨开。这样，你看得清些吗？"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "看清了。原来只是这样一缕阳光，也会不停地变化。"
+        },
+        {
+          "who": "我",
+          "text": "风一吹，它就从另一片叶子后面出来了。"
+        }
+      ],
+      "gesture_label": "拨开草叶",
+      "motion_media": {
+        "mode": "layers",
+        "marker": [
+          0.55,
+          0.59
+        ],
+        "duration": 4.2,
+        "during_dialogue": "看见了……先这样停一会儿。",
+        "source": "User-selected original three painted grass layers and separate approved hand sprites, same renderer path as the restored layered birds; no generated hand-video matte"
+      }
+    },
+    {
+      "id": "listening",
+      "kind": "listen",
+      "title": "向晚 · 草原的声音",
+      "hint": "轻点白圈，静静聆听鸟鸣和振翅声",
+      "background": "res://assets/grassland-v2/03-background.png",
+      "target": [
+        0.46,
+        0.32
+      ],
+      "layers": [
+        {
+          "id": "near-grass",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.1,
+            1.18
+          ],
+          "width": 250,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass"
+        },
+        {
+          "id": "bird-near",
+          "file": "res://assets/grassland-v2/bird-flight.png",
+          "at": [
+            0.25,
+            0.34
+          ],
+          "width": 100,
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "motion": "bird",
+          "frames": [
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.0,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.3333333333333333,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.6666666666666666,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.3333333333333333,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bird-far",
+          "file": "res://assets/grassland-v2/bird-flight.png",
+          "at": [
+            0.12,
+            0.25
+          ],
+          "width": 59,
+          "pivot": [
+            0.5,
+            0.5
+          ],
+          "motion": "bird",
+          "frames": [
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.0,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.3333333333333333,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.6666666666666666,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            },
+            {
+              "file": "res://assets/grassland-v2/bird-flight.png",
+              "region": [
+                0.3333333333333333,
+                0,
+                0.3333333333333333,
+                1
+              ]
+            }
+          ],
+          "phase": 2.2
+        }
+      ],
+      "archived_narration": "渴望地听草原上的每一种声音。",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "先别走……你听，风声里面还有别的声音。"
+        },
+        {
+          "who": "我",
+          "text": "好，我停下来。我们一起仔细听。"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "听到了，是鸟！它从那边飞过去了。"
+        },
+        {
+          "who": "我",
+          "text": "嗯，声音也跟着它，慢慢远了。"
+        }
+      ],
+      "gesture_label": "静静聆听",
+      "motion_media": {
+        "mode": "layers",
+        "duration": 5.45,
+        "marker": [
+          0.46,
+          0.32
+        ],
+        "action_sound": "res://assets/grassland-listening-layers/action-sound.mp3",
+        "during_dialogue": "听到了，是鸟！它从那边飞过去了。",
+        "source": "Original painted near/far sprite layers; original flight and wing cycle; current preview foley retained byte-for-byte"
+      }
+    },
+    {
+      "id": "creek",
+      "kind": "creek",
+      "title": "向晚 · 溪水与小鱼",
+      "hint": "轻点白圈，轻轻探入溪水",
+      "background": "res://assets/creek-sample/background.png",
+      "target": [
+        0.6863511029411764,
+        0.6960539641203703
+      ],
+      "layers": [],
+      "archived_narration": "一条突然出现的小溪，小溪中的一条小鱼，都会令她激动不已。",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "水里有条小鱼！可以把手伸过去吗？轻一点……"
+        },
+        {
+          "who": "我",
+          "text": "我慢慢放进水里，不去抓它。"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "呀，它躲开了……松开手以后，它还会回来吗？"
+        },
+        {
+          "who": "我",
+          "text": "我们把手收回来，安静等一会儿。它觉得安全了，就会再游过来。"
+        }
+      ],
+      "gesture_label": "轻轻探入溪水",
+      "motion_media": {
+        "mode": "frames",
+        "manifest": "res://assets/grassland-creek-clean-frames/manifest.json",
+        "duration": 5.166666666666667,
+        "rect": [
+          580,
+          230,
+          700,
+          490
+        ],
+        "marker": [
+          0.6863511029411764,
+          0.6960539641203703
+        ],
+        "during_dialogue": "呀，它躲开了……我们把手收回来，等一等它。",
+        "action_sound": "res://assets/grassland-creek-clean-frames/action-sound.mp3"
+      }
+    },
+    {
+      "id": "dusk",
+      "kind": "wind",
+      "title": "黄昏 · 一缕绿草的清香",
+      "hint": "轻点白圈，举手迎风",
+      "background": "res://assets/grassland-v2/05-background.png",
+      "target": [
+        0.7109375,
+        0.7083333333333334
+      ],
+      "hand": {
+        "file": "res://assets/grassland-v2/hand-wind.png",
+        "width": 690,
+        "pivot": [
+          0.65,
+          0.72
+        ],
+        "tip": [
+          0.22,
+          0.31
+        ],
+        "contact": [
+          0.72,
+          0.62
+        ],
+        "rest": [
+          1.19,
+          1.17
+        ]
+      },
+      "layers": [
+        {
+          "id": "grass-left",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.05,
+            1.14
+          ],
+          "width": 300,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "phase": 0.2
+        },
+        {
+          "id": "grass-mid",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.39,
+            1.17
+          ],
+          "width": 275,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "phase": 1.0
+        },
+        {
+          "id": "grass-right",
+          "file": "res://assets/grassland-v2/grass-clump.png",
+          "at": [
+            0.88,
+            1.15
+          ],
+          "width": 330,
+          "pivot": [
+            0.5,
+            0.94
+          ],
+          "motion": "grass",
+          "phase": 2.1
+        }
+      ],
+      "archived_narration": "一阵不期而至的微风，风中一缕绿草的清香都会让她落泪……\n我感到，她对这个世界的情感已丰富到病态的程度。",
+      "dialogue": [
+        {
+          "who": "她",
+          "text": "风又来了……我好像闻到了一点青草的香味。"
+        },
+        {
+          "who": "我",
+          "text": "我把手举起来。你也能感觉到，风从指间过去吗？"
+        }
+      ],
+      "response": [
+        {
+          "who": "她",
+          "text": "能。这样小的一阵风，我也想记住。"
+        },
+        {
+          "who": "我",
+          "text": "那就再站一会儿。等风慢慢停下来，我们再走。"
+        }
+      ],
+      "gesture_label": "举手迎风",
+      "motion_media": {
+        "mode": "frames",
+        "manifest": "res://assets/grassland-wind-clean-frames/manifest.json",
+        "duration": 5.166666666666667,
+        "rect": [
+          360,
+          194.28571428571433,
+          920,
+          525.7142857142857
+        ],
+        "marker": [
+          0.7109375,
+          0.7083333333333334
+        ],
+        "during_dialogue": "能。这样小的一阵风，我也想记住。",
+        "action_sound": "res://assets/grassland-wind-clean-frames/action-sound.mp3"
+      }
+    }
+  ],
+  "interaction_flow": "dialogue -> unlocked gesture -> completed action -> character response -> next page"
+}

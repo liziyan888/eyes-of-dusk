@@ -1,0 +1,2907 @@
+{
+  "version": 1,
+  "source": "Existing Wan3.0 Prime video; no new generation",
+  "sourceSha256": "6536cb1d7e8eb6e7ee109e4f9259c65609b1404e69a77f94498ec72e36123735",
+  "frameCount": 150,
+  "fps": 30.0,
+  "duration": 5.0,
+  "canvas": [
+    1108,
+    832
+  ],
+  "rect": [
+    560,
+    180,
+    720,
+    540
+  ],
+  "marker": [
+    0.6,
+    0.555
+  ],
+  "cropOffsetsPreserveFullCanvas": true,
+  "preview": "The exact same alpha atlas frames are used by the web preview and Godot.",
+  "matteRevision": "20261113 subpixel coverage and protected finger shadows",
+  "newPaidGenerations": 0,
+  "sheets": [
+    "flower-polished-00.png",
+    "flower-polished-01.png",
+    "flower-polished-02.png",
+    "flower-polished-03.png",
+    "flower-polished-04.png"
+  ],
+  "sheetDimensions": [
+    [
+      4072,
+      4060
+    ],
+    [
+      3984,
+      4040
+    ],
+    [
+      3708,
+      4096
+    ],
+    [
+      3664,
+      4088
+    ],
+    [
+      3644,
+      2904
+    ]
+  ],
+  "frames": [
+    {
+      "sourceIndex": 0,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        250,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        257,
+        3541,
+        250,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 1,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        250,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        513,
+        3541,
+        250,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 2,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        932,
+        2351,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 3,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1859,
+        2351,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 4,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2786,
+        2351,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 5,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        2936,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 6,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        930,
+        2936,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 7,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1857,
+        2936,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 8,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2784,
+        2936,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 9,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        3,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 10,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        3,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 11,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        3,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 12,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        3,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 13,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        588,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 14,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        588,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 15,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        588,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 16,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        588,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 17,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        1173,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 18,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        1173,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 19,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        1173,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 20,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        1173,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 21,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        1758,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 22,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        1758,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 23,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        1758,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 24,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        1758,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 25,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        2343,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 26,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        2343,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 27,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        2343,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 28,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        2343,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 29,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        2928,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 30,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        2928,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 31,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        2928,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 32,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2784,
+        2928,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 33,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        3,
+        3513,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 34,
+      "offset": [
+        187,
+        249
+      ],
+      "size": [
+        921,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        932,
+        2363,
+        921,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 35,
+      "offset": [
+        187,
+        249
+      ],
+      "size": [
+        921,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1859,
+        2363,
+        921,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 36,
+      "offset": [
+        187,
+        249
+      ],
+      "size": [
+        921,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2786,
+        2363,
+        921,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 37,
+      "offset": [
+        187,
+        247
+      ],
+      "size": [
+        921,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        938,
+        594,
+        921,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 38,
+      "offset": [
+        187,
+        247
+      ],
+      "size": [
+        921,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1865,
+        594,
+        921,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 39,
+      "offset": [
+        187,
+        247
+      ],
+      "size": [
+        921,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2792,
+        594,
+        921,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 40,
+      "offset": [
+        187,
+        249
+      ],
+      "size": [
+        921,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        2952,
+        921,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 41,
+      "offset": [
+        187,
+        251
+      ],
+      "size": [
+        921,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        590,
+        921,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 42,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        921,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        930,
+        3513,
+        921,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 43,
+      "offset": [
+        185,
+        253
+      ],
+      "size": [
+        923,
+        579
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        2351,
+        923,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 44,
+      "offset": [
+        181,
+        251
+      ],
+      "size": [
+        927,
+        581
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1855,
+        2952,
+        927,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 45,
+      "offset": [
+        181,
+        251
+      ],
+      "size": [
+        927,
+        581
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2788,
+        2952,
+        927,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 46,
+      "offset": [
+        181,
+        251
+      ],
+      "size": [
+        927,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        3,
+        927,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 47,
+      "offset": [
+        181,
+        251
+      ],
+      "size": [
+        927,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        936,
+        3,
+        927,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 48,
+      "offset": [
+        181,
+        251
+      ],
+      "size": [
+        927,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1869,
+        3,
+        927,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 49,
+      "offset": [
+        181,
+        249
+      ],
+      "size": [
+        927,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        1185,
+        927,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 50,
+      "offset": [
+        183,
+        249
+      ],
+      "size": [
+        925,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2802,
+        1185,
+        925,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 51,
+      "offset": [
+        183,
+        249
+      ],
+      "size": [
+        925,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        1774,
+        925,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 52,
+      "offset": [
+        183,
+        249
+      ],
+      "size": [
+        925,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        934,
+        1774,
+        925,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 53,
+      "offset": [
+        185,
+        249
+      ],
+      "size": [
+        923,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        2363,
+        923,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 54,
+      "offset": [
+        189,
+        249
+      ],
+      "size": [
+        919,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        930,
+        2952,
+        919,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 55,
+      "offset": [
+        191,
+        251
+      ],
+      "size": [
+        917,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2780,
+        590,
+        917,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 56,
+      "offset": [
+        193,
+        251
+      ],
+      "size": [
+        915,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        1177,
+        915,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 57,
+      "offset": [
+        195,
+        251
+      ],
+      "size": [
+        913,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        924,
+        1177,
+        913,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 58,
+      "offset": [
+        197,
+        251
+      ],
+      "size": [
+        911,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1843,
+        1177,
+        911,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 59,
+      "offset": [
+        201,
+        251
+      ],
+      "size": [
+        907,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2760,
+        1177,
+        907,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 60,
+      "offset": [
+        203,
+        251
+      ],
+      "size": [
+        905,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        1764,
+        905,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 61,
+      "offset": [
+        205,
+        251
+      ],
+      "size": [
+        903,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        914,
+        1764,
+        903,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 62,
+      "offset": [
+        205,
+        251
+      ],
+      "size": [
+        903,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1823,
+        1764,
+        903,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 63,
+      "offset": [
+        209,
+        251
+      ],
+      "size": [
+        899,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2732,
+        1764,
+        899,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 64,
+      "offset": [
+        211,
+        253
+      ],
+      "size": [
+        897,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        924,
+        3,
+        897,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 65,
+      "offset": [
+        213,
+        253
+      ],
+      "size": [
+        895,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1827,
+        3,
+        895,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 66,
+      "offset": [
+        213,
+        253
+      ],
+      "size": [
+        895,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2728,
+        3,
+        895,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 67,
+      "offset": [
+        213,
+        253
+      ],
+      "size": [
+        895,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        588,
+        895,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 68,
+      "offset": [
+        215,
+        253
+      ],
+      "size": [
+        893,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        904,
+        588,
+        893,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 69,
+      "offset": [
+        217,
+        253
+      ],
+      "size": [
+        891,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1803,
+        588,
+        891,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 70,
+      "offset": [
+        219,
+        253
+      ],
+      "size": [
+        889,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2700,
+        588,
+        889,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 71,
+      "offset": [
+        219,
+        253
+      ],
+      "size": [
+        889,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        1173,
+        889,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 72,
+      "offset": [
+        219,
+        255
+      ],
+      "size": [
+        889,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        908,
+        2341,
+        889,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 73,
+      "offset": [
+        221,
+        255
+      ],
+      "size": [
+        887,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1803,
+        2341,
+        887,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 74,
+      "offset": [
+        223,
+        255
+      ],
+      "size": [
+        885,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2696,
+        2341,
+        885,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 75,
+      "offset": [
+        223,
+        255
+      ],
+      "size": [
+        885,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        2924,
+        885,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 76,
+      "offset": [
+        223,
+        255
+      ],
+      "size": [
+        885,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        894,
+        2924,
+        885,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 77,
+      "offset": [
+        225,
+        255
+      ],
+      "size": [
+        883,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1785,
+        2924,
+        883,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 78,
+      "offset": [
+        225,
+        255
+      ],
+      "size": [
+        883,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2674,
+        2924,
+        883,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 79,
+      "offset": [
+        227,
+        255
+      ],
+      "size": [
+        881,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        892,
+        3507,
+        881,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 80,
+      "offset": [
+        227,
+        255
+      ],
+      "size": [
+        881,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1779,
+        3507,
+        881,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 81,
+      "offset": [
+        229,
+        257
+      ],
+      "size": [
+        879,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        890,
+        584,
+        879,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 82,
+      "offset": [
+        229,
+        257
+      ],
+      "size": [
+        879,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        1775,
+        584,
+        879,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 83,
+      "offset": [
+        229,
+        257
+      ],
+      "size": [
+        879,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        2660,
+        584,
+        879,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 84,
+      "offset": [
+        233,
+        257
+      ],
+      "size": [
+        875,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        886,
+        1165,
+        875,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 85,
+      "offset": [
+        235,
+        257
+      ],
+      "size": [
+        873,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        1767,
+        1165,
+        873,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 86,
+      "offset": [
+        235,
+        257
+      ],
+      "size": [
+        873,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        2646,
+        1165,
+        873,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 87,
+      "offset": [
+        237,
+        257
+      ],
+      "size": [
+        871,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        882,
+        1746,
+        871,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 88,
+      "offset": [
+        237,
+        257
+      ],
+      "size": [
+        871,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        1759,
+        1746,
+        871,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 89,
+      "offset": [
+        239,
+        259
+      ],
+      "size": [
+        869,
+        573
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        3,
+        2327,
+        869,
+        573
+      ]
+    },
+    {
+      "sourceIndex": 90,
+      "offset": [
+        237,
+        257
+      ],
+      "size": [
+        871,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        2636,
+        1746,
+        871,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 91,
+      "offset": [
+        235,
+        257
+      ],
+      "size": [
+        873,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        3,
+        1746,
+        873,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 92,
+      "offset": [
+        231,
+        257
+      ],
+      "size": [
+        877,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        3,
+        1165,
+        877,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 93,
+      "offset": [
+        227,
+        257
+      ],
+      "size": [
+        881,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        3,
+        584,
+        881,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 94,
+      "offset": [
+        215,
+        257
+      ],
+      "size": [
+        893,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        2748,
+        3,
+        893,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 95,
+      "offset": [
+        209,
+        255
+      ],
+      "size": [
+        899,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        2341,
+        899,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 96,
+      "offset": [
+        201,
+        255
+      ],
+      "size": [
+        907,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2754,
+        1758,
+        907,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 97,
+      "offset": [
+        193,
+        253
+      ],
+      "size": [
+        915,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        2780,
+        3513,
+        915,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 98,
+      "offset": [
+        189,
+        251
+      ],
+      "size": [
+        919,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        930,
+        590,
+        919,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 99,
+      "offset": [
+        183,
+        249
+      ],
+      "size": [
+        925,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1865,
+        1774,
+        925,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 100,
+      "offset": [
+        181,
+        249
+      ],
+      "size": [
+        927,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        936,
+        1185,
+        927,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 101,
+      "offset": [
+        179,
+        247
+      ],
+      "size": [
+        929,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1877,
+        3,
+        929,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 102,
+      "offset": [
+        179,
+        247
+      ],
+      "size": [
+        929,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2812,
+        3,
+        929,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 103,
+      "offset": [
+        177,
+        247
+      ],
+      "size": [
+        931,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        3,
+        931,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 104,
+      "offset": [
+        177,
+        247
+      ],
+      "size": [
+        931,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        940,
+        3,
+        931,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 105,
+      "offset": [
+        179,
+        247
+      ],
+      "size": [
+        929,
+        585
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        594,
+        929,
+        585
+      ]
+    },
+    {
+      "sourceIndex": 106,
+      "offset": [
+        181,
+        249
+      ],
+      "size": [
+        927,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1869,
+        1185,
+        927,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 107,
+      "offset": [
+        183,
+        249
+      ],
+      "size": [
+        925,
+        583
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2796,
+        1774,
+        925,
+        583
+      ]
+    },
+    {
+      "sourceIndex": 108,
+      "offset": [
+        185,
+        251
+      ],
+      "size": [
+        923,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        2802,
+        3,
+        923,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 109,
+      "offset": [
+        189,
+        251
+      ],
+      "size": [
+        919,
+        581
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        1855,
+        590,
+        919,
+        581
+      ]
+    },
+    {
+      "sourceIndex": 110,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        917,
+        579
+      ],
+      "empty": false,
+      "sheet": 2,
+      "region": [
+        1857,
+        3513,
+        917,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 111,
+      "offset": [
+        193,
+        253
+      ],
+      "size": [
+        915,
+        579
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        3,
+        915,
+        579
+      ]
+    },
+    {
+      "sourceIndex": 112,
+      "offset": [
+        197,
+        255
+      ],
+      "size": [
+        911,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        1758,
+        911,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 113,
+      "offset": [
+        197,
+        255
+      ],
+      "size": [
+        911,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        920,
+        1758,
+        911,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 114,
+      "offset": [
+        197,
+        255
+      ],
+      "size": [
+        911,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1837,
+        1758,
+        911,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 115,
+      "offset": [
+        199,
+        257
+      ],
+      "size": [
+        909,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        3,
+        3,
+        909,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 116,
+      "offset": [
+        199,
+        257
+      ],
+      "size": [
+        909,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        918,
+        3,
+        909,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 117,
+      "offset": [
+        199,
+        257
+      ],
+      "size": [
+        909,
+        575
+      ],
+      "empty": false,
+      "sheet": 4,
+      "region": [
+        1833,
+        3,
+        909,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 118,
+      "offset": [
+        195,
+        257
+      ],
+      "size": [
+        913,
+        575
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2666,
+        3507,
+        913,
+        575
+      ]
+    },
+    {
+      "sourceIndex": 119,
+      "offset": [
+        195,
+        255
+      ],
+      "size": [
+        913,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        2742,
+        1173,
+        913,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 120,
+      "offset": [
+        193,
+        255
+      ],
+      "size": [
+        915,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        1821,
+        1173,
+        915,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 121,
+      "offset": [
+        191,
+        255
+      ],
+      "size": [
+        917,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        898,
+        1173,
+        917,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 122,
+      "offset": [
+        189,
+        255
+      ],
+      "size": [
+        883,
+        577
+      ],
+      "empty": false,
+      "sheet": 3,
+      "region": [
+        3,
+        3507,
+        883,
+        577
+      ]
+    },
+    {
+      "sourceIndex": 123,
+      "offset": [
+        185,
+        253
+      ],
+      "size": [
+        250,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        769,
+        3541,
+        250,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 124,
+      "offset": [
+        185,
+        253
+      ],
+      "size": [
+        250,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1025,
+        3541,
+        250,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 125,
+      "offset": [
+        185,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1281,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 126,
+      "offset": [
+        183,
+        251
+      ],
+      "size": [
+        250,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3747,
+        3,
+        250,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 127,
+      "offset": [
+        183,
+        251
+      ],
+      "size": [
+        250,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3719,
+        594,
+        250,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 128,
+      "offset": [
+        183,
+        251
+      ],
+      "size": [
+        250,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3733,
+        1185,
+        250,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 129,
+      "offset": [
+        183,
+        251
+      ],
+      "size": [
+        250,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3727,
+        1774,
+        250,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 130,
+      "offset": [
+        185,
+        251
+      ],
+      "size": [
+        248,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3713,
+        2363,
+        248,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 131,
+      "offset": [
+        185,
+        251
+      ],
+      "size": [
+        248,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3721,
+        2952,
+        248,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 132,
+      "offset": [
+        185,
+        251
+      ],
+      "size": [
+        248,
+        515
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3,
+        3541,
+        248,
+        515
+      ]
+    },
+    {
+      "sourceIndex": 133,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1535,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 134,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        1789,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 135,
+      "offset": [
+        187,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2043,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 136,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2297,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 137,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2551,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 138,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        246,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3673,
+        1177,
+        246,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 139,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        246,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3637,
+        1764,
+        246,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 140,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        246,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3713,
+        2351,
+        246,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 141,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        246,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3711,
+        2936,
+        246,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 142,
+      "offset": [
+        191,
+        253
+      ],
+      "size": [
+        246,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3,
+        3521,
+        246,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 143,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        2805,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 144,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3059,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 145,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3313,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 146,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3567,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 147,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 0,
+      "region": [
+        3821,
+        3541,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 148,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3731,
+        3,
+        248,
+        513
+      ]
+    },
+    {
+      "sourceIndex": 149,
+      "offset": [
+        189,
+        253
+      ],
+      "size": [
+        248,
+        513
+      ],
+      "empty": false,
+      "sheet": 1,
+      "region": [
+        3703,
+        590,
+        248,
+        513
+      ]
+    }
+  ]
+}

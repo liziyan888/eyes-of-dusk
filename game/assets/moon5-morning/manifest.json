@@ -1,0 +1,190 @@
+{
+  "design_size": [
+    1920,
+    720
+  ],
+  "same_geometry_as": "res://assets/moon5-psb/manifest.json",
+  "layers": {
+    "clouds": {
+      "size": [
+        2171,
+        724
+      ],
+      "content_rect": [
+        0,
+        74,
+        2171,
+        566
+      ],
+      "runtime_region": [
+        0,
+        74,
+        2171,
+        566
+      ]
+    },
+    "far": {
+      "size": [
+        2172,
+        724
+      ],
+      "content_rect": [
+        0,
+        169,
+        2172,
+        382
+      ],
+      "runtime_region": [
+        0,
+        169,
+        2172,
+        382
+      ]
+    },
+    "forest": {
+      "size": [
+        2172,
+        724
+      ],
+      "content_rect": [
+        0,
+        124,
+        2172,
+        481
+      ],
+      "runtime_region": [
+        0,
+        124,
+        2172,
+        481
+      ]
+    },
+    "glasses": {
+      "size": [
+        1774,
+        887
+      ],
+      "content_rect": [
+        228,
+        246,
+        1342,
+        402
+      ],
+      "runtime_region": [
+        228,
+        246,
+        1342,
+        402
+      ]
+    },
+    "ground": {
+      "size": [
+        2172,
+        724
+      ],
+      "content_rect": [
+        0,
+        573,
+        2172,
+        151
+      ],
+      "runtime_region": [
+        0,
+        573,
+        2172,
+        151
+      ]
+    },
+    "mist": {
+      "size": [
+        2172,
+        724
+      ],
+      "content_rect": [
+        33,
+        405,
+        2101,
+        235
+      ],
+      "runtime_region": [
+        33,
+        405,
+        2101,
+        235
+      ]
+    },
+    "rain": {
+      "size": [
+        1672,
+        941
+      ],
+      "content_rect": [
+        21,
+        13,
+        1625,
+        892
+      ],
+      "runtime_region": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "sky": {
+      "size": [
+        2048,
+        768
+      ],
+      "content_rect": [
+        0,
+        0,
+        2048,
+        768
+      ],
+      "runtime_region": [
+        0,
+        0,
+        2048,
+        768
+      ]
+    },
+    "sunbeams": {
+      "size": [
+        1672,
+        941
+      ],
+      "content_rect": [
+        103,
+        130,
+        1149,
+        521
+      ],
+      "runtime_region": [
+        0,
+        0,
+        1672,
+        941
+      ]
+    },
+    "tree": {
+      "size": [
+        1473,
+        1068
+      ],
+      "content_rect": [
+        11,
+        1,
+        1461,
+        1060
+      ],
+      "runtime_region": [
+        11,
+        1,
+        1461,
+        1060
+      ]
+    }
+  },
+  "note": "Runtime atlas trimming only; generated source PNGs retained unedited."
+}

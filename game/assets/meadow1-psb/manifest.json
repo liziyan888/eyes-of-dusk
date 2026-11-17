@@ -1,0 +1,223 @@
+{
+  "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景1\\场景一分层666\\场景1.psb",
+  "source_size": [
+    6379,
+    2496
+  ],
+  "design_size": [
+    1840.9615384615383,
+    720
+  ],
+  "source_sha256": "92359aa510a03b5a1c5986a953a0f48f5a35784bae0ebd936dee07dacb715c62",
+  "world_width": 1840.9615384615383,
+  "reference_camera": 280.48076923076917,
+  "horizon_y": 557.3076923076923,
+  "foreground_layer": "meadow1_near",
+  "layers": [
+    {
+      "id": "meadow1_sky",
+      "name": "01天空",
+      "path": "res://assets/meadow1-psb/sky.png",
+      "psd_name": "01天空",
+      "psd_bbox": [
+        0,
+        0,
+        6379,
+        1417
+      ],
+      "reference_bbox": [
+        1138,
+        -4,
+        7517,
+        1413
+      ],
+      "x": -17.596153846153843,
+      "y": -1.1538461538461537,
+      "w": 1877.0192307692305,
+      "h": 408.74999999999994,
+      "f": 0.02,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "9a360eda8007e4d80cad00290c63f550ddff9517c9b797b5806323e93c418e45",
+      "pixel_sha256": "03d5e184d1445e118e6a2712ed5927b4ab80eeabd9ee01fadebefc725e2464af",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ],
+      "extend_top": true
+    },
+    {
+      "id": "meadow1_clouds",
+      "name": "02云层",
+      "path": "res://assets/meadow1-psb/clouds.png",
+      "psd_name": "02云层",
+      "psd_bbox": [
+        3,
+        0,
+        6379,
+        2123
+      ],
+      "reference_bbox": [
+        1138,
+        22,
+        7514,
+        2145
+      ],
+      "x": -17.596153846153843,
+      "y": 6.346153846153846,
+      "w": 1876.153846153846,
+      "h": 612.4038461538461,
+      "f": 0.05,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "d1a5f6e0e19ea8c8e4b0964d4f193e84030bc223acf09d76aafdd7f6a8f06d54",
+      "pixel_sha256": "6000678be2579c549c439f16a47b26375f8a6c6a6319724ac7a86d99e05f6acb",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "meadow1_far",
+      "name": "03远山",
+      "path": "res://assets/meadow1-psb/far.png",
+      "psd_name": "03远山",
+      "psd_bbox": [
+        0,
+        1238,
+        6379,
+        2496
+      ],
+      "reference_bbox": [
+        1135,
+        1260,
+        7514,
+        2518
+      ],
+      "x": -18.46153846153846,
+      "y": 363.46153846153845,
+      "w": 1877.0192307692305,
+      "h": 362.88461538461536,
+      "f": 0.12,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "1cd0977e2db831161b8102644b075eb5d3b3a722ebeb0d7759f2aa10a41de652",
+      "pixel_sha256": "b70bf13b77a2fd6a67798b56dd07e342c5d06659be9729424746fa467cb1c250",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "meadow1_forest",
+      "name": "04树林",
+      "path": "res://assets/meadow1-psb/forest.png",
+      "psd_name": "04树林",
+      "psd_bbox": [
+        3,
+        762,
+        6379,
+        2077
+      ],
+      "reference_bbox": [
+        1138,
+        784,
+        7514,
+        2099
+      ],
+      "x": -17.596153846153843,
+      "y": 226.15384615384613,
+      "w": 1876.153846153846,
+      "h": 379.32692307692304,
+      "f": 0.35,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "51898ef4d636cb0b3d349bc6b1d2a02bc73f971961952c6b58d560ee5e0cd19d",
+      "pixel_sha256": "ffcffa0863626d989e139116f14804ecfd3e6e273ff09b50541ed9af792446c4",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "meadow1_ground",
+      "name": "05近景1",
+      "path": "res://assets/meadow1-psb/ground.png",
+      "psd_name": "05近景1",
+      "psd_bbox": [
+        3,
+        1898,
+        6379,
+        2288
+      ],
+      "reference_bbox": [
+        1138,
+        1920,
+        7514,
+        2310
+      ],
+      "x": -17.596153846153843,
+      "y": 553.8461538461538,
+      "w": 1876.153846153846,
+      "h": 140.19230769230768,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "6d051b70fdb47b333ab7b3abcd91e226fcddb4bf6ddb79a563222e1d5e0fd316",
+      "pixel_sha256": "e297f595f8d6f85754447fae3975265879367441aa440c774d177a4de56df8dc",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        96
+      ]
+    },
+    {
+      "id": "meadow1_near",
+      "name": "05近景2",
+      "path": "res://assets/meadow1-psb/near.png",
+      "psd_name": "05近景2",
+      "psd_bbox": [
+        0,
+        2212,
+        6379,
+        2496
+      ],
+      "reference_bbox": [
+        1135,
+        2234,
+        7514,
+        2518
+      ],
+      "x": -18.46153846153846,
+      "y": 644.4230769230769,
+      "w": 1877.0192307692305,
+      "h": 109.6153846153846,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "c370959dbb0d9e99ba50438add859c188ad851735bbc7013e512f9ae55b0fbf1",
+      "pixel_sha256": "57da141d7dcc8a9e232863a282abbed5da3c9d2dcc0779f75e75771920814172",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        96
+      ]
+    }
+  ]
+}

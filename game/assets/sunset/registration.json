@@ -1,0 +1,15 @@
+{
+  "video": "runtime.ogv",
+  "sha256": "478e214511bc3362c2f61f3ef2c5b92183bdc4696e8f09818a413108c1e15b77",
+  "decoded_frames": 158,
+  "fps": 24,
+  "canvas": [
+    1280,
+    720
+  ],
+  "first_frame": 0,
+  "last_frame": 157,
+  "first": "sunset_first_registered.png",
+  "last": "sunset_end_registered.png",
+  "method": "First and last decoded frames from the exact shipped OGV; no resize/crop or generated video"
+}

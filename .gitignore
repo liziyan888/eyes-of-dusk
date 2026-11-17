@@ -1,0 +1,15 @@
+game/.godot/
+.web-templates/
+dist/
+*.log
+.DS_Store
+
+# Unreferenced superseded prototype assets; originals stay in desktop project.
+game/assets/creek-psb/
+game/assets/grassland-flower-frames/
+game/assets/grassland-grass-frames/
+game/assets/grassland-grass-polished-frames/
+game/assets/grassland-listening-far-frames/
+game/assets/grassland-listening-frames/
+game/assets/grassland-polish/
+.tools/

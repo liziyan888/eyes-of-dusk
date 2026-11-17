@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "entry": [
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "再往外走一点吧，让屋檐别挡住那片晚霞。",
+      "source": "S07 互动引导改编",
+      "stimulus": 0.65
+    }
+  ],
+  "after_watch": [
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "看着晚霞渐渐消失，夜幕慢慢降临森林，就像在听一首宇宙间最美的交响曲。",
+      "source": "D032",
+      "stimulus": 0.95,
+      "senses": {
+        "vision": 1,
+        "sound": 0.45
+      }
+    }
+  ],
+  "return_lines": [
+    {
+      "who": "我",
+      "tone": "me",
+      "text": "你很珍视这些平凡的东西。",
+      "source": "D033",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.7
+      }
+    },
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "你为什么不呢，这才像在生活。",
+      "source": "D034",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.8,
+        "vision": 0.5
+      }
+    },
+    {
+      "who": "我",
+      "tone": "me",
+      "text": "我，还有其他的大部分人，不可能做到这样。在这个时代，得到太容易了。",
+      "source": "D035",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.6
+      }
+    },
+    {
+      "who": "我",
+      "tone": "me",
+      "text": "物质的东西自不必说，蓝天绿水的优美环境、乡村和孤岛的宁静等等，都可以毫不费力地得到。",
+      "source": "D035",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.6
+      }
+    },
+    {
+      "who": "我",
+      "tone": "me",
+      "text": "甚至以前人们认为最难寻觅的爱情，在虚拟现实网上至少也可以暂时体会到。所以人们不再珍视什么了。",
+      "source": "D035",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.6
+      }
+    },
+    {
+      "who": "我",
+      "tone": "me",
+      "text": "面对着一大堆伸手可得的水果，他们把拿起的每一个咬一口就扔掉。",
+      "source": "D035",
+      "stimulus": 0.65,
+      "senses": {
+        "sound": 0.6
+      }
+    },
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "但也有人面前没有这些水果。",
+      "source": "D036",
+      "stimulus": 0.9,
+      "senses": {
+        "sound": 0.8
+      }
+    },
+    {
+      "who": "旁白",
+      "tone": "sys",
+      "text": "我感觉自己刺痛了她，却不知道为什么。回去的路上，我们都没有再说话。",
+      "source": "S07 旁白",
+      "stimulus": 0.35,
+      "senses": {
+        "vision": 0.3
+      }
+    }
+  ],
+  "first_rest": [
+    {
+      "who": "旁白",
+      "tone": "sys",
+      "text": "回到旅馆后，疲惫很快将我拖入了睡梦。不知过了多久，她轻轻叫醒了我。"
+    },
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "请带我出去好吗？我们去看月亮，月亮该升起来了。"
+    }
+  ],
+  "second_rest": [
+    {
+      "who": "旁白",
+      "tone": "sys",
+      "text": "回屋睡下没多久，她又把我叫醒。我只好再次出门，沿着草地走向那棵树。",
+      "source": "月光场景时间衔接改编"
+    },
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "云影在草地上走。我们再出去走走吧。"
+    }
+  ],
+  "wind": [
+    {
+      "who": "旁白",
+      "tone": "sys",
+      "text": "我停下来。风从草尖上过去，远处的林叶也轻轻响着。"
+    },
+    {
+      "who": "女孩",
+      "tone": "her",
+      "text": "这些声音很轻，可是它们都在。"
+    }
+  ]
+}

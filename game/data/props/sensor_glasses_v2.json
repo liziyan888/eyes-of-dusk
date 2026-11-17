@@ -1,0 +1,62 @@
+{
+  "source_reference": "references/glasses-three-views.png",
+  "front": {
+    "path": "res://assets/props/sensor_glasses_v2/front.png",
+    "size": [
+      1774,
+      887
+    ],
+    "alpha_bbox_over_170": [
+      55,
+      210,
+      1719,
+      679
+    ]
+  },
+  "hang": {
+    "path": "res://assets/props/sensor_glasses_v2/hang.png",
+    "width_logical": 42,
+    "pivot_uv": [
+      0.93,
+      0.19
+    ],
+    "size": [
+      1774,
+      887
+    ],
+    "alpha_bbox_over_170": [
+      97,
+      155,
+      1693,
+      723
+    ]
+  },
+  "lens_mask": {
+    "path": "res://assets/props/sensor_glasses_v2/lens_mask.png",
+    "size": [
+      1774,
+      887
+    ],
+    "alpha_bbox_over_170": [
+      119,
+      244,
+      1655,
+      678
+    ]
+  },
+  "cutout_shader": "res://shaders/sensor_prop.gdshader",
+  "runtime_edge_sampling_radius_pixels": 3,
+  "rest": {
+    "path": "res://assets/props/sensor_glasses_v2/rest.png",
+    "width_logical": 30,
+    "pivot_uv": [
+      0.5,
+      0.75
+    ],
+    "support_source_px": [
+      210,
+      922
+    ],
+    "support_layer": "moon5_tree"
+  }
+}

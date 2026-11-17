@@ -1,0 +1,154 @@
+{
+  "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景5\\场景五.psb",
+  "source_sha256": "29441f51e9a15377d010b743638c8c3dfd62c8734c45aed1d5196c1a7469c7e3",
+  "source_size": [
+    6656,
+    2496
+  ],
+  "design_size": [
+    1920,
+    720
+  ],
+  "world_width": 1920,
+  "reference_camera": 320,
+  "horizon_y": 586.0,
+  "foreground_layer": "moon5_ground",
+  "layers": [
+    {
+      "id": "moon5_sky",
+      "name": "场景五 · 01天空与月亮",
+      "path": "res://assets/moon5-psb/sky.png",
+      "psd_name": "图层 5",
+      "psd_bbox": [
+        0,
+        0,
+        6656,
+        2496
+      ],
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1919.9999999999998,
+      "h": 719.9999999999999,
+      "f": 0.02,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "2d9ab228b98e6c8c6c54b2cc531a224ecfa4ecce61dfd31b20a536b16895b39e",
+      "pixel_sha256": "2d9ab228b98e6c8c6c54b2cc531a224ecfa4ecce61dfd31b20a536b16895b39e",
+      "bottom_padding_source_px": 0
+    },
+    {
+      "id": "moon5_clouds",
+      "name": "场景五 · 02云",
+      "path": "res://assets/moon5-psb/clouds.png",
+      "psd_name": "图层 6",
+      "psd_bbox": [
+        0,
+        0,
+        6656,
+        1740
+      ],
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1919.9999999999998,
+      "h": 501.9230769230769,
+      "f": 0.05,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "e53ef2d89c21c070d5c6acada966f5bd35eeee7b7c2334082dfc15bc5cddee59",
+      "pixel_sha256": "e53ef2d89c21c070d5c6acada966f5bd35eeee7b7c2334082dfc15bc5cddee59",
+      "bottom_padding_source_px": 0
+    },
+    {
+      "id": "moon5_far",
+      "name": "场景五 · 03远山",
+      "path": "res://assets/moon5-psb/far.png",
+      "psd_name": "图层 7",
+      "psd_bbox": [
+        0,
+        1279,
+        6647,
+        2472
+      ],
+      "x": 0.0,
+      "y": 368.9423076923077,
+      "w": 1917.403846153846,
+      "h": 344.13461538461536,
+      "f": 0.12,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "506501693c1f04824b994c5d7aca0e405eebaf359d843d1b849967e35871cff9",
+      "pixel_sha256": "506501693c1f04824b994c5d7aca0e405eebaf359d843d1b849967e35871cff9",
+      "bottom_padding_source_px": 0
+    },
+    {
+      "id": "moon5_forest",
+      "name": "场景五 · 04树林",
+      "path": "res://assets/moon5-psb/forest.png",
+      "psd_name": "图层 8",
+      "psd_bbox": [
+        0,
+        955,
+        6656,
+        2442
+      ],
+      "x": 0.0,
+      "y": 275.4807692307692,
+      "w": 1919.9999999999998,
+      "h": 428.9423076923077,
+      "f": 0.35,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "ec1b73224b1ca869aa50886f5024f31ca2ff6836930c459cbb455c54b588e84f",
+      "pixel_sha256": "ec1b73224b1ca869aa50886f5024f31ca2ff6836930c459cbb455c54b588e84f",
+      "bottom_padding_source_px": 0
+    },
+    {
+      "id": "moon5_ground",
+      "name": "场景五 · 05地面",
+      "path": "res://assets/moon5-psb/ground.png",
+      "psd_name": "图层 9",
+      "psd_bbox": [
+        0,
+        1922,
+        6656,
+        2496
+      ],
+      "x": 0.0,
+      "y": 554.4230769230769,
+      "w": 1919.9999999999998,
+      "h": 211.7307692307692,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "f4ede65bede9d68c1296c494ab4b19385c4ac08dafe2c888b5ac11631afd46cb",
+      "pixel_sha256": "968743403c0d3fd64691135a548f4668830ca33ac6067758999fb9b4e70a7732",
+      "bottom_padding_source_px": 160
+    },
+    {
+      "id": "moon5_tree",
+      "name": "场景五 · 06薰衣草树",
+      "path": "res://assets/moon5-psb/tree.png",
+      "psd_name": "06 薰衣草树",
+      "psd_bbox": [
+        3168,
+        1279,
+        4595,
+        2314
+      ],
+      "x": 913.8461538461538,
+      "y": 368.9423076923077,
+      "w": 411.63461538461536,
+      "h": 298.55769230769226,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "source_pixel_sha256": "03c2a1f32b71073350887fb5661945110ea3c17666c0b779d6a6b1cc645d311c",
+      "pixel_sha256": "03c2a1f32b71073350887fb5661945110ea3c17666c0b779d6a6b1cc645d311c",
+      "bottom_padding_source_px": 0
+    }
+  ],
+  "verification": {
+    "alpha_max_difference": 0,
+    "premultiplied_rgb_max_difference": 1.960784912109375
+  }
+}

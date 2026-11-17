@@ -1,0 +1,1684 @@
+{
+  "schema_version": 1,
+  "script_version": "ending-2026-11-16-descent",
+  "title": "落日六号",
+  "canvas": [
+    1280,
+    720
+  ],
+  "gutter_px": 5,
+  "source_count": 41,
+  "panel_count": 42,
+  "page_count": 16,
+  "entry_source": "scene5_morning",
+  "save_file": "user://ending-v1.json",
+  "ready_for_integration": false,
+  "asset_revision": "4k-to-2560-2026-11-08",
+  "required_actions": [],
+  "pages": [
+    {
+      "id": "end_p01",
+      "source_ids": [
+        "01",
+        "02",
+        "03"
+      ],
+      "ambience": "room",
+      "panels": [
+        {
+          "id": "e001",
+          "source_id": "01",
+          "source_file": "res://assets/ending/panels/e01.png",
+          "rect": [
+            0,
+            0,
+            690,
+            280
+          ],
+          "focus": [
+            0.5,
+            0.44
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "又回到了灰色的生活和忙碌的工作中，那次旅行很快就淡忘了。",
+              "box": [
+                0.04,
+                0.68,
+                0.92,
+                0.28
+              ],
+              "size": 20
+            }
+          ],
+          "interaction": {
+            "type": "screen",
+            "id": "screen_glow",
+            "asset_uv": [
+              0.2,
+              0.55
+            ],
+            "label": "看一眼前方的屏幕"
+          }
+        },
+        {
+          "id": "e002",
+          "source_id": "02",
+          "source_file": "res://assets/ending/panels/e02.png",
+          "rect": [
+            695,
+            0,
+            585,
+            280
+          ],
+          "focus": [
+            0.5,
+            0.43
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "很长时间后，我在裤脚上发现了两三颗草籽。",
+              "box": [
+                0.05,
+                0.7,
+                0.9,
+                0.26
+              ],
+              "size": 20
+            }
+          ],
+          "layers": {
+            "clean": "res://assets/ending/layers/e002_seeds_clean.png",
+            "foreground": "res://assets/ending/layers/e002_seeds_fg.png",
+            "pivot_uv": [
+              0.5632,
+              0.5063
+            ]
+          },
+          "interaction": {
+            "type": "seed",
+            "id": "seed",
+            "asset_uv": [
+              0.5632,
+              0.5063
+            ],
+            "label": "碰一碰草籽"
+          }
+        },
+        {
+          "id": "e003",
+          "source_id": "03",
+          "source_file": "res://assets/ending/panels/e03.png",
+          "rect": [
+            0,
+            285,
+            1280,
+            435
+          ],
+          "focus": [
+            0.52,
+            0.5
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "在我孤独寂寞的精神沙漠中，那棵种子已长出了令人难以察觉的绿芽。",
+              "box": [
+                0.04,
+                0.75,
+                0.58,
+                0.22
+              ],
+              "size": 20
+            }
+          ],
+          "grade_sat": 0.62,
+          "interaction": {
+            "type": "green_restore",
+            "id": "green_restored",
+            "asset_uv": [
+              0.7,
+              0.48
+            ],
+            "saturation": 1.46
+          }
+        }
+      ],
+      "music": "bgm_memory"
+    },
+    {
+      "id": "end_p02",
+      "source_ids": [
+        "04",
+        "05",
+        "06"
+      ],
+      "ambience": "room",
+      "panels": [
+        {
+          "id": "e004",
+          "source_id": "04",
+          "source_file": "res://assets/ending/panels/e04.png",
+          "rect": [
+            0,
+            0,
+            637,
+            250
+          ],
+          "focus": [
+            0.5,
+            0.52
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "晚风吹到脸上时，我已能感觉到淡淡的诗意，鸟儿的鸣叫也能引起我的注意。",
+              "box": [
+                0.05,
+                0.64,
+                0.9,
+                0.32
+              ],
+              "size": 19
+            }
+          ],
+          "interaction": {
+            "type": "wind",
+            "id": "evening_wind",
+            "asset_uv": [
+              0.28,
+              0.35
+            ],
+            "label": "感受晚风"
+          }
+        },
+        {
+          "id": "e005",
+          "source_id": "05",
+          "source_file": "res://assets/ending/panels/e05.png",
+          "rect": [
+            642,
+            0,
+            638,
+            250
+          ],
+          "focus": [
+            0.52,
+            0.45
+          ],
+          "scene_type": "memory",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "那封闭窄小的控制舱，奇怪的隔热太空服……后来只有一样东西凸现出来。",
+              "box": [
+                0.05,
+                0.64,
+                0.9,
+                0.32
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e006",
+          "source_id": "06",
+          "source_file": "res://assets/ending/panels/e06.png",
+          "rect": [
+            0,
+            255,
+            1280,
+            465
+          ],
+          "focus": [
+            0.52,
+            0.5
+          ],
+          "scene_type": "memory",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "一闭上眼睛，这支铅笔总在我的眼前漂浮。",
+              "box": [
+                0.04,
+                0.76,
+                0.46,
+                0.22
+              ],
+              "size": 20
+            }
+          ],
+          "layers": {
+            "clean": "res://assets/ending/layers/e006_pencil_clean.png",
+            "foreground": "res://assets/ending/layers/e006_pencil_fg_v2.png",
+            "pivot_uv": [
+              0.5472,
+              0.4317
+            ],
+            "registration": "uniform original-width at authored pivot; one complete pencil; no cropped AtlasTexture"
+          },
+          "interaction": {
+            "type": "pencil",
+            "id": "pencil_touched",
+            "asset_uv": [
+              0.5472,
+              0.4317
+            ],
+            "label": "轻触悬浮铅笔"
+          }
+        }
+      ],
+      "music": "bgm_memory"
+    },
+    {
+      "id": "end_p03",
+      "source_ids": [
+        "07",
+        "08"
+      ],
+      "ambience": "room",
+      "panels": [
+        {
+          "id": "e007",
+          "source_id": "07",
+          "source_file": "res://assets/ending/revisions/e07-sunset-six.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            420
+          ],
+          "focus": [
+            0.5,
+            0.46
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "一幅见过无数次的巨大壁画把我吸引住了。",
+              "box": [
+                0.04,
+                0.72,
+                0.55,
+                0.24
+              ],
+              "size": 20
+            }
+          ],
+          "crop": [
+            0,
+            0.11049723756906077,
+            1,
+            0.7762430939226519
+          ],
+          "art_revision": "Sunset Six wall mural; original hall and protagonist composition retained; native crop excludes generated white margins."
+        },
+        {
+          "id": "e008",
+          "source_id": "08",
+          "source_file": "res://assets/ending/panels/e08.png",
+          "rect": [
+            0,
+            425,
+            1280,
+            295
+          ],
+          "focus": [
+            0.48,
+            0.45
+          ],
+          "scene_type": "memory",
+          "texts": [
+            {
+              "kind": "speech",
+              "who": "女孩（回忆）",
+              "text": "我怕封闭……",
+              "box": [
+                0.66,
+                0.05,
+                0.27,
+                0.25
+              ],
+              "size": 17
+            },
+            {
+              "kind": "speech",
+              "who": "我",
+              "text": "除了太空，还有一个地方会失重！",
+              "box": [
+                0.56,
+                0.6,
+                0.38,
+                0.36
+              ],
+              "size": 20
+            }
+          ]
+        }
+      ],
+      "music": "bgm_memory"
+    },
+    {
+      "id": "end_p04",
+      "source_ids": [
+        "09a",
+        "09b",
+        "10"
+      ],
+      "ambience": "room",
+      "panels": [
+        {
+          "id": "e009a",
+          "source_id": "09",
+          "source_file": "res://assets/ending/panels/e09.png",
+          "rect": [
+            0,
+            0,
+            640,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.45
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "我飞快跑上楼梯，用力敲响主任办公室的门。",
+              "box": [
+                0.05,
+                0.68,
+                0.6,
+                0.28
+              ],
+              "size": 19
+            }
+          ],
+          "crop": [
+            0.0,
+            0.0,
+            0.49,
+            1.0
+          ]
+        },
+        {
+          "id": "e009b",
+          "source_id": "09",
+          "source_file": "res://assets/ending/panels/e09.png",
+          "rect": [
+            645,
+            0,
+            635,
+            355
+          ],
+          "focus": [
+            0.52,
+            0.45
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "speech",
+              "who": "我",
+              "text": "主任不在……",
+              "box": [
+                0.25,
+                0.5,
+                0.5,
+                0.4
+              ],
+              "size": 18
+            }
+          ],
+          "crop": [
+            0.51,
+            0.0,
+            0.49,
+            1.0
+          ]
+        },
+        {
+          "id": "e010",
+          "source_id": "10",
+          "source_file": "res://assets/ending/panels/e10.png",
+          "rect": [
+            0,
+            360,
+            1280,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.48
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "speech",
+              "who": "主任",
+              "text": "是为了她来的吧。",
+              "box": [
+                0.04,
+                0.66,
+                0.33,
+                0.3
+              ],
+              "size": 18
+            }
+          ]
+        }
+      ],
+      "music": "bgm_memory"
+    },
+    {
+      "id": "end_p05",
+      "source_ids": [
+        "11",
+        "12"
+      ],
+      "ambience": "room",
+      "panels": [
+        {
+          "id": "e011",
+          "source_id": "11",
+          "source_file": "res://assets/ending/panels/e11.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.45
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "speech",
+              "who": "我",
+              "text": "她到底在哪儿？！",
+              "box": [
+                0.02,
+                0.62,
+                0.23,
+                0.34
+              ],
+              "size": 19
+            },
+            {
+              "kind": "speech",
+              "who": "主任",
+              "text": "你可能已经猜到了。她是‘落日六号’的领航员。",
+              "box": [
+                0.64,
+                0.52,
+                0.32,
+                0.42
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e012",
+          "source_id": "12",
+          "source_file": "res://assets/ending/panels/e12.png",
+          "rect": [
+            0,
+            360,
+            1280,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.48
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "一切都明白了，我无力地跌坐在地毯上。",
+              "box": [
+                0.05,
+                0.68,
+                0.36,
+                0.28
+              ],
+              "size": 20
+            }
+          ]
+        }
+      ],
+      "music": "bgm_memory",
+      "exit_video": {
+        "after_panel": "e012",
+        "stream": "res://assets/ending/after-collapse/memory.ogv",
+        "first_frame": "res://assets/ending/after-collapse/first.png",
+        "last_frame": "res://assets/ending/after-collapse/last.png",
+        "archive": {
+          "background": "res://assets/ending/archive-launch/01E-archive.png",
+          "stream": "res://assets/ending/archive-launch/v02-v03.ogv",
+          "first_frame": "res://assets/ending/archive-launch/launch-first.png",
+          "last_frame": "res://assets/ending/archive-launch/launch-last.png",
+          "join_frame": "res://assets/ending/archive-launch/02C-fireball-peak.png",
+          "full_descent": true
+        },
+        "resume_page": "end_p11"
+      }
+    },
+    {
+      "id": "end_p06",
+      "source_ids": [
+        "13",
+        "14",
+        "15"
+      ],
+      "ambience": "depth",
+      "panels": [
+        {
+          "id": "e013",
+          "source_id": "13",
+          "source_file": "res://assets/ending/panels/e13.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            235
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "落日工程原计划发射十艘飞船，但计划因为‘落日六号’的失事而中断。",
+              "box": [
+                0.03,
+                0.05,
+                0.52,
+                0.36
+              ],
+              "size": 18
+            },
+            {
+              "kind": "narration",
+              "text": "落日飞船不是飞向天空，而是潜入地球深处。",
+              "box": [
+                0.03,
+                0.58,
+                0.48,
+                0.38
+              ],
+              "size": 19
+            }
+          ]
+        },
+        {
+          "id": "e014",
+          "source_id": "14",
+          "source_file": "res://assets/ending/panels/e14.png",
+          "rect": [
+            0,
+            240,
+            1280,
+            235
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "四年前，我在电视中看到过‘落日一号’发射时的情景。",
+              "box": [
+                0.03,
+                0.58,
+                0.55,
+                0.38
+              ],
+              "size": 19
+            }
+          ]
+        },
+        {
+          "id": "e015",
+          "source_id": "15",
+          "source_file": "res://assets/ending/panels/e15.png",
+          "rect": [
+            0,
+            480,
+            1280,
+            240
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "那一夜，远处的人们甚至能感觉到飞船穿过地层时的微微振动。",
+              "box": [
+                0.03,
+                0.6,
+                0.55,
+                0.36
+              ],
+              "size": 19
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p07",
+      "source_ids": [
+        "16",
+        "17"
+      ],
+      "ambience": "depth",
+      "panels": [
+        {
+          "id": "e016",
+          "source_id": "16",
+          "source_file": "res://assets/ending/panels/e16.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "前五艘飞船都安全返回，落日五号创造了3100公里的航行深度记录。",
+              "box": [
+                0.04,
+                0.7,
+                0.55,
+                0.26
+              ],
+              "size": 19
+            }
+          ]
+        },
+        {
+          "id": "e017",
+          "source_id": "17",
+          "source_file": "res://assets/ending/panels/e17.png",
+          "rect": [
+            0,
+            360,
+            1280,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "在3400到3500公里深处，是地幔和地核的交界面。\n落日六号的设计强度，不允许它进入液态铁镍的地核。",
+              "box": [
+                0.04,
+                0.62,
+                0.52,
+                0.34
+              ],
+              "size": 18
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p08",
+      "source_ids": [
+        "18",
+        "19"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e018",
+          "source_id": "18",
+          "source_file": "res://assets/ending/panels/e18.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            241
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "它依靠前方的烧熔发动机切开物质，在地球内部向前航行。",
+              "box": [
+                0.03,
+                0.79,
+                0.48,
+                0.19
+              ],
+              "size": 16
+            }
+          ],
+          "interaction": {
+            "type": "structure",
+            "id": "ship_structure",
+            "points": [
+              {
+                "id": "front",
+                "asset_uv": [
+                  0.11,
+                  0.52
+                ],
+                "label": "前部烧熔发动机",
+                "text": "切开地层物质，为船体开路。"
+              },
+              {
+                "id": "cabin",
+                "asset_uv": [
+                  0.53,
+                  0.55
+                ],
+                "label": "中部主舱",
+                "text": "船员生活与工作的密封空间。"
+              },
+              {
+                "id": "rear",
+                "asset_uv": [
+                  0.88,
+                  0.55
+                ],
+                "label": "后部推进发动机",
+                "text": "推动飞船向地心下沉。"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e019",
+          "source_id": "19",
+          "source_file": "res://assets/ending/panels/e19.png",
+          "rect": [
+            0,
+            246,
+            1280,
+            474
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "他们只能凭感觉触摸周围不断向上移去的高密度物质。",
+              "box": [
+                0.04,
+                0.72,
+                0.5,
+                0.24
+              ],
+              "size": 20
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p09",
+      "source_ids": [
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e020",
+          "source_id": "20",
+          "source_file": "res://assets/ending/panels/e20.png",
+          "rect": [
+            0,
+            0,
+            640,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "一种地面上的人难以理解的压抑感，折磨着每一个地航员。",
+              "box": [
+                0.05,
+                0.7,
+                0.9,
+                0.26
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e021",
+          "source_id": "21",
+          "source_file": "res://assets/ending/panels/e21.png",
+          "rect": [
+            645,
+            0,
+            635,
+            360
+          ],
+          "focus": [
+            0.52,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "飞船航行到十五小时四十分钟时，警报出现了。",
+              "box": [
+                0.05,
+                0.7,
+                0.9,
+                0.26
+              ],
+              "size": 18
+            }
+          ],
+          "interaction": {
+            "type": "alarm",
+            "id": "radar_alarm",
+            "asset_uv": [
+              0.78,
+              0.52
+            ],
+            "label": "查看雷达"
+          }
+        },
+        {
+          "id": "e022",
+          "source_id": "22",
+          "source_file": "res://assets/ending/panels/e22.png",
+          "rect": [
+            0,
+            365,
+            675,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "物质密度从每立方厘米6.3克猛增到9.5克，主要成分变成了铁镍。",
+              "box": [
+                0.04,
+                0.68,
+                0.92,
+                0.28
+              ],
+              "size": 17
+            }
+          ],
+          "interaction": {
+            "type": "compare",
+            "id": "density_compared",
+            "asset_uv": [
+              0.25,
+              0.55
+            ],
+            "label": "比较地层密度"
+          }
+        },
+        {
+          "id": "e023",
+          "source_id": "23",
+          "source_file": "res://assets/ending/panels/e23.png",
+          "rect": [
+            680,
+            365,
+            600,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "他们在2500公里的深度，竟然闯入了地核！",
+              "box": [
+                0.04,
+                0.65,
+                0.92,
+                0.3
+              ],
+              "size": 19
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p10",
+      "source_ids": [
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e024",
+          "source_id": "24",
+          "source_file": "res://assets/ending/panels/e24.png",
+          "rect": [
+            0,
+            0,
+            420,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "飞船立刻紧急转向，企图冲出这条裂隙。",
+              "box": [
+                0.05,
+                0.68,
+                0.92,
+                0.28
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e025",
+          "source_id": "25",
+          "source_file": "res://assets/ending/panels/e25.png",
+          "rect": [
+            425,
+            0,
+            855,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "烧熔发动机与主舱的结合部断裂了。",
+              "box": [
+                0.04,
+                0.7,
+                0.55,
+                0.26
+              ],
+              "size": 19
+            }
+          ],
+          "interaction": {
+            "type": "fracture",
+            "id": "fracture",
+            "asset_uv": [
+              0.44,
+              0.5
+            ],
+            "label": "查看断裂处"
+          }
+        },
+        {
+          "id": "e026",
+          "source_id": "26",
+          "source_file": "res://assets/ending/panels/e26.png",
+          "rect": [
+            0,
+            360,
+            637,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "没有烧熔发动机，落日六号在地层中寸步难行。",
+              "box": [
+                0.05,
+                0.68,
+                0.9,
+                0.28
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e027",
+          "source_id": "27",
+          "source_file": "res://assets/ending/panels/e27.png",
+          "rect": [
+            642,
+            360,
+            638,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "液态铁镍产生的浮力小于飞船的自重……落日六号便向地心沉下去。",
+              "box": [
+                0.04,
+                0.64,
+                0.92,
+                0.32
+              ],
+              "size": 17
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p11",
+      "source_ids": [
+        "28",
+        "29",
+        "30"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e028",
+          "source_id": "28",
+          "source_file": "res://assets/ending/panels/e28.png",
+          "rect": [
+            0,
+            0,
+            640,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "以当时人类的技术，进入地核的落日六号，已经没有获救的希望。",
+              "box": [
+                0.05,
+                0.68,
+                0.9,
+                0.28
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e029",
+          "source_id": "29",
+          "source_file": "res://assets/ending/panels/e29.png",
+          "rect": [
+            645,
+            0,
+            635,
+            355
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "此后的一年中，航行组坚持工作，把从地核中获得的大量宝贵资料发送到地面。",
+              "box": [
+                0.05,
+                0.66,
+                0.9,
+                0.3
+              ],
+              "size": 17
+            }
+          ]
+        },
+        {
+          "id": "e030",
+          "source_id": "30",
+          "source_file": "res://assets/ending/panels/e30.png",
+          "rect": [
+            0,
+            360,
+            1280,
+            360
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "周围是温度高达五千度、压力足以让碳在一秒钟内变成金刚石的液态铁镍。",
+              "box": [
+                0.04,
+                0.7,
+                0.55,
+                0.27
+              ],
+              "size": 18
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p12",
+      "source_ids": [
+        "31",
+        "32",
+        "33"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e031",
+          "source_id": "31",
+          "source_file": "res://assets/ending/panels/e31.png",
+          "rect": [
+            0,
+            0,
+            420,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "沉重的心理压力，终于让一名船员崩溃了。",
+              "box": [
+                0.05,
+                0.76,
+                0.9,
+                0.2
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e032",
+          "source_id": "32",
+          "source_file": "res://assets/ending/panels/e32.png",
+          "rect": [
+            425,
+            0,
+            420,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "指令长避免了落日六号的彻底毁灭，但他在写完最后一页航行日志后死去了。",
+              "box": [
+                0.05,
+                0.72,
+                0.9,
+                0.24
+              ],
+              "size": 17
+            }
+          ]
+        },
+        {
+          "id": "e033",
+          "source_id": "33",
+          "source_file": "res://assets/ending/panels/e33.png",
+          "rect": [
+            850,
+            0,
+            430,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "history",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "从那以后，在这个星球的最深处，在落日六号上，只剩下她一个人了。",
+              "box": [
+                0.05,
+                0.74,
+                0.9,
+                0.22
+              ],
+              "size": 17
+            }
+          ]
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p13",
+      "source_ids": [
+        "34",
+        "35",
+        "36"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e034",
+          "source_id": "34",
+          "source_file": "res://assets/ending/panels/e34.png",
+          "rect": [
+            0,
+            0,
+            500,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "飞船已下沉到6800公里深处。她将在这个不到十平方米的世界里，度过自己的余生。\n生命循环系统，还可以运行五十至八十年。",
+              "box": [
+                0.05,
+                0.72,
+                0.9,
+                0.24
+              ],
+              "size": 18
+            }
+          ]
+        },
+        {
+          "id": "e035",
+          "source_id": "35",
+          "source_file": "res://assets/ending/panels/e35.png",
+          "rect": [
+            505,
+            0,
+            365,
+            720
+          ],
+          "focus": [
+            0.52,
+            0.5
+          ],
+          "scene_type": "memory",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "传感眼镜使她与地面世界多少保持着一些感性的联系。",
+              "box": [
+                0.04,
+                0.76,
+                0.92,
+                0.2
+              ],
+              "size": 17
+            }
+          ],
+          "interaction": {
+            "type": "lens",
+            "id": "lens_memory",
+            "asset_uv": [
+              0.55,
+              0.54
+            ],
+            "label": "轻触镜片"
+          },
+          "local_patch": {
+            "path": "res://assets/props/sensor_glasses_v2/local_edit/ending35.png",
+            "rect_uv": [
+              -0.1,
+              0.3,
+              1.2,
+              0.61
+            ],
+            "feather": 0.025,
+            "note": "Only glasses vicinity is composited. Original full-resolution faces and all pixels outside this region remain unchanged."
+          }
+        },
+        {
+          "id": "e036",
+          "source_id": "36",
+          "source_file": "res://assets/ending/panels/e36.png",
+          "rect": [
+            875,
+            0,
+            405,
+            720
+          ],
+          "focus": [
+            0.52,
+            0.5
+          ],
+          "scene_type": "memory",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "那种联系在三个月前中断了……正是我从草原返回的飞机上。",
+              "box": [
+                0.05,
+                0.74,
+                0.9,
+                0.22
+              ],
+              "size": 17
+            }
+          ],
+          "local_patch": {
+            "path": "res://assets/props/sensor_glasses_v2/local_edit/ending36.png",
+            "rect_uv": [
+              0.42,
+              0.68,
+              0.48,
+              0.22
+            ],
+            "feather": 0.012,
+            "note": "Only glasses vicinity is composited. Original full-resolution faces and all pixels outside this region remain unchanged."
+          }
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p14",
+      "source_ids": [
+        "37",
+        "38"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e037",
+          "source_id": "37",
+          "source_file": "res://assets/ending/panels/e37.png",
+          "rect": [
+            0,
+            0,
+            637,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.45
+          ],
+          "scene_type": "reality",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "那个没有日出的细雨蒙蒙的草原早晨，竟是她最后看到的地面世界。\n后来，最后的语音和数据联系，也在一天深夜中断了。",
+              "box": [
+                0.05,
+                0.68,
+                0.9,
+                0.28
+              ],
+              "size": 18
+            }
+          ],
+          "interaction": {
+            "type": "signal",
+            "id": "signal_lost",
+            "asset_uv": [
+              0.4,
+              0.32
+            ],
+            "label": "查看信号"
+          }
+        },
+        {
+          "id": "e038",
+          "source_id": "38",
+          "source_file": "res://assets/ending/panels/e38.png",
+          "rect": [
+            642,
+            0,
+            638,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "recording",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "我不敢想象她最后告别的情形，但主任让我听的录音，却出乎我的意料。",
+              "box": [
+                0.05,
+                0.74,
+                0.9,
+                0.22
+              ],
+              "size": 18
+            }
+          ],
+          "interaction": {
+            "type": "record",
+            "id": "record_opened",
+            "asset_uv": [
+              0.62,
+              0.72
+            ],
+            "label": "打开保存的录音",
+            "transcript": "……我会按照整个研究计划努力工作的。"
+          }
+        }
+      ],
+      "music": "bgm_depth"
+    },
+    {
+      "id": "end_p15",
+      "source_ids": [
+        "39",
+        "40"
+      ],
+      "ambience": "cabin",
+      "panels": [
+        {
+          "id": "e039",
+          "source_id": "39",
+          "source_file": "res://assets/ending/panels/e39.png",
+          "rect": [
+            0,
+            0,
+            637,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "recording",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "你们发来的最后一份补充建议已经收到。今后，我会按照整个研究计划努力工作的。",
+              "box": [
+                0.05,
+                0.66,
+                0.9,
+                0.3
+              ],
+              "size": 18
+            }
+          ],
+          "interaction": {
+            "type": "record",
+            "id": "record_work",
+            "asset_uv": [
+              0.56,
+              0.52
+            ],
+            "label": "播放这段录音",
+            "transcript": "你们发来的最后一份补充建议已经收到。今后，我会按照整个研究计划努力工作的。"
+          }
+        },
+        {
+          "id": "e040",
+          "source_id": "40",
+          "source_file": "res://assets/ending/panels/e40.png",
+          "rect": [
+            642,
+            0,
+            638,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "imagination",
+          "texts": [
+            {
+              "kind": "narration",
+              "text": "将来，可能是几代人以后吧，也许会有地心飞船找到落日六号……但愿那时我留下的资料会有用。\n请你们放心，我会在这里安排好自己生活的。",
+              "box": [
+                0.05,
+                0.64,
+                0.9,
+                0.32
+              ],
+              "size": 17
+            }
+          ],
+          "interaction": {
+            "type": "record",
+            "id": "record_future",
+            "asset_uv": [
+              0.35,
+              0.55
+            ],
+            "label": "播放这段录音",
+            "transcript": "将来，可能是几代人以后吧，也许会有地心飞船找到落日六号……但愿那时我留下的资料会有用。\n请你们放心，我会在这里安排好自己生活的。"
+          }
+        }
+      ],
+      "music": "bgm_farewell"
+    },
+    {
+      "id": "end_p16",
+      "source_ids": [
+        "41"
+      ],
+      "ambience": "farewell",
+      "panels": [
+        {
+          "id": "e041",
+          "source_id": "41",
+          "source_file": "res://assets/ending/panels/e41.png",
+          "rect": [
+            0,
+            0,
+            1280,
+            720
+          ],
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "scene_type": "memory",
+          "texts": []
+        }
+      ],
+      "music": "bgm_farewell"
+    }
+  ],
+  "known_gaps": [
+    "4K 01-41 received; game panels downscaled to max 2560 wide, never upscaled",
+    "clean seed/pencil layers are requested in prompts/image_requests.json and are still pending",
+    "no BGM/SFX and no final voice track; recording panels use archived subtitles plus waveform",
+    "formal integration and a final Codex regression are still pending"
+  ]
+}

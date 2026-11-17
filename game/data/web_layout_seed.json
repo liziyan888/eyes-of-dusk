@@ -1,0 +1,101 @@
+{
+	"coordinate_revision": 10,
+	"grounds": {},
+	"layers": {
+		"ground": {
+			"f": 0.8,
+			"y": 605.0
+		},
+		"house": {
+			"f": 0.8
+		},
+		"meadow1_far": {
+			"visible": true
+		},
+		"meadow1_near": {
+			"visible": true
+		},
+		"meadow1_sky": {
+			"visible": true
+		},
+		"passage12_clouds": {
+			"f": 0.05
+		},
+		"passage12_far": {
+			"f": 0.12
+		},
+		"passage12_fog": {
+			"visible": true
+		},
+		"passage12_forest": {
+			"f": 0.35
+		},
+		"passage12_sky": {
+			"f": 0.02,
+			"scale": 2.0,
+			"y": 0.0
+		},
+		"passage12_trees": {
+			"f": 0.8,
+			"visible": true
+		},
+		"robot": {
+			"f": 0.8,
+			"x": 1320.0
+		}
+	},
+	"offset_x": 0.0,
+	"offset_y": 0.0,
+	"overlap": 9.0,
+	"player_scale": 0.85,
+	"points": {
+		"s1-flower": {
+			"x": 872.49365234375,
+			"y": 675.0
+		},
+		"s1-snow": {
+			"x": 1650.84399414063,
+			"y": 672.0
+		},
+		"s2-water": {
+			"x": 4116.9931640625,
+			"y": 674.5
+		},
+		"s3-door": {
+			"x": 5870.5869140625,
+			"y": 683.333374023438
+		},
+		"s3-sunset": {
+			"x": 5606.4609375,
+			"y": 694.5
+		}
+	},
+	"subtitles": {
+		"her": {
+			"background_auto": true,
+			"background_color": "#7ab8f0",
+			"background_height": 64.0,
+			"background_opacity": 0.12,
+			"background_width": 497.0,
+			"background_x": 736.0,
+			"background_y": 51.0,
+			"text_height": 145.0,
+			"text_width": 461.0,
+			"text_x": 760.0,
+			"text_y": 61.0
+		},
+		"man": {
+			"background_auto": true,
+			"background_color": "#ffb861",
+			"background_height": 64.0,
+			"background_opacity": 0.1,
+			"background_width": 1058.0,
+			"background_x": 46.0,
+			"background_y": 602.0,
+			"text_height": 84.0,
+			"text_width": 1010.0,
+			"text_x": 70.0,
+			"text_y": 612.0
+		}
+	}
+}

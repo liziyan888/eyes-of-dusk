@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "nominal_source_lufs": -18,
+  "peak_ceiling_dbfs": -2,
+  "assets": {
+    "res://assets/prologue/audio/page-minimax.wav": "res://assets/audio-mix-v2/page-minimax-5b226167.wav",
+    "res://assets/prologue/audio/room-minimax.wav": "res://assets/audio-mix-v2/room-minimax-0697dab5.wav",
+    "res://assets/prologue/audio/transition-minimax.wav": "res://assets/audio-mix-v2/transition-minimax-d3ecda3f.wav",
+    "res://assets/prologue/audio/wind-minimax.wav": "res://assets/audio-mix-v2/wind-minimax-31f73e0c.wav",
+    "res://assets/ending/audio/bgm_depth.mp3": "res://assets/audio-mix-v2/bgm_depth-3e46eb32.wav",
+    "res://assets/ending/audio/bgm_farewell.mp3": "res://assets/audio-mix-v2/bgm_farewell-8e703707.wav",
+    "res://assets/ending/audio/bgm_memory.mp3": "res://assets/audio-mix-v2/bgm_memory-bb3eb696.wav",
+    "res://assets/ending/audio/page-minimax.wav": "res://assets/audio-mix-v2/page-minimax-5b226167.wav",
+    "res://assets/ending/audio/room-minimax.wav": "res://assets/audio-mix-v2/room-minimax-0697dab5.wav",
+    "res://assets/ending/audio/sfx_alarm.mp3": "res://assets/audio-mix-v2/sfx_alarm-ebf4167f.wav",
+    "res://assets/ending/audio/sfx_fracture.mp3": "res://assets/audio-mix-v2/sfx_fracture-72ea0dc8.wav",
+    "res://assets/ending/audio/sfx_signal.mp3": "res://assets/audio-mix-v2/sfx_signal-4d74ebb1.wav",
+    "res://assets/ending/audio/transition-minimax.wav": "res://assets/audio-mix-v2/transition-minimax-d3ecda3f.wav",
+    "res://assets/ending/audio/voice_last_recording.wav": "res://assets/audio-mix-v2/voice_last_recording-478b4861.wav",
+    "res://assets/ending/audio/wind-minimax.wav": "res://assets/audio-mix-v2/wind-minimax-31f73e0c.wav",
+    "res://assets/moon5-morning/audio/bird.wav": "res://assets/audio-mix-v2/bird-c305886e.wav",
+    "res://assets/moon5-morning/audio/rain.wav": "res://assets/audio-mix-v2/rain-10e3a84e.wav",
+    "res://assets/grassland/nature-minimax.wav": "res://assets/audio-mix-v2/nature-minimax-2dec04c6.wav"
+  }
+}

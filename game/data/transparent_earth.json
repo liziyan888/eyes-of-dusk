@@ -1,0 +1,23 @@
+{
+  "title": "四、透明地球",
+  "video_budget": {"cap_credits": 2880, "planned_credits": 2400, "unit_credits": 600, "model": "MiniMax H3", "resolution": "2k", "clip_seconds": 5},
+  "shots": [
+    {"id":"prairie-arrival","image":"01.png","seconds":3.0,"text":"后来的岁月里，我到过很多地方。"},
+    {"id":"prairie-rest","image":"02.png","seconds":5.3,"transition":"dissolve","text":"每到一处，我都喜欢躺在那里的大地上。"},
+    {"id":"beach-arrival","image":"03.png","seconds":2.5,"text":"在海南岛的海滩上……"},
+    {"id":"beach-rest","image":"04.png","video":"beach","seconds":5.3,"transition":"dissolve","text":"听潮水一次次漫过岸边。"},
+    {"id":"snow-arrival","image":"05.png","seconds":2.5,"text":"在阿拉斯加的冰雪上……"},
+    {"id":"snow-rest","image":"06.png","video":"snow","seconds":5.3,"transition":"dissolve","text":"把呼吸交给寂静的旷野。"},
+    {"id":"birch-arrival","image":"07.png","seconds":2.5,"text":"在俄罗斯的白桦林中……"},
+    {"id":"birch-rest","image":"08.png","video":"birch","seconds":5.3,"transition":"dissolve","text":"让阳光穿过树叶，落在身上。"},
+    {"id":"desert-arrival","image":"09.png","seconds":2.5,"text":"在撒哈拉烫人的沙漠上……"},
+    {"id":"desert-rest","image":"10.png","video":"desert","seconds":5.3,"transition":"dissolve","text":"每当这时，地球便在我的脑海中变得透明。"},
+    {"id":"transparent-core","kind":"earth","seconds":28.0,"text":"","lines":[
+      {"at":0,"scope":"core-surface","text":"眼前的地球，仿佛正在一点点变得透明。"},
+      {"at":6,"scope":"core-0","text":"脚下六千多公里，在这颗水晶球的中心，落日六号静静停泊。"},
+      {"at":12,"scope":"core-1","text":"我仿佛感到她的心跳，听到她轻轻哼起《月光》。"},
+      {"at":18,"scope":"core-2","text":"金色的阳光，银色的月光，都穿过大地，抵达她身旁。"},
+      {"at":23,"scope":"core-3","text":"不管走到天涯海角，我离她都不会再远了。"}
+    ]}
+  ]
+}

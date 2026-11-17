@@ -1,0 +1,14 @@
+{
+  "fade_to_black": 0.7,
+  "black_settle": 0.15,
+  "title_in": 0.8,
+  "title_hold": 1.1,
+  "title_out": 0.45,
+  "reveal": 0.8,
+  "chapters": {
+    "1": { "title": "一、前序" },
+    "2": { "title": "二、草原" },
+    "3": { "title": "三、落日六号", "extra_hold": 0.3 },
+    "4": { "title": "四、透明地球", "extra_hold": 0.3 }
+  }
+}

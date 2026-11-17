@@ -1,0 +1,189 @@
+{
+  "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景2小溪分层\\场景二  xin.psb",
+  "source_size": [
+    6330,
+    2492
+  ],
+  "design_size": [
+    1825.961538461538,
+    720
+  ],
+  "source_sha256": "0cec8a0d3f0cefc2bf1eabd561ac166de784101350a02b891e1eb56bf5b5501e",
+  "world_width": 1825.961538461538,
+  "reference_camera": 272.98076923076906,
+  "horizon_y": 557.3076923076923,
+  "foreground_layer": "creek2_ground",
+  "layers": [
+    {
+      "id": "creek2_sky",
+      "name": "01天空",
+      "path": "res://assets/creek2-psb/sky.png",
+      "psd_name": "01天空",
+      "psd_bbox": [
+        0,
+        0,
+        6330,
+        2488
+      ],
+      "reference_bbox": [
+        10643,
+        0,
+        16973,
+        2488
+      ],
+      "x": -18.46153846153846,
+      "y": 0.0,
+      "w": 1862.8846153846152,
+      "h": 717.6923076923076,
+      "f": 0.02,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "cfb63dba5314ce43c21186e9249baee26e39f98fa68d98823f2bd5bb2a6aa262",
+      "pixel_sha256": "ef20ba9a5f883f61d1d6d9f3765a06acfe03d1006433c4653fd6ab66e04c81fc",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ],
+      "extend_top": true
+    },
+    {
+      "id": "creek2_clouds",
+      "name": "02 云层",
+      "path": "res://assets/creek2-psb/clouds.png",
+      "psd_name": "02 云层",
+      "psd_bbox": [
+        3,
+        0,
+        6330,
+        2109
+      ],
+      "reference_bbox": [
+        10646,
+        0,
+        16973,
+        2109
+      ],
+      "x": -17.596153846153843,
+      "y": 0.0,
+      "w": 1862.0192307692307,
+      "h": 608.3653846153845,
+      "f": 0.05,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "b4ac1adc2a1813f83bee203c3dd3059e737cbf4230807438f2ef3d99a86137fe",
+      "pixel_sha256": "fdb9f414f0ca4ca4cdee7a6155c2cd37ae757c20aaf8577ab3172897dc676d38",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "creek2_far",
+      "name": "03远山",
+      "path": "res://assets/creek2-psb/far.png",
+      "psd_name": "03远山",
+      "psd_bbox": [
+        0,
+        1242,
+        6330,
+        2492
+      ],
+      "reference_bbox": [
+        10643,
+        1242,
+        16973,
+        2492
+      ],
+      "x": -18.46153846153846,
+      "y": 358.2692307692307,
+      "w": 1862.8846153846152,
+      "h": 360.57692307692304,
+      "f": 0.12,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "c2b87619efea9baa0632bb3db94776981bc5d2c814cbb1676495713a006ca6af",
+      "pixel_sha256": "7f2ffc3236f1b57e1ff851837e8bc5e710420ecc1bd33900483ce5d50dfc8b78",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "creek2_forest",
+      "name": "04树林",
+      "path": "res://assets/creek2-psb/forest.png",
+      "psd_name": "04树林",
+      "psd_bbox": [
+        0,
+        762,
+        6330,
+        2071
+      ],
+      "reference_bbox": [
+        10643,
+        762,
+        16973,
+        2071
+      ],
+      "x": -18.46153846153846,
+      "y": 219.8076923076923,
+      "w": 1862.8846153846152,
+      "h": 377.5961538461538,
+      "f": 0.3,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "0b7738fcbf371195ab083dba4d04e181bf5e8eebe17b91bd857b54e7ffa59f8c",
+      "pixel_sha256": "2b7ab7c1b67e2d9e221b957127c0a16ce0f7092c7688041988e6868d26415557",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "creek2_ground",
+      "name": "05近景",
+      "path": "res://assets/creek2-psb/ground.png",
+      "psd_name": "05近景",
+      "psd_bbox": [
+        0,
+        1932,
+        6330,
+        2492
+      ],
+      "reference_bbox": [
+        10643,
+        1932,
+        16973,
+        2492
+      ],
+      "x": -18.46153846153846,
+      "y": 557.3076923076923,
+      "w": 1862.8846153846152,
+      "h": 189.23076923076923,
+      "f": 1,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "529e1f9826410b84bed18bb38710972f6f8dfa359133e17a09e4ecc019b5ef0e",
+      "pixel_sha256": "278980a0b3f5ebb5ae9aed31e44aa3881d53117ac6e3130ec0a725a614f8e562",
+      "padding_source_px": [
+        64,
+        64,
+        0,
+        96
+      ]
+    }
+  ]
+}

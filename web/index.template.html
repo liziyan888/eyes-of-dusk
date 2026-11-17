@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111e">
+<meta name="description" content="带上她的眼睛，一段关于远方、感官与陪伴的互动阅读旅程。">
+<meta property="og:title" content="带上她的眼睛">
+<meta property="og:description" content="把你看见的世界，带给远方的她。">
+<meta property="og:image" content="cover.png">
+<title>带上她的眼睛 · 互动阅读游戏</title>
+<link rel="icon" href="index.icon.png">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#03080e;color:#f7f5eb}body{display:grid;place-items:center;font-family:"Songti SC","SimSun",serif}#canvas{display:block;outline:none;background:#07111e;touch-action:none}#loading{position:fixed;inset:0;z-index:10;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,11,22,.87),rgba(3,11,22,.28)),url("cover.png") center/cover no-repeat}main{width:min(430px,82vw);margin-left:max(7vw,28px);padding:30px 0}.eyebrow{font-size:13px;letter-spacing:.32em;opacity:.66}h1{font-size:clamp(34px,5vw,64px);font-weight:400;letter-spacing:.13em;line-height:1.5;margin:24px 0}.intro{font-size:17px;line-height:1.9;opacity:.78;margin:0 0 38px}button{color:inherit;font:inherit;font-size:19px;letter-spacing:.18em;border:1px solid #e9f4ff80;background:#d9f0ff0a;padding:16px 28px;cursor:pointer;transition:background .2s}button:hover,button:focus-visible{background:#d9f0ff24;outline:1px solid #eaf5ff}button:disabled{opacity:.55;cursor:wait}#progress-area{margin-top:32px}progress{display:block;width:100%;height:3px;appearance:none;border:none;background:#e9f4ff22}progress::-webkit-progress-bar{background:#e9f4ff22}progress::-webkit-progress-value{background:#edf7ff;box-shadow:0 0 12px #aacfff80}progress::-moz-progress-bar{background:#edf7ff}#status{font-size:14px;letter-spacing:.05em;opacity:.82;margin-top:13px;line-height:1.8}#detail{font-family:system-ui,sans-serif;font-size:12px;opacity:.52;line-height:1.8;margin-top:7px}#failure{font-size:14px;line-height:1.8;color:#f4d9cc;white-space:pre-wrap;margin-top:20px}.hidden{display:none!important}@media(max-width:600px){main{margin:auto}h1{font-size:38px}.intro{font-size:15px}#loading{background-position:65% center}}
+</style>
+</head>
+<body>
+<canvas id="canvas" width="2560" height="1440" tabindex="0" role="application" aria-label="带上她的眼睛互动阅读游戏">请使用支持 WebGL 2 的现代浏览器。</canvas>
+<section id="loading" aria-label="游戏加载">
+<main>
+<div class="eyebrow">互 动 阅 读 · 带 上 她 的 眼 睛</div>
+<h1>把世界，<br>带给远方的她。</h1>
+<p class="intro">一次草原上的旅行，<br>与一双来自远方的眼睛。</p>
+<button id="enter" type="button">进入游戏</button>
+<div id="progress-area" class="hidden">
+<progress id="progress" max="1" value="0" aria-label="完整游戏加载进度"></progress>
+<div id="status" role="status" aria-live="polite">正在准备画面与声音……</div>
+<div id="detail">首次打开需要加载完整素材，请稍候。</div>
+</div>
+<div id="failure" role="alert"></div>
+</main>
+</section>
+<script src="index.js?v=__BUILD_ID__"></script>
+<script>
+"use strict";
+const CONFIG=__ENGINE_CONFIG__;
+const canvas=document.getElementById("canvas");
+const button=document.getElementById("enter");
+const bar=document.getElementById("progress");
+const status=document.getElementById("status");
+const detail=document.getElementById("detail");
+function fitCanvas(){
+ const width=Math.min(window.innerWidth,window.innerHeight*16/9);
+ const height=width*9/16;
+ canvas.style.width=width+"px";canvas.style.height=height+"px";
+}
+fitCanvas();
+window.addEventListener("resize",fitCanvas);
+window.addEventListener("keydown",function(event){
+ if(["F2","F3","F10"].includes(event.code)&&document.activeElement===canvas)event.preventDefault();
+});
+function showProgress(current,total,message){
+ bar.max=total||1;bar.value=current;
+ const percent=total?Math.min(100,Math.floor(current/total*100)):0;
+ status.textContent=message+" "+percent+"%";
+ detail.textContent=(current/1048576).toFixed(1)+" / "+(total/1048576).toFixed(1)+" MB";
+}
+async function prepareCache(){
+ if(!("serviceWorker" in navigator))return;
+ try{
+  await navigator.serviceWorker.register("cache-worker.js?v=__BUILD_ID__",{updateViaCache:"none"});
+  await Promise.race([navigator.serviceWorker.ready,new Promise(function(resolve){setTimeout(resolve,2500);})]);
+ }catch(error){console.info("Optional game cache unavailable",error);}
+}
+async function assemblePack(manifest,engineBytes){
+ let pack=new Uint8Array(manifest.pack_bytes);
+ const loaded=manifest.parts.map(function(){return 0;});
+ let next=0;
+ function progress(){
+  const current=loaded.reduce(function(sum,size){return sum+size;},0);
+  showProgress(engineBytes+current,engineBytes+manifest.pack_bytes,"正在加载画面与声音");
+ }
+ async function download(part,index){
+  for(let attempt=0;attempt<3;attempt++){
+   try{
+    loaded[index]=0;progress();
+    const response=await fetch(part.file,{cache:"default"});
+    if(!response.ok)throw new Error("素材请求失败："+response.status);
+    const buffer=new Uint8Array(part.bytes);
+    let offset=0;
+    if(response.body){
+     const reader=response.body.getReader();
+     while(true){
+      const result=await reader.read();
+      if(result.done)break;
+      if(offset+result.value.length>buffer.length)throw new Error("素材长度不符");
+      buffer.set(result.value,offset);offset+=result.value.length;
+      loaded[index]=offset;progress();
+     }
+    }else{
+     const value=new Uint8Array(await response.arrayBuffer());
+     buffer.set(value);offset=value.length;
+    }
+    if(offset!==part.bytes)throw new Error("素材未下载完整");
+    if(globalThis.crypto&&crypto.subtle){
+     const digest=await crypto.subtle.digest("SHA-256",buffer);
+     const hex=Array.from(new Uint8Array(digest)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+     if(hex!==part.sha256)throw new Error("素材校验失败");
+    }
+    pack.set(buffer,part.offset);
+    loaded[index]=part.bytes;progress();return;
+   }catch(error){
+    if(attempt===2)throw error;
+    await new Promise(function(resolve){setTimeout(resolve,600*(attempt+1));});
+   }
+  }
+ }
+ async function worker(){
+  while(next<manifest.parts.length){const index=next++;await download(manifest.parts[index],index);}
+ }
+ await Promise.all([worker(),worker(),worker()]);
+ return pack;
+}
+button.addEventListener("click",async function(){
+ button.disabled=true;
+ document.getElementById("progress-area").classList.remove("hidden");
+ try{
+  const missing=Engine.getMissingFeatures({threads:false});
+  if(missing.length)throw new Error("当前浏览器缺少游戏运行支持。请使用最新版 Chrome、Edge 或 Firefox。");
+  const response=await fetch("release-manifest.json",{cache:"no-cache"});
+  if(!response.ok)throw new Error("游戏版本信息暂时无法加载，请刷新重试。");
+  const manifest=await response.json();
+  await prepareCache();
+  const wasmBytes=CONFIG.fileSizes["index.wasm"]||0;
+  CONFIG.canvas=canvas;
+  CONFIG.canvasResizePolicy=0;
+  CONFIG.focusCanvas=true;
+  CONFIG.args=["--main-pack","index.pck"];
+  const params=new URLSearchParams(location.search);
+  const chapter=Number(params.get("chapter"));
+  if(chapter>=1&&chapter<=4)CONFIG.args.push("--","--web-chapter="+chapter);
+  if(params.get("scene")==="core")CONFIG.args=["--main-pack","index.pck","--","--preview-earth-core"];
+  CONFIG.onProgress=function(current){showProgress(current,wasmBytes+manifest.pack_bytes,"正在准备游戏");};
+  CONFIG.onPrintError=function(){
+   const message=Array.from(arguments).join(" ");
+   console.error(message);
+  };
+  const engine=new Engine(CONFIG);
+  await engine.init("index");
+  let pack=await assemblePack(manifest,wasmBytes);
+  status.textContent="正在打开故事……";detail.textContent="画面、视频与音乐已完整加载。";
+  await engine.preloadFile(pack.buffer,"index.pck");
+  pack=null;
+  await engine.start();
+  document.getElementById("loading").remove();
+  canvas.focus();
+ }catch(error){
+  console.error(error);
+  document.getElementById("failure").textContent=String(error.message||error)+"\n可刷新页面后重新尝试。";
+  button.disabled=false;button.textContent="重新加载";
+ }
+});
+</script>
+</body>
+</html>

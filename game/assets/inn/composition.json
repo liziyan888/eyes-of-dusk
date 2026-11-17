@@ -1,0 +1,105 @@
+{
+  "clouds": {
+    "source": "透明1.png",
+    "master_box": [
+      1,
+      1,
+      2044,
+      541
+    ]
+  },
+  "haze": {
+    "source": "未标题-1.png",
+    "master_box": [
+      0,
+      342,
+      2048,
+      210
+    ]
+  },
+  "far": {
+    "source": "1.png",
+    "master_box": [
+      0,
+      370,
+      2048,
+      178
+    ]
+  },
+  "forest": {
+    "source": "2.png",
+    "master_box": [
+      0,
+      335,
+      2048,
+      263
+    ]
+  },
+  "ground": {
+    "source": "51.png",
+    "master_box": [
+      400,
+      505,
+      1648,
+      256
+    ]
+  },
+  "house": {
+    "source": "3.png",
+    "master_box": [
+      1183,
+      359,
+      845,
+      334
+    ]
+  },
+  "robot": {
+    "source": "6g.png",
+    "master_box": [
+      1465,
+      588,
+      60,
+      83
+    ],
+    "used_box": [
+      1465,
+      588,
+      1524,
+      670
+    ]
+  },
+  "design_width": 1920.0,
+  "design_height": 720,
+  "master_size": [
+    2048,
+    768
+  ],
+  "draw_order": [
+    "sky",
+    "clouds",
+    "haze",
+    "far",
+    "ground",
+    "forest",
+    "house"
+  ],
+  "positions": {
+    "s3-door": {
+      "x": 4965.625,
+      "y": 660
+    },
+    "s3-dinner": {
+      "x": 5101.09375,
+      "y": 628.125
+    },
+    "s3-sunset": {
+      "x": 5480,
+      "y": 660
+    }
+  },
+  "robot_width": 55.3125,
+  "pixel_difference_max": 0,
+  "pixel_difference_mean": 0.0,
+  "coordinate_revision": 2,
+  "scroll": "shared world transform; no independent layer distortion"
+}

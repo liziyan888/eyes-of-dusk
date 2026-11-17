@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "DeepSeek Music-3.0 delivery 2026-11-16",
+  "cues": {
+    "M01": {
+      "title": "另一双眼睛 · 月光主题",
+      "full": "res://assets/music-v1/M05_moonlight_full.wav",
+      "loop": "res://assets/music-v1/M05_moonlight_loop.wav",
+      "gain_db": -11,
+      "fade_seconds": 5.0,
+      "full_seconds": 210.0,
+      "loop_seconds": 100.2,
+      "loop_frames": 4809600,
+      "intro_to_loop_crossfade_seconds": 5.0
+    },
+    "M02": {
+      "title": "回到有风的地面",
+      "full": "res://assets/music-v1/M02_prairie_full.wav",
+      "loop": "res://assets/music-v1/M02_prairie_loop.wav",
+      "gain_db": -8,
+      "fade_seconds": 5.0,
+      "full_seconds": 150.39802083333333,
+      "loop_seconds": 100.2,
+      "loop_frames": 4809600,
+      "intro_to_loop_crossfade_seconds": 5.0
+    },
+    "M03": {
+      "title": "与你共度的一天",
+      "full": "res://assets/music-v1/M03_six_vignettes_full.wav",
+      "loop": "res://assets/music-v1/M03_six_vignettes_loop.wav",
+      "gain_db": -8,
+      "fade_seconds": 5.0,
+      "full_seconds": 114.93,
+      "loop_seconds": 113.13,
+      "loop_frames": 5430240,
+      "intro_to_loop_crossfade_seconds": 5.0
+    },
+    "M04": {
+      "title": "晚霞停留",
+      "full": "res://assets/music-v1/M04_sunset_full.wav",
+      "loop": "res://assets/music-v1/M04_sunset_loop.wav",
+      "gain_db": -9,
+      "fade_seconds": 5.0,
+      "full_seconds": 128.79,
+      "loop_seconds": 68.2,
+      "loop_frames": 3273600,
+      "intro_to_loop_crossfade_seconds": 5.0
+    },
+    "M05": {
+      "title": "月光与未说出口的话",
+      "full": "res://assets/music-v1/M05_moonlight_full.wav",
+      "loop": "res://assets/music-v1/M05_moonlight_loop.wav",
+      "gain_db": -11,
+      "fade_seconds": 5.0,
+      "full_seconds": 210.0,
+      "loop_seconds": 100.2,
+      "loop_frames": 4809600,
+      "intro_to_loop_crossfade_seconds": 5.0
+    },
+    "M06": {
+      "title": "雨中第一声鸟",
+      "full": "res://assets/music-v1/M06_rain_morning_full.wav",
+      "loop": "res://assets/music-v1/M06_rain_morning_loop.wav",
+      "gain_db": -10,
+      "fade_seconds": 5.0,
+      "full_seconds": 173.0,
+      "loop_seconds": 68.2,
+      "loop_frames": 3273600,
+      "intro_to_loop_crossfade_seconds": 5.0
+    }
+  }
+}

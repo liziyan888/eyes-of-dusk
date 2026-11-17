@@ -1,0 +1,231 @@
+{
+  "dialogue_styles": {
+    "her": {
+      "background_opacity": 0.3,
+      "gradient_power": 1.2,
+      "line_opacity": 0.8
+    },
+    "man": {
+      "background_color": "#568bc6",
+      "background_opacity": 0.66,
+      "gradient_power": 1.2,
+      "line_color": "#6b7ce9",
+      "line_opacity": 1.0
+    }
+  },
+  "editor_ui": {
+    "panel_position": [
+      619.839416503906,
+      4.0
+    ]
+  },
+  "entries": {
+    "014554aa05c00667a22d15fc3061922e480dffc3667e75c1e88254be9079b092": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_cover/Button[0]",
+      "position": [
+        152.0,
+        508.5
+      ],
+      "source": "开 始 游 戏"
+    },
+    "04ea34445fe7dc3749913c4187c041284ec94ab89b85af63c6af436dfc0009a2": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-02/Panel[0]/Label[0]",
+      "font_color": "ffffffff",
+      "source": "我"
+    },
+    "126cfac2722db1f86c0ef06d3e38b798085b8e12f2d008c0fd12306a8da53d4f": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-dusk/Label[0]",
+      "position": [
+        789.5,
+        114.0
+      ],
+      "source": "能。这样小的一阵风，我也想记住。"
+    },
+    "1f94da00ef42fd6d2731df78005c8485bfe843eb5ba5d72c5b35b75b4d955752": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-flower/Label[0]",
+      "position": [
+        786.0,
+        100.5
+      ],
+      "source": "你看，它又慢慢站起来了！"
+    },
+    "3b44cbe8590d039d78c101f1823a1709f06dc894c4315ef2fb4156836a827100": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-dusk/Label[0]",
+      "position": [
+        789.5,
+        116.5
+      ],
+      "source": "风又来了……我好像闻到了一点青草的香味。"
+    },
+    "433e09dc395c520588dbb9926ed44bae5a5473d660b61bcfa82099b9ddaf296f": {
+      "context": "main/CanvasLayer[0]/Control[0]/dialogue_view/PanelContainer[2]/VBoxContainer[0]/Label[0]",
+      "font_color": "ffffffff",
+      "source": "我"
+    },
+    "5d61af1293e42ff77fc54a754122b3ae764387fdd778f518590e641ec3767ea9": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-20/Panel[0]/Label[1]",
+      "position": [
+        24.3943862915039,
+        37.7588043212891
+      ],
+      "source": "好，我不问自己不该知道的事了。你还是决定我们去哪儿吧。"
+    },
+    "5db6d89ff591636f82dc273a570ac9fb0845d29ed5e7a5a46df8fb40a4107981": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-26/Panel[0]/Label[1]",
+      "position": [
+        446.208374023438,
+        216.634124755859
+      ],
+      "source": "我们没有三天，只有两天。在时间上，这个时代的人都是穷光蛋。不过，三小时内，我和你的眼睛就能到达地球上的任何一个地方。"
+    },
+    "766b39d06b8474361ab426b453c88702615112d4b606605e84928b0283b233ff": {
+      "box": [
+        244.099975585938,
+        28.0
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-17/Panel[0]/Label[1]",
+      "position": [
+        1009.40002441406,
+        143.451766967773
+      ],
+      "source": "你不会是被关禁闭吧？"
+    },
+    "7e1a42402a2523f6a7eca4e5969b28fe32368f4f88b2b6db20af5e51b9f9bfbb": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-listening/Label[0]",
+      "position": [
+        778.0,
+        112.0
+      ],
+      "source": "听到了，是鸟！它从那边飞过去了。"
+    },
+    "82646ad999049bf402a6b37131e24ddf0e00d485cf08d59a53a543acd0c98450": {
+      "box": [
+        316.5,
+        57.8333282470703
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_cover/Control[0]/Label[0]",
+      "font_size": 48,
+      "font_style": 0,
+      "position": [
+        152.0,
+        221.16667175293
+      ],
+      "source": "带 上 她 的",
+      "text": "带上她的眼睛"
+    },
+    "8fcbde2af8929c7167dc705da5c474dc594840e852b907ac1ec6a7ba615e36f1": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-sunlight/Label[0]",
+      "position": [
+        781.0,
+        101.0
+      ],
+      "source": "看清了。原来只是这样一缕阳光，也会不停地变化。"
+    },
+    "a6a2b77fdaf03f1d32b2e16ffcc29a5b77d411631f1ff666f5e748ee3039f120": {
+      "context": "main/CanvasLayer[0]/Control[0]/dialogue_view/PanelContainer[2]/VBoxContainer[0]/MaleDialogue",
+      "source": "（蹲下来，半趴到地上）一缕淡淡的清香。",
+      "text": "一缕淡淡的清香。"
+    },
+    "abb1319a1441a928a8fa2c191aad5d16d22ac0dfc58b284c8fd22510a2b2a5ff": {
+      "context": "main/CanvasLayer[0]/Control[0]/ending_entry/ending_comic/ending_archive_sequence/TextureRect[1]/Control[0]/Label[0]",
+      "source": "历史影像档案",
+      "text": "历史档案"
+    },
+    "bb4881df21129dd9a0ee1052decf504ca8657cd4b478952d83948a43d11cece7": {
+      "context": "main/CanvasLayer[0]/Control[0]/ending_entry/ending_comic/ending_archive_sequence/Button[0]",
+      "source": "播放",
+      "text": "回顾"
+    },
+    "bf52b3c3b7ebba29c89b0c6bf10485b6065781aba31ffba09c67cec1bbfe9ec8": {
+      "context": "main/CanvasLayer[0]/Control[0]/dialogue_view/PanelContainer[0]/VBoxContainer[0]/FemaleDialogue",
+      "position": [
+        630.329772949219,
+        34.3296737670898
+      ],
+      "source": "还有那一朵，淡蓝色的，她的名字应该是月光……"
+    },
+    "cf43c6a4ec1b8b5a9a0e084d2a2c2d8c7d97061398ee9a3706f93cce1a5c3a36": {
+      "box": [
+        311.308319091797,
+        73.2132263183594
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-25/Panel[0]/Label[1]",
+      "font_size": 16,
+      "position": [
+        18.5249996185303,
+        212.551452636719
+      ],
+      "source": "哦，这对我来说不容易。您要是看过海伦·凯勒的《三天所见》，就能明白这多难了！"
+    },
+    "d7f994464e16a8196f72e9bf2c4bbf7749732c5389e950d943bc36eaa7916dad": {
+      "context": "main/CanvasLayer[0]/Control[0]/grassland_comic/grassland-page-creek/Label[0]",
+      "position": [
+        784.5,
+        108.5
+      ],
+      "source": "水里有条小鱼！可以把手伸过去吗？轻一点……"
+    },
+    "dfb9a74e7d1953112e57efc82c0167f9ed96a9c2a59de0b68fbf025f71dbde10": {
+      "box": [
+        368.833343505859,
+        103.333358764648
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_cover/Control[0]/Label[1]",
+      "font": "Adobe 宋体 Std L",
+      "font_size": 72,
+      "position": [
+        170.833343505859,
+        58.0
+      ],
+      "source": "眼 睛",
+      "text": ""
+    },
+    "e0fef2876c6e9bd74448eda27f7c2e8282eb65488cf025e0a33496e2e3d3eaca": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-20/Panel[0]/Label[0]",
+      "position": [
+        10.5,
+        5.0
+      ],
+      "source": "我"
+    },
+    "e332571809f95559968ee8d4dfbabfdefc8be20ce917febf14546b41f151f61c": {
+      "box": [
+        920.97607421875,
+        53.0439453125
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/dialogue_view/PanelContainer[2]/VBoxContainer[0]/MaleDialogue",
+      "position": [
+        13.7048645019531,
+        619.516479492188
+      ],
+      "source": "好，我慢慢蹲下来，让指尖先碰到水。"
+    },
+    "e4ec3d6adbad3074a7e7b0fbccf9a386b57d6015589d0c57d8a9cf570ad1be82": {
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/sensor_introduction/Label[1]",
+      "source": "原来，我能替一个难以回到地球的人，带去这一路的风景。",
+      "text": ""
+    },
+    "e9675af22494a3d50baffbbabb94735cbe66c12b0661fd290ecd105eb99ba90b": {
+      "box": [
+        721.0,
+        130.0
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/sensor_introduction/Label[0]",
+      "position": [
+        59.5,
+        59.0
+      ],
+      "source": "主任：镜片采集你看到的景象，由超高频信息波传向远方。",
+      "text": "当你戴上它时，你所看到的一切图象由超高频信息波发射出去，可以被远方的另一个戴同样传感眼镜的人接收到，于是他就能看到你所看到的一切，就象你带着他的眼睛一样。"
+    },
+    "f2b56ee1df5eee84fb7f4b0ccf314a9e54f85b674c6cde580a95529698bbe534": {
+      "box": [
+        490.0,
+        42.0
+      ],
+      "context": "main/CanvasLayer[0]/Control[0]/prologue_comic/Control[0]/prologue-panel-04/Control[0]/Label[0]",
+      "source": "于是，他带我去拿眼睛。"
+    }
+  },
+  "version": 1
+}

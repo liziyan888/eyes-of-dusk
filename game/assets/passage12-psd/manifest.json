@@ -1,0 +1,323 @@
+{
+  "source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\过渡场景.psd",
+  "source_size": [
+    4775,
+    2528
+  ],
+  "design_size": [
+    901.7307692307693,
+    720
+  ],
+  "source_sha256": "77b381794dd0b0098011979a2c426ee708544f23f61b13b36683b9909f519036",
+  "world_width": 901.7307692307693,
+  "reference_camera": -189.13461538461536,
+  "horizon_y": 557.3076923076923,
+  "foreground_layer": "passage12_ground",
+  "layers": [
+    {
+      "id": "passage12_sky",
+      "name": "过渡区 · 01过渡天空",
+      "path": "res://assets/passage12-psd/sky.png",
+      "psd_name": "01过渡天空",
+      "psd_bbox": [
+        857,
+        26,
+        3980,
+        1985
+      ],
+      "reference_bbox": [
+        7520,
+        1,
+        10643,
+        1960
+      ],
+      "x": 0.8653846153846153,
+      "y": 0.28846153846153844,
+      "w": 900.8653846153845,
+      "h": 565.0961538461538,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "b9b6ba37cb872ce02bf5351ad98027ba8d78b9ffe27c2cf56b13294c1a3ff4ea",
+      "pixel_sha256": "b9b6ba37cb872ce02bf5351ad98027ba8d78b9ffe27c2cf56b13294c1a3ff4ea",
+      "padding_source_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back",
+      "extend_top": true
+    },
+    {
+      "id": "passage12_clouds",
+      "name": "过渡区 · 02过渡云层",
+      "path": "res://assets/passage12-psd/clouds.png",
+      "psd_name": "03过渡 云层",
+      "psd_bbox": [
+        848,
+        25,
+        3984,
+        1921
+      ],
+      "reference_bbox": [
+        7511,
+        -25,
+        10647,
+        1871
+      ],
+      "x": -1.7307692307692306,
+      "y": -7.211538461538461,
+      "w": 904.6153846153845,
+      "h": 546.9230769230769,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "16ad7fcb19e76a6b0f13ab095f3998e14ad3eeabde601bedcd15993541e70cad",
+      "pixel_sha256": "16ad7fcb19e76a6b0f13ab095f3998e14ad3eeabde601bedcd15993541e70cad",
+      "padding_source_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back"
+    },
+    {
+      "id": "passage12_far",
+      "name": "过渡区 · 03过渡远山",
+      "path": "res://assets/passage12-psd/far.png",
+      "psd_name": "02过渡远山",
+      "psd_bbox": [
+        854,
+        1374,
+        3990,
+        2521
+      ],
+      "reference_bbox": [
+        7517,
+        1349,
+        10653,
+        2496
+      ],
+      "x": 0.0,
+      "y": 389.13461538461536,
+      "w": 904.6153846153845,
+      "h": 330.8653846153846,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "0bc12df1a22f1ac9bdee2583ea691c536f50ea7e2ecc222957e05ef6ee85c0f4",
+      "pixel_sha256": "0bc12df1a22f1ac9bdee2583ea691c536f50ea7e2ecc222957e05ef6ee85c0f4",
+      "padding_source_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back"
+    },
+    {
+      "id": "passage12_forest",
+      "name": "过渡区 · 04过渡树林",
+      "path": "res://assets/passage12-psd/forest.png",
+      "psd_name": "04过渡树林",
+      "psd_bbox": [
+        836,
+        1449,
+        4001,
+        2024
+      ],
+      "reference_bbox": [
+        7499,
+        1424,
+        10664,
+        1999
+      ],
+      "x": -5.192307692307692,
+      "y": 410.7692307692307,
+      "w": 912.9807692307692,
+      "h": 165.8653846153846,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "d4e291b53befc39084ef04a411d7ae27b5906b3fbf882e4b8bf57e16e2e87598",
+      "pixel_sha256": "d4e291b53befc39084ef04a411d7ae27b5906b3fbf882e4b8bf57e16e2e87598",
+      "padding_source_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back"
+    },
+    {
+      "id": "passage12_trees",
+      "name": "过渡区 · 05过渡中景树",
+      "path": "res://assets/passage12-psd/trees.png",
+      "psd_name": "05过渡中景树",
+      "psd_bbox": [
+        854,
+        26,
+        3984,
+        2521
+      ],
+      "reference_bbox": [
+        7517,
+        1,
+        10647,
+        2496
+      ],
+      "x": 0.0,
+      "y": -27.40384615384615,
+      "w": 902.8846153846154,
+      "h": 747.4038461538461,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "d217f993fb8626063cb0f6089e5f9af15f05970fa248aa6cee2b6b9834f1e7a7",
+      "pixel_sha256": "25efee8ad7d2d7720f46224a95e96a1708fe903506d47a692100ef6c88eb4f69",
+      "padding_source_px": [
+        0,
+        0,
+        96,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back"
+    },
+    {
+      "id": "passage12_ground",
+      "name": "过渡区 · 06过渡前景",
+      "path": "res://assets/passage12-psd/ground.png",
+      "psd_name": "06过渡前景",
+      "psd_bbox": [
+        854,
+        1985,
+        3993,
+        2528
+      ],
+      "reference_bbox": [
+        7517,
+        1960,
+        10656,
+        2503
+      ],
+      "x": 0.0,
+      "y": 565.3846153846154,
+      "w": 905.4807692307692,
+      "h": 184.32692307692307,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "eb64a0c0ab4485353044067617a1f8d21de986f41e1a2197f2064a6267928939",
+      "pixel_sha256": "d04128cec35cb644bb71e62f6a875e6a2d762b58f037494f55622f2efbc3213a",
+      "padding_source_px": [
+        0,
+        0,
+        0,
+        96
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "back"
+    },
+    {
+      "id": "passage12_fog",
+      "name": "过渡区 · 07雾气",
+      "path": "res://assets/passage12-psd/fog.png",
+      "psd_name": "07雾气",
+      "psd_bbox": [
+        852,
+        26,
+        3984,
+        2521
+      ],
+      "reference_bbox": [
+        7515,
+        1,
+        10647,
+        2496
+      ],
+      "x": -0.5769230769230769,
+      "y": -27.40384615384615,
+      "w": 903.4615384615383,
+      "h": 747.4038461538461,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 0.47843137254901963,
+      "source_pixel_sha256": "d1f3a59d4bad622b5f9b4201c64ec7aa8b9e0c2354575c687e01f18fb5c273c8",
+      "pixel_sha256": "fe895cbcba39a8fffefe43bc7b96a13d27c6ff948235fa7bba54aad46c8ee279",
+      "padding_source_px": [
+        0,
+        0,
+        96,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "fog"
+    },
+    {
+      "id": "passage12_cover",
+      "name": "过渡区 · 08最前景遮挡树",
+      "path": "res://assets/passage12-psd/cover.png",
+      "psd_name": "08最前景遮挡树",
+      "psd_bbox": [
+        0,
+        25,
+        4775,
+        2528
+      ],
+      "reference_bbox": [
+        6663,
+        0,
+        11438,
+        2496
+      ],
+      "x": -246.3461538461538,
+      "y": -27.61486216540152,
+      "w": 1377.403846153846,
+      "h": 747.6148621654015,
+      "f": 1.0,
+      "scale": 1.0,
+      "visible": true,
+      "opacity": 1.0,
+      "source_pixel_sha256": "75d3b314e53daa537e182cf4ce3d22fcefa3a3fbabe216f8612bb77e4b6e8505",
+      "pixel_sha256": "15251c14de969d2dc9254ec211c95e56ae3e6cd809aaa1af843b530fc06d5ec1",
+      "padding_source_px": [
+        0,
+        0,
+        96,
+        0
+      ],
+      "region_start": 1840.9615384615383,
+      "region_end": 2742.6923076923076,
+      "reference_camera": -189.13461538461536,
+      "render_stage": "cover"
+    }
+  ]
+}

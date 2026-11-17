@@ -1,0 +1,2097 @@
+{
+  "title": "带上她的眼睛",
+  "world": {
+    "horizon_y": 565.0,
+    "horizon_reference_scene": 3,
+    "groundY": 566,
+    "startX": 150,
+    "walkSpeed": 190,
+    "jumpSpeed": 690,
+    "gravity": 2000,
+    "lookAhead": 0.4,
+    "continuous_scene_count": 5,
+    "passage12": {
+      "start": 1840.9615384615383,
+      "end": 2742.6923076923076,
+      "ground": 700,
+      "psd_manifest": "res://assets/passage12-psd/manifest.json",
+      "reference_source": "D:\\360MoveData\\Users\\Administrator\\Desktop\\带上她的眼睛\\场景1场景2和过渡场景的拼接的效果图.psb",
+      "reference_origin": 1135,
+      "reference_scale": 0.28846153846153844,
+      "reference_y_offset": 7.692307692307736
+    },
+    "chapter2_cinematic_exit": true,
+    "ending_entry_after_scene5": true
+  },
+  "prologue": {
+    "chapter": {
+      "no": "序章",
+      "name": "控制中心"
+    },
+    "lines": [
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "连续工作了两个多月，我实在累了。我向主任请两天假。"
+      },
+      {
+        "who": "主任",
+        "tone": "zr",
+        "text": "假可以给你。但你得再带一双眼睛去。"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "眼睛？"
+      },
+      {
+        "who": "主任",
+        "tone": "zr",
+        "text": "一副传感眼镜。你戴上它，你看到的，她也能看到。"
+      },
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "走廊尽头的小房间里，架子上还剩下十几双眼睛。"
+      },
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "大屏幕亮起来。屏幕里是一个穿着太空服的小姑娘，呆呆地看着我。"
+      },
+      {
+        "who": "女孩",
+        "tone": "her",
+        "text": "麻烦您了，真不好意思。"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "一点都不麻烦。你想去哪儿？"
+      },
+      {
+        "who": "女孩",
+        "tone": "her",
+        "text": "您自己还没决定去哪儿吗？"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "还没。你有想去的地方？"
+      },
+      {
+        "who": "女孩",
+        "tone": "her",
+        "text": "有。去我们起航前到过的地方吧。"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "哪儿？"
+      },
+      {
+        "who": "女孩",
+        "tone": "her",
+        "text": "草原。"
+      },
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "她的回答几乎没有延迟。但她的太空服上，隔热和冷却系统异常发达。"
+      },
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "那间舱室十分窄小，没有窗，也没有观察屏。只有一支铅笔在她头顶打转。"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "你在哪个空间站？"
+      },
+      {
+        "who": "主任",
+        "tone": "zr",
+        "text": "先别问这个吧。"
+      },
+      {
+        "who": "女孩",
+        "tone": "her",
+        "text": "别问，好吗？"
+      },
+      {
+        "who": "我",
+        "tone": "me",
+        "text": "……好。"
+      },
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "两天。我们只有两天。"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "no": "场景一",
+      "name": "草原",
+      "start": 0,
+      "end": 2742.6923076923076,
+      "kind": "forest",
+      "cropTop": 0.15,
+      "horizon_y": 557.3076923076923,
+      "ground": 700,
+      "layers": {
+        "meadow1_sky": {
+          "path": "res://assets/meadow1-psb/sky.png",
+          "x": -17.596153846153843,
+          "y": -1.1538461538461537,
+          "w": 1877.0192307692305,
+          "h": 408.74999999999994,
+          "f": 0.02,
+          "scale": 1.0,
+          "visible": true
+        },
+        "meadow1_clouds": {
+          "path": "res://assets/meadow1-psb/clouds.png",
+          "x": -17.596153846153843,
+          "y": 6.346153846153846,
+          "w": 1876.153846153846,
+          "h": 612.4038461538461,
+          "f": 0.05,
+          "scale": 1.0,
+          "visible": true
+        },
+        "meadow1_far": {
+          "path": "res://assets/meadow1-psb/far.png",
+          "x": -18.46153846153846,
+          "y": 363.46153846153845,
+          "w": 1877.0192307692305,
+          "h": 362.88461538461536,
+          "f": 0.12,
+          "scale": 1.0,
+          "visible": true
+        },
+        "meadow1_forest": {
+          "path": "res://assets/meadow1-psb/forest.png",
+          "x": -17.596153846153843,
+          "y": 226.15384615384613,
+          "w": 1876.153846153846,
+          "h": 379.32692307692304,
+          "f": 0.35,
+          "scale": 1.0,
+          "visible": true
+        },
+        "meadow1_ground": {
+          "path": "res://assets/meadow1-psb/ground.png",
+          "x": -17.596153846153843,
+          "y": 553.8461538461538,
+          "w": 1876.153846153846,
+          "h": 140.19230769230768,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true
+        },
+        "meadow1_near": {
+          "path": "res://assets/meadow1-psb/near.png",
+          "x": -18.46153846153846,
+          "y": 644.4230769230769,
+          "w": 1877.0192307692305,
+          "h": 109.6153846153846,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true
+        }
+      },
+      "palette": {
+        "skyTop": "#b9d5a3",
+        "skyMid": "#dde8bd",
+        "skyBot": "#f4e9c6",
+        "sun": "#f8dfa6",
+        "far": "#a9c48b",
+        "mid": "#7d9b52",
+        "near": "#3f5f3c",
+        "ground1": "#3b5a3a",
+        "ground2": "#16301f",
+        "grass": "#6f8f4a",
+        "fog": "#eef0d4"
+      },
+      "props": {
+        "canopy": true,
+        "trees": 8,
+        "bushes": 12,
+        "rocks": 4,
+        "flowers": 34,
+        "fireflies": 0,
+        "rain": 0,
+        "moon": 0,
+        "house": false,
+        "willow": false
+      },
+      "platforms": [
+        {
+          "x": 700,
+          "y": 462,
+          "w": 170
+        },
+        {
+          "x": 1240,
+          "y": 430,
+          "w": 170
+        }
+      ],
+      "enter": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "这就是……草原吗？"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "是。到处都是草。"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "我现在就像从很深很深的水底冲出来，呼吸到空气。"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "上次离开后，我常梦到这里。现在回到梦里来了。",
+          "stimulus": 0.58,
+          "senses": {
+            "touch": 0.85,
+            "vision": 0.25,
+            "sound": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "我太怕封闭了。",
+          "stimulus": 0.58,
+          "senses": {
+            "touch": 0.85,
+            "vision": 0.25,
+            "sound": 0.35
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "可你现在并不封闭。同你周围的太空比起来，这草原太小了。",
+          "stimulus": 0.58,
+          "senses": {
+            "touch": 0.85,
+            "vision": 0.25,
+            "sound": 0.35
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她沉默了，似乎连呼吸都停止了。",
+          "stimulus": 0.58,
+          "senses": {
+            "touch": 0.85,
+            "vision": 0.25,
+            "sound": 0.35
+          }
+        }
+      ],
+      "psd_manifest": "res://assets/meadow1-psb/manifest.json",
+      "foreground_layer": "meadow1_near",
+      "visual_end": 1840.9615384615383,
+      "point_edit_margin": 40
+    },
+    {
+      "id": 2,
+      "no": "场景二",
+      "name": "溪水与风",
+      "start": 2742.6923076923076,
+      "end": 4568.653846153846,
+      "kind": "forest",
+      "cropTop": 0.15,
+      "palette": {
+        "skyTop": "#aecfa0",
+        "skyMid": "#d9e7bd",
+        "skyBot": "#eeebc8",
+        "sun": "#f5dca4",
+        "far": "#9dbd8c",
+        "mid": "#719756",
+        "near": "#37573c",
+        "ground1": "#33543c",
+        "ground2": "#12301f",
+        "grass": "#5f8b4c",
+        "fog": "#e4edd8"
+      },
+      "props": {
+        "canopy": true,
+        "trees": 9,
+        "bushes": 10,
+        "rocks": 6,
+        "flowers": 22,
+        "fireflies": 0,
+        "rain": 0,
+        "moon": 0,
+        "house": false,
+        "willow": false,
+        "creek": true
+      },
+      "platforms": [
+        {
+          "x": 2080,
+          "y": 470,
+          "w": 150
+        },
+        {
+          "x": 2660,
+          "y": 432,
+          "w": 170
+        }
+      ],
+      "enter": [],
+      "ground": 700,
+      "zoom": 1.0,
+      "layers": {
+        "creek2_sky": {
+          "path": "res://assets/creek2-psb/sky.png",
+          "x": -18.46153846153846,
+          "y": 0.0,
+          "w": 1862.8846153846152,
+          "h": 717.6923076923076,
+          "f": 0.02,
+          "scale": 1.0,
+          "visible": true
+        },
+        "creek2_clouds": {
+          "path": "res://assets/creek2-psb/clouds.png",
+          "x": -17.596153846153843,
+          "y": 0.0,
+          "w": 1862.0192307692307,
+          "h": 608.3653846153845,
+          "f": 0.05,
+          "scale": 1.0,
+          "visible": true
+        },
+        "creek2_far": {
+          "path": "res://assets/creek2-psb/far.png",
+          "x": -18.46153846153846,
+          "y": 358.2692307692307,
+          "w": 1862.8846153846152,
+          "h": 360.57692307692304,
+          "f": 0.12,
+          "scale": 1.0,
+          "visible": true
+        },
+        "creek2_forest": {
+          "path": "res://assets/creek2-psb/forest.png",
+          "x": -18.46153846153846,
+          "y": 219.8076923076923,
+          "w": 1862.8846153846152,
+          "h": 377.5961538461538,
+          "f": 0.3,
+          "scale": 1.0,
+          "visible": true
+        },
+        "creek2_ground": {
+          "path": "res://assets/creek2-psb/ground.png",
+          "x": -18.46153846153846,
+          "y": 557.3076923076923,
+          "w": 1862.8846153846152,
+          "h": 189.23076923076923,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true
+        }
+      },
+      "continuous_from_previous": true,
+      "psd_manifest": "res://assets/creek2-psb/manifest.json",
+      "horizon_y": 557.3076923076923,
+      "foreground_layer": "creek2_ground"
+    },
+    {
+      "id": 3,
+      "no": "场景三",
+      "name": "白色小屋",
+      "start": 4568.653846153846,
+      "end": 6488.653846153846,
+      "kind": "forest",
+      "cropTop": 0.15,
+      "palette": {
+        "skyTop": "#c8b98f",
+        "skyMid": "#e4cda2",
+        "skyBot": "#f2d8ac",
+        "sun": "#f2c184",
+        "far": "#a1b184",
+        "mid": "#6f8a50",
+        "near": "#3a5538",
+        "ground1": "#38533a",
+        "ground2": "#152c1e",
+        "grass": "#6a8747",
+        "fog": "#e8dcb8"
+      },
+      "props": {
+        "canopy": true,
+        "trees": 7,
+        "bushes": 9,
+        "rocks": 3,
+        "flowers": 16,
+        "fireflies": 0,
+        "rain": 0,
+        "moon": 0,
+        "house": true,
+        "willow": false
+      },
+      "platforms": [
+        {
+          "x": 4828.653846153846,
+          "y": 460,
+          "w": 160
+        }
+      ],
+      "enter": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "天色渐晚。我拖着疲惫的脚步，朝白色小屋走去。"
+        }
+      ],
+      "ground": 700,
+      "zoom": 1.0,
+      "continuous_from_previous": true,
+      "layers": {
+        "sky": {
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 719.9999999999999,
+          "f": 0.02,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/sky.png"
+        },
+        "clouds": {
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 507.98076923076917,
+          "f": 0.05,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/clouds.png"
+        },
+        "far": {
+          "x": 0.0,
+          "y": 378.74999999999994,
+          "w": 1919.9999999999998,
+          "h": 197.01923076923075,
+          "f": 0.12,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/far.png"
+        },
+        "near": {
+          "x": 0.0,
+          "y": 408.46153846153845,
+          "w": 1919.9999999999998,
+          "h": 167.3076923076923,
+          "f": 0.2,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/near.png"
+        },
+        "forest": {
+          "x": 0.0,
+          "y": 381.05769230769226,
+          "w": 1919.9999999999998,
+          "h": 243.74999999999997,
+          "f": 0.35,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/forest.png"
+        },
+        "ground": {
+          "x": 0.0,
+          "y": 611.5384615384614,
+          "w": 1919.9999999999998,
+          "h": 220.96153846153845,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/ground.png"
+        },
+        "house": {
+          "x": 1146.923076923077,
+          "y": 408.46153846153845,
+          "w": 712.7884615384614,
+          "h": 282.1153846153846,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/house.png"
+        },
+        "robot": {
+          "x": 1367.5961538461538,
+          "y": 624.8076923076923,
+          "w": 47.88461538461538,
+          "h": 65.76923076923076,
+          "f": 1,
+          "scale": 1.0,
+          "visible": true,
+          "path": "res://assets/inn-psd/robot.png"
+        }
+      },
+      "psd_manifest": "res://assets/inn-psd/manifest.json"
+    },
+    {
+      "id": 4,
+      "no": "场景四",
+      "name": "月光草原",
+      "start": 6488.653846153846,
+      "end": 8408.653846153846,
+      "kind": "forest",
+      "cropTop": 0.15,
+      "palette": {
+        "skyTop": "#5b4a5f",
+        "skyMid": "#b5724f",
+        "skyBot": "#f0b072",
+        "sun": "#ffcf8a",
+        "far": "#7a6250",
+        "mid": "#4e4638",
+        "near": "#2d3730",
+        "ground1": "#2b3a30",
+        "ground2": "#101c18",
+        "grass": "#4d6242",
+        "fog": "#e0a97e"
+      },
+      "props": {
+        "canopy": true,
+        "trees": 8,
+        "bushes": 8,
+        "rocks": 4,
+        "flowers": 14,
+        "fireflies": 48,
+        "rain": 0,
+        "moon": 0,
+        "house": false,
+        "willow": false
+      },
+      "platforms": [
+        {
+          "x": 6388.653846153846,
+          "y": 460,
+          "w": 180
+        }
+      ],
+      "enter": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "不知什么时候，月亮已经升起来了。我又带着她的眼睛走出小屋，草海里浮动着点点微光。",
+          "source": "月光场景时间衔接改编"
+        }
+      ],
+      "ground": 700,
+      "psd_manifest": "res://assets/moon4-psb/manifest.json",
+      "layers": {
+        "moon4_sky": {
+          "path": "res://assets/moon4-psb/sky.png",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 719.9999999999999,
+          "f": 0.02,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon4_clouds": {
+          "path": "res://assets/moon4-psb/clouds.png",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 501.9230769230769,
+          "f": 0.05,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon4_far": {
+          "path": "res://assets/moon4-psb/far.png",
+          "x": 0.0,
+          "y": 368.9423076923077,
+          "w": 1917.403846153846,
+          "h": 344.13461538461536,
+          "f": 0.12,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon4_forest": {
+          "path": "res://assets/moon4-psb/forest.png",
+          "x": 0.0,
+          "y": 275.4807692307692,
+          "w": 1919.9999999999998,
+          "h": 428.9423076923077,
+          "f": 0.35,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon4_ground": {
+          "path": "res://assets/moon4-psb/ground.png",
+          "x": 0.0,
+          "y": 554.4230769230769,
+          "w": 1919.9999999999998,
+          "h": 211.7307692307692,
+          "f": 1.0,
+          "scale": 1.0,
+          "visible": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "no": "场景五",
+      "name": "树下月光",
+      "start": 8408.653846153846,
+      "end": 10328.653846153846,
+      "kind": "forest",
+      "cropTop": 0.15,
+      "palette": {
+        "skyTop": "#071417",
+        "skyMid": "#0d2422",
+        "skyBot": "#17332c",
+        "sun": "#cfe6d8",
+        "far": "#1c3a33",
+        "mid": "#17332e",
+        "near": "#112622",
+        "ground1": "#132a26",
+        "ground2": "#08140f",
+        "grass": "#2f4c38",
+        "fog": "#a8c8bc"
+      },
+      "props": {
+        "canopy": true,
+        "trees": 9,
+        "bushes": 8,
+        "rocks": 5,
+        "flowers": 10,
+        "fireflies": 90,
+        "rain": 0,
+        "moon": 1,
+        "house": false,
+        "willow": true
+      },
+      "platforms": [
+        {
+          "x": 8148.653846153846,
+          "y": 466,
+          "w": 150
+        }
+      ],
+      "enter": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我带着她的眼睛，重新走进月光里。云影在草地上缓缓移动。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.85,
+            "sound": 0.45
+          }
+        }
+      ],
+      "ground": 700,
+      "psd_manifest": "res://assets/moon5-psb/manifest.json",
+      "layers": {
+        "moon5_sky": {
+          "path": "res://assets/moon5-psb/sky.png",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 719.9999999999999,
+          "f": 0.02,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon5_clouds": {
+          "path": "res://assets/moon5-psb/clouds.png",
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1919.9999999999998,
+          "h": 501.9230769230769,
+          "f": 0.05,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon5_far": {
+          "path": "res://assets/moon5-psb/far.png",
+          "x": 0.0,
+          "y": 368.9423076923077,
+          "w": 1917.403846153846,
+          "h": 344.13461538461536,
+          "f": 0.12,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon5_forest": {
+          "path": "res://assets/moon5-psb/forest.png",
+          "x": 0.0,
+          "y": 275.4807692307692,
+          "w": 1919.9999999999998,
+          "h": 428.9423076923077,
+          "f": 0.35,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon5_ground": {
+          "path": "res://assets/moon5-psb/ground.png",
+          "x": 0.0,
+          "y": 554.4230769230769,
+          "w": 1919.9999999999998,
+          "h": 211.7307692307692,
+          "f": 1.0,
+          "scale": 1.0,
+          "visible": true
+        },
+        "moon5_tree": {
+          "path": "res://assets/moon5-psb/tree.png",
+          "x": 913.8461538461538,
+          "y": 368.9423076923077,
+          "w": 411.63461538461536,
+          "h": 298.55769230769226,
+          "f": 1.0,
+          "scale": 1.0,
+          "visible": true
+        }
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "id": "s1-flower",
+      "scene": 1,
+      "x": 901.1022267206478,
+      "y": 700,
+      "type": "flower",
+      "prompt": "蹲下闻花，听她给花命名",
+      "lines": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "呀，花儿，有花啊！上次我来时没有的！"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "能近些看看那朵花吗？"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "（蹲下来，半趴到地上）一缕淡淡的清香。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "能闻闻她吗？不，别拔下她！",
+          "stimulus": 0.9,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "啊，我也闻到了。真像一首隐隐传来的小夜曲呢。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "再看那一朵，叫小雨吧。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "还有那一朵，淡蓝色的，她的名字应该是月光……",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她没完没了地玩下去，忘记了一切。到我坚持停下时，我们已经给上百朵花起了名字。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        }
+      ],
+      "original_lines": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "呀，花儿，有花啊！上次我来时没有的！"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "能近些看看那朵花吗？"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "（蹲下来，半趴到地上）一缕淡淡的清香。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "能闻闻她吗？不，别拔下她！",
+          "stimulus": 0.9,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "啊，我也闻到了。真像一首隐隐传来的小夜曲呢。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.95,
+            "vision": 0.55,
+            "touch": 0.25
+          }
+        }
+      ],
+      "sensory": {
+        "channels": {
+          "smell": 0.85,
+          "vision": 0.7,
+          "touch": 0.35
+        },
+        "profile": "flower"
+      },
+      "lead_in": [],
+      "approach_radius": 180,
+      "interact_radius": 100,
+      "approach_mode": "proximity",
+      "previous_scene12_position": [
+        930,
+        660
+      ],
+      "scene12_x_scale": 0.9689271255060729,
+      "layer_id": "meadow1_near",
+      "layer_anchor": [
+        919.5637651821862,
+        47.88461538461536
+      ],
+      "action_only": true,
+      "required": true
+    },
+    {
+      "id": "s1-snow",
+      "scene": 1,
+      "x": 1666.5546558704452,
+      "y": 700,
+      "type": "flower",
+      "prompt": "扶起被踩到的花",
+      "lines": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "天啊，你把小雪踩住了！"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "（扶起那朵白色的野花）对不起。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "左边那朵叫水晶，也是白色的，茎上有分开的三片叶儿。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "右边那朵叫火苗，粉红色，茎上有四片叶子。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她说的都对。我有些感动了。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "以后漫长的日子里，我会一遍遍地想她们每一个的样儿，像背一本美丽的童话书。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        }
+      ],
+      "original_lines": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "天啊，你把小雪踩住了！"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "（扶起那朵白色的野花）对不起。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "左边那朵叫水晶，也是白色的，茎上有分开的三片叶儿。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "右边那朵叫火苗，粉红色，茎上有四片叶子。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她说的都对。我有些感动了。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "以后漫长的日子里，我会一遍遍地想她们每一个的样儿，像背一本美丽的童话书。",
+          "stimulus": 0.58,
+          "senses": {
+            "smell": 0.85,
+            "vision": 0.7,
+            "touch": 0.35
+          }
+        }
+      ],
+      "sensory": {
+        "channels": {
+          "smell": 0.85,
+          "vision": 0.7,
+          "touch": 0.35
+        },
+        "profile": "flower"
+      },
+      "lead_in": [],
+      "approach_radius": 18,
+      "interact_radius": 45,
+      "approach_mode": "foot_contact",
+      "previous_scene12_position": [
+        1720,
+        660
+      ],
+      "scene12_x_scale": 0.9689271255060729,
+      "layer_id": "meadow1_near",
+      "layer_anchor": [
+        1685.0161943319838,
+        47.88461538461536
+      ],
+      "action_only": true,
+      "required": false,
+      "requires": [
+        "s1-flower"
+      ]
+    },
+    {
+      "id": "s2-water",
+      "scene": 2,
+      "x": 3484.230769230769,
+      "y": 635.0,
+      "type": "water",
+      "prompt": "把手伸进溪水，再感受湿手上的风",
+      "approach_radius": 135,
+      "interact_radius": 76,
+      "animation": "water",
+      "sensory": {
+        "channels": {
+          "touch": 1,
+          "sound": 0.42,
+          "vision": 0.25
+        },
+        "profile": "water"
+      },
+      "lead_in": [],
+      "lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "草丛渐渐分开，一条细细的小溪在阳光下闪着光。",
+          "stimulus": 0.65,
+          "source": "S05 场景衔接"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "我真想把手伸到小河里。",
+          "stimulus": 0.65,
+          "source": "D026"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "好凉……让我再感受一会儿。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 1,
+            "sound": 0.35
+          },
+          "source": "S05 感受反馈改编"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我蹲下来，把手伸进溪水。一股清凉从指尖流遍全身，眼镜把这感觉传给了她。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 1,
+            "sound": 0.35
+          },
+          "source": "S05 旁白 VO"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你那儿很热吧？",
+          "stimulus": 0.55,
+          "senses": {
+            "touch": 0.45
+          },
+          "source": "D027"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "热，热得像……地狱。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 0.75
+          },
+          "source": "D028 前半句"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我把手从水里抬起来。水珠挂在指间，岸上的草叶轻轻倒向风吹来的方向。",
+          "stimulus": 0.65,
+          "senses": {
+            "touch": 0.65,
+            "sound": 0.3
+          },
+          "source": "S05 动作衔接"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "不，别动，这真是天国的风呀！",
+          "stimulus": 1,
+          "senses": {
+            "touch": 1,
+            "sound": 0.7
+          },
+          "source": "D028 后半句",
+          "pose": "wind"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我把双手举在风里，直到手被吹干。后来又按她的请求重新浸湿，再举到风中。我们停留了很久。",
+          "stimulus": 0.75,
+          "senses": {
+            "touch": 0.9,
+            "sound": 0.5,
+            "smell": 0.2
+          },
+          "source": "S05 旁白 VO"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "你那儿的世界真好。",
+          "stimulus": 0.7,
+          "senses": {
+            "touch": 0.4,
+            "vision": 0.3
+          },
+          "source": "D029"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "我不知道，灰色的生活把我这方面的感觉都磨钝了。",
+          "stimulus": 0.4,
+          "source": "D030"
+        }
+      ],
+      "original_lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "草丛渐渐分开，一条细细的小溪在阳光下闪着光。",
+          "stimulus": 0.65,
+          "source": "S05 场景衔接"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "我真想把手伸到小河里。",
+          "stimulus": 0.65,
+          "source": "D026"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "好凉……让我再感受一会儿。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 1,
+            "sound": 0.35
+          },
+          "source": "S05 感受反馈改编"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我蹲下来，把手伸进溪水。一股清凉从指尖流遍全身，眼镜把这感觉传给了她。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 1,
+            "sound": 0.35
+          },
+          "source": "S05 旁白 VO"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你那儿很热吧？",
+          "stimulus": 0.55,
+          "senses": {
+            "touch": 0.45
+          },
+          "source": "D027"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "热，热得像……地狱。",
+          "stimulus": 0.9,
+          "senses": {
+            "touch": 0.75
+          },
+          "source": "D028 前半句"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我把手从水里抬起来。水珠挂在指间，岸上的草叶轻轻倒向风吹来的方向。",
+          "stimulus": 0.65,
+          "senses": {
+            "touch": 0.65,
+            "sound": 0.3
+          },
+          "source": "S05 动作衔接"
+        }
+      ],
+      "layer_id": "creek2_ground",
+      "layer_anchor": [
+        760.0,
+        70.0
+      ],
+      "action_only": true,
+      "previous_scene12_position": [
+        2520,
+        660
+      ],
+      "scene12_x_scale": 1.0144230769230766,
+      "required": true,
+      "previous_water_position": [
+        3371.6346153846152,
+        700
+      ],
+      "contact_anchor": "water_surface"
+    },
+    {
+      "id": "s2-cloud",
+      "scene": 2,
+      "x": 4258.653846153846,
+      "y": 620,
+      "type": "sky",
+      "prompt": "继续陪她看看草原",
+      "approach_radius": 175,
+      "interact_radius": 100,
+      "animation": "look",
+      "sensory": {
+        "channels": {
+          "vision": 1,
+          "sound": 0.2
+        },
+        "profile": "sky"
+      },
+      "lead_in": [],
+      "lines": [],
+      "original_lines": [
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "怎么会呢？！这世界能给人多少感觉啊！谁要能说清这些感觉，就如同说清大雷雨有多少雨点一样。",
+          "stimulus": 0.65,
+          "source": "D031"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "在这里停一停，抬头看看天边那大团的白云。",
+          "stimulus": 0.65,
+          "source": "D031 互动引导改编"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "银白银白的，我这时觉得它们好像是固态的，像发光玉石构成的高山。",
+          "stimulus": 0.9,
+          "senses": {
+            "vision": 1
+          },
+          "source": "D031"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "下面的草原，这时倒像是气态的，好像所有的绿草都飞离了大地，成了一片绿色的云海。",
+          "stimulus": 0.85,
+          "senses": {
+            "vision": 1
+          },
+          "source": "D031"
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "看！当那片云遮住太阳又飘开时，草原上光和影的变幻是多么气势磅礴啊！看看这些，您真的感受不到什么吗？",
+          "stimulus": 1,
+          "senses": {
+            "vision": 1,
+            "sound": 0.2
+          },
+          "source": "D031"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我停下脚步，第一次长久地注视这片草原。风景没有变，我却像是重新学着去看它。",
+          "stimulus": 0.55,
+          "senses": {
+            "vision": 0.6
+          },
+          "source": "S06 旁白改编"
+        }
+      ],
+      "action_only": true,
+      "previous_scene12_position": [
+        3350,
+        660
+      ],
+      "scene12_x_scale": 1.0144230769230766,
+      "kind": "grassland_comic",
+      "required": true,
+      "requires": [
+        "s2-water"
+      ]
+    },
+    {
+      "id": "s3-door",
+      "scene": 3,
+      "x": 5908.029807692307,
+      "type": "door",
+      "prompt": "走进白色小旅店",
+      "action_only": true,
+      "animation": "knock",
+      "approach_radius": 145,
+      "interact_radius": 80,
+      "sensory": {
+        "channels": {
+          "sound": 0.8,
+          "touch": 0.65,
+          "vision": 0.5
+        },
+        "profile": "voice"
+      },
+      "lead_in": [],
+      "lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "这是一间为旅游者准备的小旅店，似乎好久没人光顾了，只有一个迟钝的老式机器人照看着这里。"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "能给我准备些吃的吗？我又累又饿了。"
+        },
+        {
+          "who": "机器人",
+          "tone": "sys",
+          "text": "请稍等。"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "可晚饭只吃到一半，她又提议我们立刻去看日落。我只好拖着沉重的双腿，重新走到外面。"
+        }
+      ],
+      "original_lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "日落前，我走到草原中央一间孤零零的白色小屋。那是给旅游者准备的小旅店。",
+          "source": "S07 旁白",
+          "stimulus": 0.65
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "那边好像还有灯。过去看看吧。",
+          "source": "S07 场景衔接改编",
+          "stimulus": 0.65
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我轻轻敲了敲门。屋檐下，一个老式机器人缓缓转过身来。",
+          "source": "S07 动作衔接改编",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.85,
+            "touch": 0.6
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "它大概很久没有见到客人了。",
+          "source": "S07 观察改编",
+          "stimulus": 0.65,
+          "senses": {
+            "vision": 0.65,
+            "sound": 0.4
+          }
+        }
+      ],
+      "y": 682.1134615384615,
+      "previous_psd_position": [
+        4965.625,
+        660
+      ],
+      "layer_id": "house",
+      "layer_anchor": [
+        192.4528846153846,
+        273.651923076923
+      ],
+      "previous_scene12_position": [
+        5039.3759615384615,
+        682.1134615384615
+      ],
+      "required": true
+    },
+    {
+      "id": "s3-sunset",
+      "scene": 3,
+      "x": 6348.653846153846,
+      "type": "sky",
+      "prompt": "停下，看晚霞渐暗与夜幕降临",
+      "action_only": true,
+      "animation": "look",
+      "approach_radius": 150,
+      "interact_radius": 90,
+      "sensory": {
+        "channels": {
+          "vision": 1,
+          "sound": 0.4
+        },
+        "profile": "sky"
+      },
+      "lead_in": [],
+      "lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "晚饭才吃到一半，她就提出要立刻去看日落。",
+          "source": "S07 旁白",
+          "stimulus": 0.65
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "再往外走一点吧，让屋檐别挡住那片晚霞。",
+          "source": "S07 互动引导改编",
+          "stimulus": 0.65
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "看着晚霞渐渐消失，夜幕慢慢降临森林，就像在听一首宇宙间最美的交响曲。",
+          "source": "D032",
+          "stimulus": 0.95,
+          "senses": {
+            "vision": 1,
+            "sound": 0.45
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你很珍视这些平凡的东西。",
+          "source": "D033",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.7
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "你为什么不呢，这才像在生活。",
+          "source": "D034",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.8,
+            "vision": 0.5
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "我，还有其他的大部分人，不可能做到这样。在这个时代，得到太容易了。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "物质的东西自不必说，蓝天绿水的优美环境、乡村和孤岛的宁静等等，都可以毫不费力地得到。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "甚至以前人们认为最难寻觅的爱情，在虚拟现实网上至少也可以暂时体会到。所以人们不再珍视什么了。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "面对着一大堆伸手可得的水果，他们把拿起的每一个咬一口就扔掉。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "但也有人面前没有这些水果。",
+          "source": "D036",
+          "stimulus": 0.9,
+          "senses": {
+            "sound": 0.8
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我感觉自己刺痛了她，却不知道为什么。回去的路上，我们都没有再说话。",
+          "source": "S07 旁白",
+          "stimulus": 0.35,
+          "senses": {
+            "vision": 0.3
+          }
+        }
+      ],
+      "original_lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "晚饭才吃到一半，她就提出要立刻去看日落。",
+          "source": "S07 旁白",
+          "stimulus": 0.65
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "再往外走一点吧，让屋檐别挡住那片晚霞。",
+          "source": "S07 互动引导改编",
+          "stimulus": 0.65
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "看着晚霞渐渐消失，夜幕慢慢降临森林，就像在听一首宇宙间最美的交响曲。",
+          "source": "D032",
+          "stimulus": 0.95,
+          "senses": {
+            "vision": 1,
+            "sound": 0.45
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你很珍视这些平凡的东西。",
+          "source": "D033",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.7
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "你为什么不呢，这才像在生活。",
+          "source": "D034",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.8,
+            "vision": 0.5
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "我，还有其他的大部分人，不可能做到这样。在这个时代，得到太容易了。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "物质的东西自不必说，蓝天绿水的优美环境、乡村和孤岛的宁静等等，都可以毫不费力地得到。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "甚至以前人们认为最难寻觅的爱情，在虚拟现实网上至少也可以暂时体会到。所以人们不再珍视什么了。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "面对着一大堆伸手可得的水果，他们把拿起的每一个咬一口就扔掉。",
+          "source": "D035",
+          "stimulus": 0.65,
+          "senses": {
+            "sound": 0.6
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "但也有人面前没有这些水果。",
+          "source": "D036",
+          "stimulus": 0.9,
+          "senses": {
+            "sound": 0.8
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我感觉自己刺痛了她，却不知道为什么。回去的路上，我们都没有再说话。",
+          "source": "S07 旁白",
+          "stimulus": 0.35,
+          "senses": {
+            "vision": 0.3
+          }
+        }
+      ],
+      "y": 660,
+      "previous_scene12_position": [
+        5480,
+        660
+      ],
+      "required": true,
+      "requires": [
+        "s3-door"
+      ],
+      "kind": "sunset_experience"
+    },
+    {
+      "id": "s4-moon",
+      "scene": 4,
+      "x": 6838.653846153846,
+      "y": 700.0,
+      "type": "moon",
+      "prompt": "停下看月亮，听她哼起《月光》",
+      "lead_in": [],
+      "lines": [
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你怎么知道月亮要升起来了？",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.85,
+            "sound": 0.45
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "月光已经照到草原上了。再看一会儿吧。",
+          "source": "月光场景衔接改编"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "喂，你是不是从轨道上看到月光照到这里？",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.95,
+            "sound": 0.2
+          }
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "告诉我你的飞船的大概方位，说不定我还能看到呢。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.95,
+            "sound": 0.2
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "……",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.95,
+            "sound": 0.2
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她没有回答，只是继续哼着那支曲子，陶醉于其中，完全忘记了我在旁边。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.95,
+            "sound": 0.2
+          }
+        },
+        {
+          "who": "女孩",
+          "tone": "her",
+          "text": "这是德彪西的《月光》。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.85,
+            "sound": 0.45
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "旋律同月光一起，从太空降落到草原上。",
+          "stimulus": 0.58,
+          "senses": {
+            "sound": 0.95,
+            "vision": 0.2
+          }
+        }
+      ],
+      "animation": "look",
+      "action_only": true,
+      "layer_id": "moon4_ground",
+      "layer_anchor": [
+        350.0,
+        166.5769230769231
+      ],
+      "approach_radius": 145,
+      "interact_radius": 100,
+      "approach_mode": "proximity",
+      "sensory": {
+        "channels": {
+          "vision": 0.9,
+          "sound": 0.55
+        },
+        "profile": "voice"
+      },
+      "previous_scene45_position": [
+        6880,
+        566
+      ],
+      "previous_scene12_position": [
+        5970.0,
+        700.0
+      ],
+      "required": true,
+      "requires": [
+        "s3-sunset"
+      ]
+    },
+    {
+      "id": "s5-willow",
+      "scene": 5,
+      "x": 9523.653846153846,
+      "y": 505.0,
+      "type": "willow",
+      "prompt": "把眼镜挂在红柳枝上，回旅馆睡觉",
+      "lead_in": [],
+      "lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "困意被打断，我有些恼火，还是不情愿地走了出来。月亮在云中穿行，草原上的光斑缓缓浮动。"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你倒像个十八世纪的多愁善感的诗人，一点也不像个宇航员。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.55,
+            "touch": 0.75
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我不耐烦地摘下眼镜，挂到身旁的红柳枝上。"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你自己看月亮吧。我真的得睡了，明天还要赶回航天中心。",
+          "stimulus": 0.58,
+          "senses": {
+            "vision": 0.55,
+            "touch": 0.75
+          }
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她的眼睛中传出细细的声音，我听不清说什么，径自回去了。",
+          "stimulus": 0.58,
+          "senses": {
+            "sound": 0.95,
+            "vision": 0.2
+          }
+        }
+      ],
+      "animation": "idle",
+      "action_only": true,
+      "layer_id": "moon5_tree",
+      "layer_anchor": [
+        201.15384615384616,
+        157.05769230769232
+      ],
+      "approach_radius": 115,
+      "interact_radius": 85,
+      "approach_mode": "proximity",
+      "sensory": {
+        "channels": {
+          "vision": 0.9,
+          "sound": 0.55
+        },
+        "profile": "voice"
+      },
+      "prop_feedback": "hang_glasses_on_branch",
+      "previous_scene45_position": [
+        8300,
+        566
+      ],
+      "layer_anchor_source_px": [
+        697.3333333333334,
+        544.4666666666667
+      ],
+      "previous_scene12_position": [
+        8684.615384615385,
+        561.4038461538462
+      ],
+      "required": true,
+      "time_phase": "night",
+      "requires": [
+        "s4-moon"
+      ],
+      "previous_prop_position": [
+        9553.26923076923,
+        561.4038461538462
+      ],
+      "prop_support": "branch"
+    },
+    {
+      "scene": 5,
+      "animation": "idle",
+      "action_only": true,
+      "required": true,
+      "time_phase": "morning",
+      "approach_mode": "proximity",
+      "id": "s5-morning-glasses",
+      "kind": "morning_glasses",
+      "type": "willow",
+      "prompt": "从红柳枝上取下眼镜，轻轻擦去水雾",
+      "x": 9523.653846153846,
+      "y": 505.0,
+      "layer_id": "moon5_tree",
+      "layer_anchor": [
+        201.15384615384616,
+        157.05769230769232
+      ],
+      "approach_radius": 120,
+      "interact_radius": 90,
+      "sensory": {
+        "channels": {
+          "vision": 0.3,
+          "touch": 0.7
+        },
+        "profile": "voice"
+      },
+      "lines": [
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "原以为她看了一夜月亮，现在还在睡觉，却从眼镜中听到了她低低的抽泣声。我的心一下子软下来。"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "真对不起，我昨天晚上实在太累了。"
+        },
+        {
+          "who": "她",
+          "tone": "her",
+          "text": "不，不是因为你。呜呜，天从三点半就阴了，五点多又下起雨……"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "你一夜都没睡？！"
+        },
+        {
+          "who": "她",
+          "tone": "her",
+          "text": "……呜呜，下起雨，我，我看不到日出了，我好想看草原的日出，呜呜，好想看的，呜……"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我的心像是被什么东西溶化了。我想起她眼泪汪汪的样子，眼睛竟有些湿润。"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "在过去的一天一夜里，她教会了我某种东西。由于它，以后我眼中的世界会与以前不同。"
+        },
+        {
+          "who": "我",
+          "tone": "me",
+          "text": "草原上总还会有日出的，以后我一定会再带你的眼睛来，或者，带你本人来看，好吗？"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她不哭了。我们在雨里静静站了一会儿。"
+        }
+      ],
+      "previous_prop_position": [
+        9553.26923076923,
+        606.4038461538462
+      ],
+      "layer_anchor_source_px": [
+        697.3333333333334,
+        544.4666666666667
+      ],
+      "prop_support": "branch"
+    },
+    {
+      "scene": 5,
+      "animation": "idle",
+      "action_only": true,
+      "required": true,
+      "time_phase": "morning",
+      "approach_mode": "proximity",
+      "id": "s5-morning-bird",
+      "kind": "morning_bird",
+      "type": "bird",
+      "prompt": "停下，听听雨中的声音",
+      "x": 9973.26923076923,
+      "y": 686,
+      "approach_radius": 150,
+      "interact_radius": 110,
+      "requires": [
+        "s5-morning-glasses"
+      ],
+      "sensory": {
+        "channels": {
+          "sound": 1,
+          "vision": 0.2
+        },
+        "profile": "bird"
+      },
+      "lines": [
+        {
+          "who": "她",
+          "tone": "her",
+          "text": "听……"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我没听见什么，但紧张起来。"
+        },
+        {
+          "who": "她",
+          "tone": "her",
+          "text": "这是今天的第一声鸟叫，雨中也有鸟呢！"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "她激动的口气，如同听到世纪钟声一样庄严。"
+        },
+        {
+          "who": "旁白",
+          "tone": "sys",
+          "text": "我记住了这片细雨中的草原，带着她的眼睛，踏上了归程。"
+        }
+      ]
+    }
+  ],
+  "blockedHint": "还有风景没有看完。",
+  "coordinate_revision": 2,
+  "scene5_morning": {
+    "skin_manifest": "res://assets/moon5-morning/manifest.json",
+    "after_point": "s5-willow",
+    "entry_lines": [
+      {
+        "who": "旁白",
+        "tone": "sys",
+        "text": "我醒来时天已大亮，阴云布满天空，草原笼罩在蒙蒙的小雨中。她的眼睛，还留在昨夜的那棵树上。"
+      }
+    ],
+    "ending_scene": "res://scenes/ending/ending_comic.tscn",
+    "ending_source_count": 41,
+    "weather": {
+      "rain_opacity": 0.43,
+      "mist_opacity": 0.28,
+      "sunbeams_opacity": 0.1
+    }
+  },
+  "sunset_route_version": 1
+}
