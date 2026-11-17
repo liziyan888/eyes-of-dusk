@@ -33,6 +33,7 @@
 <script src="index.js?v=__BUILD_ID__"></script>
 <script>
 "use strict";
+const PAGE_BUILD="__BUILD_ID__";
 const CONFIG=__ENGINE_CONFIG__;
 const canvas=document.getElementById("canvas");
 const button=document.getElementById("enter");
@@ -120,6 +121,10 @@ button.addEventListener("click",async function(){
   const response=await fetch("release-manifest.json",{cache:"no-cache"});
   if(!response.ok)throw new Error("游戏版本信息暂时无法加载，请刷新重试。");
   const manifest=await response.json();
+  if(manifest.build_id!==PAGE_BUILD){
+   const destination=new URL(location.href);destination.searchParams.set("_v",manifest.build_id);
+   location.replace(destination.href);return;
+  }
   await prepareCache();
   const wasmBytes=CONFIG.fileSizes["index.wasm"]||0;
   CONFIG.canvas=canvas;
@@ -146,6 +151,20 @@ button.addEventListener("click",async function(){
   canvas.focus();
  }catch(error){
   console.error(error);
+  // A deployment may replace a content-addressed fragment while an older
+  // tab is still downloading. Start the new manifest as a whole; never mix
+  // pack versions. Previously downloaded unchanged fragments stay cached.
+  try{
+   const latestResponse=await fetch("release-manifest.json?_check="+Date.now(),{cache:"no-store"});
+   if(latestResponse.ok){
+    const latest=await latestResponse.json();
+    if(latest.build_id!==PAGE_BUILD){
+     status.textContent="游戏已更新，正在打开新版本……";
+     const destination=new URL(location.href);destination.searchParams.set("_v",latest.build_id);
+     location.replace(destination.href);return;
+    }
+   }
+  }catch(updateError){console.info("Version check will retry on the next load",updateError);}
   document.getElementById("failure").textContent=String(error.message||error)+"\n可刷新页面后重新尝试。";
   button.disabled=false;button.textContent="重新加载";
  }
