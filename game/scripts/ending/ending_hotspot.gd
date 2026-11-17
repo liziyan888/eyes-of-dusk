@@ -1,4 +1,5 @@
 extends Button
+const Breathing=preload("res://scripts/hotspot_pulse.gd")
 ## Small diegetic empty circle.  It is a real Button, so its click is isolated
 ## from the parent panel and keyboard focus can live here without leaking.
 
@@ -23,6 +24,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if not is_visible_in_tree():return
 	clock += delta
 	var active := is_hovered() or has_focus()
 	pulse = move_toward(pulse, 1.0 if active else 0.0, delta * 4.2)
@@ -31,10 +33,9 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
 	var center := size / 2.0
-	var r := radius * (1.0 + pulse * (0.08 + 0.08 * sin(clock * 3.3)))
-	var alpha := 0.58 + pulse * 0.38
-	if completed:alpha *= 0.36
+	var appearance:=Breathing.appearance(clock,pulse,radius,.60,.98,.36 if completed else 1.0)
+	var r:=appearance.x
+	var alpha:=appearance.y
 	draw_arc(center + Vector2(0, 1), r, 0.0, TAU, 48, Color(0.02, 0.055, 0.09, alpha * 0.36), 2.7, true)
-	if pulse > 0.02:
-		draw_arc(center, r + 3.8, 0.0, TAU, 48, Color(1, 1, 1, pulse * 0.13), 3.0, true)
+	draw_arc(center, r + 3.8, 0.0, TAU, 48, Color(1, 1, 1, appearance.z), 3.0, true)
 	draw_arc(center, r, 0.0, TAU, 48, Color(0.985, 1.0, 0.975, alpha), 1.45, true)

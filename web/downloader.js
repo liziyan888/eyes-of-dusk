@@ -14,7 +14,10 @@
   if(!Number.isSafeInteger(manifest.pack_bytes)||manifest.pack_bytes<=0||manifest.pack_bytes>1073741824||!Array.isArray(manifest.parts)||!manifest.parts.length)throw new Error("游戏素材清单不完整");
   let offset=0;
   for(const part of manifest.parts){
-   if(!/^game-data\/part-[a-f0-9]{64}\.bin$/.test(part.file)||!Number.isSafeInteger(part.bytes)||part.bytes<=0||part.bytes>64*MiB||part.offset!==offset||!/^\w{64}$/.test(part.sha256)||!part.file.includes(part.sha256))throw new Error("游戏素材清单校验失败");
+   if(!/^game-data\/part-[a-f0-9]{64}\.bin$/.test(part.file)||!Number.isSafeInteger(part.bytes)||part.bytes<=0||part.bytes>64*MiB||part.offset!==offset||!(/^[a-f0-9]{64}$/).test(part.sha256)||!part.file.includes(part.sha256))throw new Error("游戏素材清单校验失败");
+   if(part.encoding!==undefined&&part.encoding!=="gzip")throw new Error("游戏素材压缩格式不支持");
+   if(part.encoding===undefined&&[part.download_file,part.download_bytes,part.download_sha256].some(value=>value!==undefined))throw new Error("游戏素材下载清单校验失败");
+   if(part.encoding==="gzip"&&(!/^game-data\/packed-[a-f0-9]{64}\.bin$/.test(part.download_file)||!Number.isSafeInteger(part.download_bytes)||part.download_bytes<=0||part.download_bytes>part.bytes||!(/^[a-f0-9]{64}$/).test(part.download_sha256)||!part.download_file.includes(part.download_sha256)))throw new Error("游戏素材压缩清单校验失败");
    offset+=part.bytes;
   }
   if(offset!==manifest.pack_bytes)throw new Error("游戏素材长度不符");
@@ -48,7 +51,7 @@
   const digest=options.digest||(async buffer=>hex(await crypto.subtle.digest("SHA-256",buffer)));
   const clock=options.now||(()=>performance.now());
   const wait=options.sleep||pause;
-  const idleTimeout=options.idleTimeoutMs||30000;
+  const idleTimeout=options.idleTimeoutMs||15000;
   const report=options.onProgress||(()=>{});
   const base=options.baseURL||globalThis.location.href;
   const controller=new AbortController();
@@ -58,7 +61,7 @@
    else options.signal.addEventListener("abort",()=>controller.abort(options.signal.reason),{once:true});
   }
   function cancelled(){if(signal.aborted)throw signal.reason||new Error("已暂停加载");}
-  const pack=new Uint8Array(manifest.pack_bytes),loaded=manifest.parts.map(()=>0),done=new Set();
+  const pack=new Uint8Array(manifest.pack_bytes),loaded=manifest.parts.map(()=>0),received=manifest.parts.map(()=>0),done=new Set();
   let networkBytes=0,cachedBytes=0,retries=0,lastReport=-Infinity,cache=null,cacheWritable=true;
   const started=clock(),tuner=new Tuner(options.maxConcurrency||8);
   let limit=options.concurrency||tuner.limit,active=0;
@@ -69,7 +72,8 @@
    const seconds=(time-speedTime)/1000;
    if(seconds>=1){speed=(networkBytes-speedBytes)/seconds;speedTime=time;speedBytes=networkBytes;}
    lastReport=time;
-   report({loaded:loaded.reduce((a,b)=>a+b,0),total:manifest.pack_bytes,cachedBytes,networkBytes,speed,connections:limit,retries,completed:done.size,parts:manifest.parts.length});
+   const remainingBytes=manifest.parts.reduce((sum,part,index)=>sum+(done.has(index)?0:(part.download_bytes||part.bytes)-received[index]),0);
+   report({loaded:loaded.reduce((a,b)=>a+b,0),total:manifest.pack_bytes,cachedBytes,networkBytes,speed,remainingBytes,connections:limit,retries,completed:done.size,parts:manifest.parts.length});
   }
   try{
    const storage=options.caches===undefined?globalThis.caches:options.caches;
@@ -91,16 +95,21 @@
   }
   if(cache){
    // A cache-first pass ensures refreshing never re-downloads verified fragments.
-   for(let index=0;index<manifest.parts.length;index++){
-    cancelled();const part=manifest.parts[index],url=new URL(part.file,base).href;
-    try{
-     const stored=await cache.match(url);
-     if(!stored)continue;
-     const buffer=new Uint8Array(await stored.arrayBuffer());
-     if(buffer.length===part.bytes&&await digest(buffer)===part.sha256)accept(buffer,part,index,true);
-     else await cache.delete(url);
-    }catch(error){/* Treat an unreadable optional cache entry as a miss. */}
+   let cacheNext=0;
+   async function readCached(){
+    while(cacheNext<manifest.parts.length){
+     cancelled();const index=cacheNext++,part=manifest.parts[index],url=new URL(part.file,base).href;
+     try{
+      const stored=await cache.match(url);
+      if(!stored)continue;
+      const buffer=new Uint8Array(await stored.arrayBuffer());
+      if(buffer.length===part.bytes&&await digest(buffer)===part.sha256)accept(buffer,part,index,true);
+      else await cache.delete(url);
+     }catch(error){/* Treat an unreadable optional cache entry as a miss. */}
+    }
    }
+   // Bound in-memory cache reads to three fragments, rather than 210 serial reads.
+   await Promise.all(Array.from({length:Math.min(3,manifest.parts.length)},readCached));
    // Read existing 32 MiB cached parts locally. Never request removed legacy URLs.
    if(Array.isArray(manifest.legacy_parts)){
     for(const old of manifest.legacy_parts){
@@ -124,6 +133,8 @@
   const pending=manifest.parts.map((p,i)=>i).filter(i=>!done.has(i));
   let next=0,fatal=null,tick=null;
   async function download(part,index){
+   const compressed=part.encoding==="gzip",expected=part.download_bytes||part.bytes;
+   const buffer=new Uint8Array(expected);let offset=0;
    for(let attempt=0;attempt<5;attempt++){
     cancelled();let reader=null,timeout=null;
     const requestController=new AbortController();
@@ -131,30 +142,50 @@
     signal.addEventListener("abort",abort,{once:true});
     function touch(){clearTimeout(timeout);timeout=setTimeout(()=>requestController.abort(new Error("连接暂时无响应，正在重试")),idleTimeout);}
     try{
-     loaded[index]=0;progress();touch();
-     const response=await fetcher(new URL(part.file,base).href,{cache:attempt?"reload":"default",signal:requestController.signal});
+     touch();
+     const headers={};if(offset)headers.Range="bytes="+offset+"-";
+     const response=await fetcher(new URL(part.download_file||part.file,base).href,{cache:attempt?"reload":"default",signal:requestController.signal,headers});
      if(!response.ok){const error=new Error("素材暂时无法下载（"+response.status+"）");error.status=response.status;throw error;}
-     const buffer=new Uint8Array(part.bytes);let offset=0;
+     if(response.status===206){
+      const range=/^bytes (\d+)-(\d+)\/(\d+)$/.exec(response.headers.get("Content-Range")||"");
+      if(!range||Number(range[1])!==offset||Number(range[2])!==expected-1||Number(range[3])!==expected){offset=0;throw new Error("素材续传范围不符");}
+     }else if(offset)offset=0; // A server may ignore Range and return the complete file.
+     received[index]=offset;loaded[index]=Math.floor(offset/expected*part.bytes);progress();
      if(response.body){
       reader=response.body.getReader();
       while(true){
        const result=await reader.read();if(result.done)break;
        touch();if(offset+result.value.length>buffer.length)throw new Error("素材长度不符");
-       buffer.set(result.value,offset);offset+=result.value.length;networkBytes+=result.value.length;loaded[index]=offset;progress();
+       buffer.set(result.value,offset);offset+=result.value.length;networkBytes+=result.value.length;received[index]=offset;loaded[index]=Math.floor(offset/expected*part.bytes);progress();
       }
      }else{
       const value=new Uint8Array(await response.arrayBuffer());
-      if(value.length!==buffer.length)throw new Error("素材长度不符");
-      buffer.set(value);offset=value.length;networkBytes+=offset;
+      if(offset+value.length!==buffer.length)throw new Error("素材长度不符");
+      buffer.set(value,offset);offset+=value.length;networkBytes+=value.length;received[index]=offset;
      }
      clearTimeout(timeout);
-     if(offset!==part.bytes)throw new Error("素材尚未下载完整");
-     if(await digest(buffer)!==part.sha256)throw new Error("素材校验失败，正在重新获取");
-     cancelled();accept(buffer,part,index,false);await persist(buffer,part);return;
+     if(offset!==expected)throw new Error("素材尚未下载完整");
+     if(await digest(buffer)!==(part.download_sha256||part.sha256)){offset=0;throw new Error("素材校验失败，正在重新获取");}
+     let decoded=buffer;
+     if(compressed){
+      if(typeof DecompressionStream!=="function")throw new Error("请更新浏览器以加载无损压缩素材");
+      const stream=new Response(buffer).body.pipeThrough(new DecompressionStream("gzip")),decoder=stream.getReader();
+      decoded=new Uint8Array(part.bytes);let decodedBytes=0;
+      try{
+       while(true){
+        cancelled();const chunk=await decoder.read();if(chunk.done)break;
+        if(decodedBytes+chunk.value.length>part.bytes)throw new Error("解压后素材长度不符");
+        decoded.set(chunk.value,decodedBytes);decodedBytes+=chunk.value.length;
+       }
+      }finally{await decoder.cancel();}
+      if(decodedBytes!==part.bytes||await digest(decoded)!==part.sha256){offset=0;throw new Error("解压后素材校验失败");}
+     }
+     cancelled();accept(decoded,part,index,false);await persist(decoded,part);return;
     }catch(error){
      if(reader)try{await reader.cancel();}catch(ignored){}
      requestController.abort();cancelled();
-     loaded[index]=0;progress(true);
+     if(offset===expected)offset=0;
+     received[index]=offset;loaded[index]=Math.floor(offset/expected*part.bytes);progress(true);
      // A missing immutable fragment indicates a new deployment; do not repeat it five times.
      if(error.status===404||attempt===4)throw error;
      retries++;

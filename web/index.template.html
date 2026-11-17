@@ -71,17 +71,22 @@ async function loadGame(){
  let transfer=null;
  try{
   if(Engine.getMissingFeatures({threads:false}).length)throw new Error("请使用最新版 Chrome、Edge 或 Firefox 打开游戏。");
+  const cachePreparation=prepareCache();
   const response=await fetch("release-manifest.json",{cache:"no-cache"});
   if(!response.ok)throw new Error("游戏版本信息暂时无法加载，请稍后重试。");
   const manifest=await response.json();if(newerVersion(manifest))return;
-  await prepareCache();
+  await cachePreparation;
   const wasmBytes=CONFIG.fileSizes["index.wasm"]||0;let engineLoaded=0,packLoaded=0,lastTransfer=null;
   function progress(){
    bar.max=wasmBytes+manifest.pack_bytes;bar.value=engineLoaded+packLoaded;
    status.textContent="正在加载画面与声音 "+Math.min(100,Math.floor(bar.value/bar.max*100))+"%";
-   let text=(bar.value/1048576).toFixed(1)+" / "+(bar.max/1048576).toFixed(1)+" MB";
+   let text="已准备 "+(bar.value/1048576).toFixed(1)+" / "+(bar.max/1048576).toFixed(1)+" MB";
    if(lastTransfer&&lastTransfer.speed>0)text+=" · "+(lastTransfer.speed/1048576).toFixed(1)+" MB/s";
    if(lastTransfer&&lastTransfer.cachedBytes>0)text+=" · 已保留 "+(lastTransfer.cachedBytes/1048576).toFixed(1)+" MB";
+   if(lastTransfer&&lastTransfer.speed>0&&lastTransfer.remainingBytes>0){
+    const seconds=Math.ceil(lastTransfer.remainingBytes/lastTransfer.speed);
+    text+=" · 预计剩余 "+(seconds>=60?Math.floor(seconds/60)+"分":"")+(seconds%60)+"秒";
+   }
    detail.textContent=text;
   }
   CONFIG.canvas=canvas;CONFIG.canvasResizePolicy=0;CONFIG.focusCanvas=true;CONFIG.args=["--main-pack","index.pck"];

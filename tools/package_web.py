@@ -1,5 +1,5 @@
 from pathlib import Path
-import argparse, hashlib, json, re, shutil
+import argparse, gzip, hashlib, io, json, re, shutil
 
 ROOT=Path(__file__).resolve().parents[1]
 DIST=ROOT/'dist'
@@ -18,10 +18,13 @@ def package():
         previous=json.loads((DIST/'release-manifest.json').read_text(encoding='utf-8'))
         with pack.open('wb') as target:
             for part in previous['parts']:
-                source=(DIST/part['file']).resolve()
-                if not source.is_relative_to(DIST.resolve()) or digest(source)!=part['sha256']:
+                source=(DIST/part.get('download_file',part['file'])).resolve()
+                if not source.is_relative_to(DIST.resolve()) or digest(source)!=part.get('download_sha256',part['sha256']):
                     raise RuntimeError('Existing export fragment verification failed')
-                target.write(source.read_bytes())
+                payload=source.read_bytes()
+                if part.get('encoding')=='gzip':payload=gzip.decompress(payload)
+                if len(payload)!=part['bytes'] or hashlib.sha256(payload).hexdigest()!=part['sha256']:raise RuntimeError('Existing export decoded fragment verification failed')
+                target.write(payload)
         if digest(pack)!=previous['pack_sha256']:raise RuntimeError('Existing export reconstruction failed')
     if not pack.is_file():raise RuntimeError('Expected fresh Godot index.pck export')
     with pack.open('rb') as stream:
@@ -35,25 +38,38 @@ def package():
     worker_template=(ROOT/'web/cache-worker.template.js').read_text(encoding='utf-8')
     cover=cover_layout()
     engine_hash=digest(DIST/'index.wasm')
-    build_id=hashlib.sha256((pack_hash+engine_hash+template+loader+worker_template+json.dumps(cover,sort_keys=True)).encode()).hexdigest()[:16]
+    build_id=hashlib.sha256(('lossless-gzip-v3'+pack_hash+engine_hash+template+loader+worker_template+json.dumps(cover,sort_keys=True)).encode()).hexdigest()[:16]
     parts_dir=DIST/'game-data'
     parts_dir.mkdir(parents=True,exist_ok=True)
-    parts=[];reassembled=hashlib.sha256();offset=0
+    parts=[];reassembled=hashlib.sha256();offset=0;published_parts=set();transfer_bytes=0
     with pack.open('rb') as stream:
         index=0
         while True:
             block=stream.read(4*1024*1024)
             if not block:break
             part_digest=hashlib.sha256(block).hexdigest()
-            dest=parts_dir/f'part-{part_digest}.bin'
-            dest.write_bytes(block)
-            part_hash=digest(dest)
-            if part_hash!=hashlib.sha256(block).hexdigest():raise RuntimeError('Resource fragment verification failed')
-            reassembled.update(dest.read_bytes())
-            parts.append({'file':dest.relative_to(DIST).as_posix(),'offset':offset,'bytes':len(block),'sha256':part_hash})
+            # Keep the old uncompressed content-addressed cache key. Existing
+            # visitors can reuse verified fragments without downloading gzip.
+            logical_file=f'game-data/part-{part_digest}.bin'
+            descriptor={'file':logical_file,'offset':offset,'bytes':len(block),'sha256':part_digest}
+            stream_buffer=io.BytesIO()
+            with gzip.GzipFile(filename='',mode='wb',fileobj=stream_buffer,compresslevel=6,mtime=0) as archive:archive.write(block)
+            encoded=stream_buffer.getvalue()
+            if len(encoded)<=len(block)*.98:
+                encoded_hash=hashlib.sha256(encoded).hexdigest()
+                descriptor.update({'encoding':'gzip','download_file':f'game-data/packed-{encoded_hash}.bin','download_bytes':len(encoded),'download_sha256':encoded_hash})
+                if gzip.decompress(encoded)!=block:raise RuntimeError('Lossless decompression verification failed')
+                payload=encoded
+            else:payload=block
+            published_file=descriptor.get('download_file',logical_file)
+            dest=DIST/published_file;dest.write_bytes(payload)
+            if digest(dest)!=descriptor.get('download_sha256',part_digest):raise RuntimeError('Resource fragment verification failed')
+            published_parts.add(published_file);transfer_bytes+=len(payload)
+            reassembled.update(gzip.decompress(dest.read_bytes()) if descriptor.get('encoding')=='gzip' else dest.read_bytes())
+            parts.append(descriptor)
             offset+=len(block);index+=1
     if reassembled.hexdigest()!=pack_hash or offset!=pack.stat().st_size:raise RuntimeError('Lossless resource assembly verification failed')
-    manifest={'title':'带上她的眼睛','build_id':build_id,'godot_version':'4.7.2','pack_bytes':offset,'pack_sha256':pack_hash,'parts':parts,'engine_config':config,'engine_sha256':engine_hash,'transport_version':2,'resource_processing':'Original game resources; byte-identical pack split into 4 MiB verified parts; adaptive 3/6/8 connections and persistent resume, no image/video/audio re-encoding'}
+    manifest={'title':'带上她的眼睛','build_id':build_id,'godot_version':'4.7.2','pack_bytes':offset,'transfer_bytes':transfer_bytes,'pack_sha256':pack_hash,'parts':parts,'engine_config':config,'engine_sha256':engine_hash,'transport_version':3,'resource_processing':'Original game resources; byte-identical pack in verified 4 MiB fragments, lossless gzip transport when smaller, partial HTTP resume and bounded parallel cache reads. No image/video/audio re-encoding.'}
     legacy_path=ROOT/'web/legacy-pack.json'
     if legacy_path.is_file():
         legacy=json.loads(legacy_path.read_text(encoding='utf-8'))
@@ -75,12 +91,12 @@ def package():
         if old.is_dir() and old.name!=build_id and re.fullmatch(r'[a-f0-9]{16}',old.name):
             if not old.resolve().is_relative_to(DIST.resolve()):raise RuntimeError('Unsafe old export path')
             shutil.rmtree(old)
-        elif old.is_file() and re.fullmatch(r'part-[a-f0-9]{64}\.bin',old.name) and old.relative_to(DIST).as_posix() not in {part['file'] for part in parts}:
+        elif old.is_file() and re.fullmatch(r'(?:part|packed)-[a-f0-9]{64}\.bin',old.name) and old.relative_to(DIST).as_posix() not in published_parts:
             if not old.resolve().is_relative_to(DIST.resolve()):raise RuntimeError('Unsafe old resource fragment path')
             old.unlink()
     total=sum(p.stat().st_size for p in DIST.rglob('*') if p.is_file())
     if total>1_000_000_000:raise RuntimeError(f'Pages site exceeds conservative 1 GB budget: {total}')
-    print(json.dumps({'build_id':build_id,'pack_bytes':offset,'resource_parts':len(parts),'largest_part':max(p['bytes'] for p in parts),'published_bytes':total,'lossless_assembly_verified':True},ensure_ascii=False,indent=2))
+    print(json.dumps({'build_id':build_id,'pack_bytes':offset,'transfer_bytes':transfer_bytes,'saved_transfer_bytes':offset-transfer_bytes,'resource_parts':len(parts),'compressed_parts':sum(p.get('encoding')=='gzip' for p in parts),'largest_part':max(p['bytes'] for p in parts),'published_bytes':total,'lossless_assembly_verified':True},ensure_ascii=False,indent=2))
     return manifest
 
 def cover_layout():

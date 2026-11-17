@@ -1,4 +1,5 @@
 extends Button
+const Breathing=preload("res://scripts/hotspot_pulse.gd")
 ## The hit area and visual center stay fixed for the whole action.
 var progress:=0.0
 var completed:=false
@@ -23,8 +24,9 @@ func _process(delta:float)->void:
 	queue_redraw()
 func _draw()->void:
 	var center:=size*.5
-	var radius:=10.0+(sin(clock*3.0)*.65 if pulse>0 and not button_pressed else 0.0)
+	var appearance:=Breathing.appearance(clock,pulse,10.0,.84,1.0,.82 if completed else 1.0)
+	var radius:=appearance.x
 	draw_arc(center+Vector2(0,1),radius,0,TAU,48,Color(.04,.08,.15,.35),3,true)
-	if pulse>.01:draw_arc(center,radius+3,0,TAU,48,Color(1,1,1,pulse*.14),3,true)
-	draw_arc(center,radius,0,TAU,48,Color(1,1,1,.72 if completed else .95),1.5,true)
+	draw_arc(center,radius+3,0,TAU,48,Color(1,1,1,appearance.z),3,true)
+	draw_arc(center,radius,0,TAU,48,Color(1,1,1,appearance.y),1.5,true)
 	if progress>.001:draw_arc(center,14,-PI*.5,-PI*.5+TAU*clampf(progress,0,1),64,Color(1,1,1,.96),2,true)

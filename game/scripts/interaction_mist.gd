@@ -1,16 +1,64 @@
 extends RefCounted
-## Analytic, frame-rate independent mist ripples and long-travelling dust. No video loops.
+## Fixed radial motion, instanced on the GPU; no per-particle frame allocations.
+const BURST_SHADER=preload("res://shaders/interaction_burst.gdshader")
 var bursts: Array[Dictionary] = []
 const BURST_LIFE:=4.8
 const PARTICLE_COUNT:=680
+const MAX_BURSTS:=4
+var batches:Array[MultiMeshInstance2D]=[]
+var geometry:MultiMesh
+var prewarming:=false
+
+func setup(canvas:CanvasItem)->void:
+	if not batches.is_empty():return
+	var quad:=QuadMesh.new();quad.size=Vector2(2,2)
+	geometry=MultiMesh.new();geometry.transform_format=MultiMesh.TRANSFORM_2D;geometry.mesh=quad
+	geometry.instance_count=PARTICLE_COUNT
+	geometry.custom_aabb=AABB(Vector3(-600,-600,-1),Vector3(1200,1200,2))
+	for index in range(PARTICLE_COUNT):geometry.set_instance_transform_2d(index,Transform2D.IDENTITY)
+	for index in range(MAX_BURSTS):
+		var node:=MultiMeshInstance2D.new();node.name="InteractionDust"+str(index);node.multimesh=geometry
+		var material:=ShaderMaterial.new();material.shader=BURST_SHADER;material.set_shader_parameter("burst_life",BURST_LIFE);material.set_shader_parameter("burst_age",BURST_LIFE)
+		node.material=material;canvas.add_child(node);node.hide();batches.append(node)
+	# Render one fully transparent batch behind the initial cover. The first
+	# interaction does not pay for the first shader/pipeline compilation.
+	if DisplayServer.get_name()!="headless":
+		prewarming=true;batches[0].position=Vector2(640,360);batches[0].show()
+		RenderingServer.frame_post_draw.connect(_finish_prewarm,CONNECT_ONE_SHOT)
+
+func _finish_prewarm()->void:
+	prewarming=false
+	if not is_instance_valid(batches[0]):return
+	for burst in bursts:
+		if int(burst.get("slot",-1))==0:return
+	batches[0].hide()
+
+func _release(burst:Dictionary)->void:
+	var slot:=int(burst.get("slot",-1))
+	if slot>=0 and slot<batches.size() and is_instance_valid(batches[slot]):batches[slot].hide()
+
+func _free_slot()->int:
+	for slot in range(batches.size()):
+		var occupied:=false
+		for burst in bursts:
+			if int(burst.get("slot",-1))==slot:occupied=true;break
+		if not occupied:return slot
+	return -1
+
+func hide_bursts()->void:
+	for index in range(batches.size()):
+		if not prewarming or index!=0:batches[index].hide()
 
 func trigger(world_position: Vector2) -> void:
-	bursts.append({"position":world_position,"age":0.0,"seed":float(bursts.size())*1.93})
-	if bursts.size()>4:bursts.pop_front()
+	var seed:=float(bursts.size())*1.93
+	if bursts.size()>=MAX_BURSTS:_release(bursts.pop_front())
+	bursts.append({"position":world_position,"age":0.0,"seed":seed,"slot":_free_slot()})
 
 func update(delta: float) -> void:
-	for b in bursts:b.age+=delta
-	bursts=bursts.filter(func(b):return b.age<BURST_LIFE)
+	for index in range(bursts.size()-1,-1,-1):
+		bursts[index].age+=delta
+		if float(bursts[index].age)>=BURST_LIFE:
+			_release(bursts[index]);bursts.remove_at(index)
 
 func idle(canvas: CanvasItem,p: Vector2,time: float,amount:=1.0) -> void:
 	# The fog fills the ring and smoothly disappears towards its edge.
@@ -33,6 +81,7 @@ func idle(canvas: CanvasItem,p: Vector2,time: float,amount:=1.0) -> void:
 		canvas.draw_circle(p+Vector2.from_angle(angle)*d, .75,Color(1,1,1,(.15+.23*sin(time+float(i)))*amount))
 
 func draw(canvas: CanvasItem,game: Node) -> void:
+	if batches.is_empty():setup(canvas)
 	canvas.draw_set_transform(game._world_origin(),0,Vector2.ONE*game.zoom)
 	for point in game.points():
 		if not game.point_available(point):continue
@@ -52,15 +101,13 @@ func draw(canvas: CanvasItem,game: Node) -> void:
 		var a:=pow(1.0-t,1.35)
 		canvas.draw_arc(p,r,0,TAU,128,Color(.96,.99,1,a*.26),1.4+3*(1-t),true)
 		canvas.draw_arc(p,r-7,0,TAU,128,Color(.96,.99,1,a*.06),18,true)
-		for i in range(PARTICLE_COUNT):
-			var particle:=burst_particle(burst,i)
-			var q:Vector2=particle.position-Vector2(game.camera_x,0)
-			var opacity:float=particle.opacity
-			var size:float=particle.size
-			if i%4==0:canvas.draw_circle(q,size*2.8,Color(.94,.98,1,opacity*.075))
-			canvas.draw_circle(q,size,Color(.96,.99,1,opacity))
+		if int(burst.get("slot",-1))<0:burst.slot=_free_slot()
+		var node:MultiMeshInstance2D=batches[int(burst.slot)]
+		node.position=game._world_origin()+p*float(game.zoom);node.scale=Vector2.ONE*float(game.zoom)
+		node.material.set_shader_parameter("burst_age",age);node.material.set_shader_parameter("burst_seed",float(burst.seed));node.show()
 
 func burst_particle(burst:Dictionary,index:int)->Dictionary:
+	# Reference sampler for authoring/trajectory checks; never called by draw().
 	# Direction is fixed at birth. No angular oscillation or vertical drift.
 	var direction:=Vector2.from_angle(float(index)*2.399963+float(burst.seed))
 	var delay:=fposmod(float(index)*.071,.42)

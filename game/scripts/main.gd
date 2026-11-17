@@ -382,6 +382,7 @@ func _make_ui() -> void:
 	grassland.arrival_revealed.connect(_finish_grassland)
 	grassland.fullscreen_requested.connect(_toggle_fullscreen)
 	marker_canvas=Node2D.new();marker_canvas.z_index=4;add_child(marker_canvas);marker_canvas.draw.connect(_draw_mist)
+	mist.setup(marker_canvas)
 	morning=MorningAfter.new();morning.z_index=110;ui.add_child(morning)
 	morning.apply_subtitle_style(layout.subtitles())
 	morning.prepared.connect(_prepare_morning)
@@ -1078,8 +1079,8 @@ func scenery_visible(index:int)->bool:
 	return index<2 if scene_index<2 else index>=2
 
 func _draw_mist()->void:
-	if morning!=null and morning.active:return
-	if not playing or (grassland!=null and grassland.visible):return
+	if (morning!=null and morning.active) or not playing or (grassland!=null and grassland.visible):
+		mist.hide_bursts();return
 	mist.draw(marker_canvas,self)
 
 func _begin_grassland()->void:
