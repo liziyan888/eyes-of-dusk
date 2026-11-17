@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,re,sys
 ROOT=Path(__file__).resolve().parents[1]
-TEXT_EXT={'.gd','.gdshader','.json','.tscn','.tres','.godot','.cfg','.html','.js','.css','.md','.yml','.yaml','.py','.ps1','.bat','.sh','.txt'}
+TEXT_EXT={'.gd','.gdshader','.json','.tscn','.tres','.godot','.cfg','.html','.js','.cjs','.mjs','.css','.md','.yml','.yaml','.py','.ps1','.bat','.sh','.txt'}
 RULES={
  'GitHub token':re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{28,}|github_pat_[A-Za-z0-9_]{30,})\b'),
  'service API key':re.compile(r'\bsk-(?:proj-|ant-|svcacct-)?[A-Za-z0-9_-]{24,}\b'),

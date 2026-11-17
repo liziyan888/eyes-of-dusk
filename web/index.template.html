@@ -10,165 +10,109 @@
 <meta property="og:image" content="cover.png">
 <title>带上她的眼睛 · 互动阅读游戏</title>
 <link rel="icon" href="index.icon.png">
+<link rel="preload" as="image" href="cover.png">
 <style>
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#03080e;color:#f7f5eb}body{display:grid;place-items:center;font-family:"Songti SC","SimSun",serif}#canvas{display:block;outline:none;background:#07111e;touch-action:none}#loading{position:fixed;inset:0;z-index:10;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,11,22,.87),rgba(3,11,22,.28)),url("cover.png") center/cover no-repeat}main{width:min(430px,82vw);margin-left:max(7vw,28px);padding:30px 0}.eyebrow{font-size:13px;letter-spacing:.32em;opacity:.66}h1{font-size:clamp(28px,4.5vw,52px);font-weight:400;letter-spacing:.09em;line-height:1.55;margin:24px 0}.intro{font-size:17px;line-height:1.9;opacity:.78;margin:0 0 38px}button{color:inherit;font:inherit;font-size:19px;letter-spacing:.18em;border:1px solid #e9f4ff80;background:#d9f0ff0a;padding:16px 28px;cursor:pointer;transition:background .2s}button:hover,button:focus-visible{background:#d9f0ff24;outline:1px solid #eaf5ff}button:disabled{opacity:.55;cursor:wait}#progress-area{margin-top:32px}progress{display:block;width:100%;height:3px;appearance:none;border:none;background:#e9f4ff22}progress::-webkit-progress-bar{background:#e9f4ff22}progress::-webkit-progress-value{background:#edf7ff;box-shadow:0 0 12px #aacfff80}progress::-moz-progress-bar{background:#edf7ff}#status{font-size:14px;letter-spacing:.05em;opacity:.82;margin-top:13px;line-height:1.8}#detail{font-family:system-ui,sans-serif;font-size:12px;opacity:.52;line-height:1.8;margin-top:7px}#failure{font-size:14px;line-height:1.8;color:#f4d9cc;white-space:pre-wrap;margin-top:20px}.hidden{display:none!important}@media(max-width:600px){main{margin:auto}h1{font-size:clamp(26px,6.3vw,38px)}.intro{font-size:15px}#loading{background-position:65% center}}
+@font-face{font-family:GameCover;src:url("cover-font.ttf?v=__BUILD_ID__") format("truetype");font-display:swap}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#03080e;color:#f7f8f2}body{display:grid;place-items:center;font-family:GameCover,"SimSun",serif}#canvas{display:block;outline:none;background:#07111e;touch-action:none}#loading{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:#03080e}#cover-stage{position:relative;overflow:hidden;background:url("cover.png") center/cover no-repeat}#cover-stage .cover-text,#enter{position:absolute;margin:0;white-space:pre-wrap;font-weight:400;line-height:1.2;overflow:hidden;text-shadow:0 2px 0 #050f1e59}#enter{border:0;background:transparent;color:#f7f8f3;font-family:inherit;cursor:pointer;text-align:center;display:grid;place-items:center;padding:0}#enter::before,#enter::after{content:"";position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#ffffffdb 27%,#ffffffdb 73%,transparent)}#enter::before{top:5.3%}#enter::after{bottom:5.3%}#enter:disabled{opacity:.65;cursor:wait}#enter:focus-visible{outline:1px solid #ffffffb3;outline-offset:5px}#progress-area{position:absolute;left:11.875%;top:85.5%;width:34%;color:#f7f8f2}progress{display:block;width:100%;height:3px;appearance:none;border:0;background:#e9f4ff22}progress::-webkit-progress-bar{background:#e9f4ff22}progress::-webkit-progress-value{background:#edf7ff;box-shadow:0 0 12px #aacfff80}progress::-moz-progress-bar{background:#edf7ff}#status{font-size:max(12px,calc(var(--cover-scale)*15px));opacity:.86;margin-top:12px;line-height:1.5}#detail{font-family:system-ui,sans-serif;font-size:max(11px,calc(var(--cover-scale)*12px));opacity:.7;line-height:1.5;margin-top:5px}#failure{font-size:max(12px,calc(var(--cover-scale)*14px));line-height:1.5;color:#f4d9cc;white-space:pre-wrap;margin-top:8px}#failure:empty{display:none}@media(max-width:600px){#progress-area{left:6%;width:88%;top:82%}#status{margin-top:6px}#detail{margin-top:2px}}
 </style>
 </head>
 <body>
 <canvas id="canvas" width="2560" height="1440" tabindex="0" role="application" aria-label="带上她的眼睛互动阅读游戏">请使用支持 WebGL 2 的现代浏览器。</canvas>
 <section id="loading" aria-label="游戏加载">
-<main>
-<div class="eyebrow">互 动 阅 读 · 带 上 她 的 眼 睛</div>
-<h1>把世界，<br>带给远方的她。</h1>
-<p class="intro">一次草原上的旅行，<br>与一双来自远方的眼睛。</p>
-<button id="enter" type="button">进入游戏</button>
-<div id="progress-area" class="hidden">
-<progress id="progress" max="1" value="0" aria-label="完整游戏加载进度"></progress>
+<div id="cover-stage">
+<button id="enter" type="button" disabled>开 始 游 戏</button>
+<div id="progress-area">
+<progress id="progress" max="1" value="0" aria-label="游戏加载进度"></progress>
 <div id="status" role="status" aria-live="polite">正在准备画面与声音……</div>
-<div id="detail">首次打开需要加载完整素材，请稍候。</div>
-</div>
+<div id="detail">已经下载的素材会自动保留。</div>
 <div id="failure" role="alert"></div>
-</main>
+</div>
+</div>
 </section>
 <script src="index.js?v=__BUILD_ID__"></script>
+<script src="downloader.js?v=__BUILD_ID__"></script>
 <script>
 "use strict";
-const PAGE_BUILD="__BUILD_ID__";
-const CONFIG=__ENGINE_CONFIG__;
-const canvas=document.getElementById("canvas");
-const button=document.getElementById("enter");
-const bar=document.getElementById("progress");
-const status=document.getElementById("status");
-const detail=document.getElementById("detail");
+const PAGE_BUILD="__BUILD_ID__",CONFIG=__ENGINE_CONFIG__,COVER=__COVER_LAYOUT__;
+const canvas=document.getElementById("canvas"),button=document.getElementById("enter"),bar=document.getElementById("progress"),status=document.getElementById("status"),detail=document.getElementById("detail"),stage=document.getElementById("cover-stage");
+function positionCover(element,spec){
+ element.textContent=spec.text;element.style.left=spec.position[0]/12.8+"%";element.style.top=spec.position[1]/7.2+"%";
+ element.style.width=spec.box[0]/12.8+"%";element.style.height=spec.box[1]/7.2+"%";
+ element.style.fontSize="calc(var(--cover-scale)*"+spec.font_size+"px)";
+ if(spec.font_color)element.style.color="#"+spec.font_color;
+ if(spec.alignment!==undefined)element.style.textAlign=["left","center","right","justify"][spec.alignment];
+ if([1,3].includes(spec.font_style))element.style.fontWeight="700";
+ if([2,3].includes(spec.font_style))element.style.fontStyle="italic";
+}
+for(const spec of COVER.labels){const label=document.createElement("div");label.className="cover-text";positionCover(label,spec);stage.appendChild(label);}
+positionCover(button,COVER.button);
 function fitCanvas(){
- const width=Math.min(window.innerWidth,window.innerHeight*16/9);
- const height=width*9/16;
+ const width=Math.min(innerWidth,innerHeight*16/9),height=width*9/16;
  canvas.style.width=width+"px";canvas.style.height=height+"px";
+ stage.style.width=width+"px";stage.style.height=height+"px";stage.style.setProperty("--cover-scale",width/1280);
 }
-fitCanvas();
-window.addEventListener("resize",fitCanvas);
-window.addEventListener("keydown",function(event){
- if(["F2","F3","F10"].includes(event.code)&&document.activeElement===canvas)event.preventDefault();
-});
-function showProgress(current,total,message){
- bar.max=total||1;bar.value=current;
- const percent=total?Math.min(100,Math.floor(current/total*100)):0;
- status.textContent=message+" "+percent+"%";
- detail.textContent=(current/1048576).toFixed(1)+" / "+(total/1048576).toFixed(1)+" MB";
-}
+fitCanvas();addEventListener("resize",fitCanvas);
+addEventListener("keydown",event=>{if(["F2","F3","F10"].includes(event.code)&&document.activeElement===canvas)event.preventDefault();});
 async function prepareCache(){
  if(!("serviceWorker" in navigator))return;
  try{
   await navigator.serviceWorker.register("cache-worker.js?v=__BUILD_ID__",{updateViaCache:"none"});
-  await Promise.race([navigator.serviceWorker.ready,new Promise(function(resolve){setTimeout(resolve,2500);})]);
+  await Promise.race([navigator.serviceWorker.ready,new Promise(resolve=>setTimeout(resolve,2000))]);
+  if(!navigator.serviceWorker.controller)await new Promise(resolve=>{const timer=setTimeout(resolve,1500);navigator.serviceWorker.addEventListener("controllerchange",()=>{clearTimeout(timer);resolve();},{once:true});});
  }catch(error){console.info("Optional game cache unavailable",error);}
 }
-async function assemblePack(manifest,engineBytes){
- let pack=new Uint8Array(manifest.pack_bytes);
- const loaded=manifest.parts.map(function(){return 0;});
- let next=0;
- function progress(){
-  const current=loaded.reduce(function(sum,size){return sum+size;},0);
-  showProgress(engineBytes+current,engineBytes+manifest.pack_bytes,"正在加载画面与声音");
- }
- async function download(part,index){
-  for(let attempt=0;attempt<3;attempt++){
-   try{
-    loaded[index]=0;progress();
-    const response=await fetch(part.file,{cache:"default"});
-    if(!response.ok)throw new Error("素材请求失败："+response.status);
-    const buffer=new Uint8Array(part.bytes);
-    let offset=0;
-    if(response.body){
-     const reader=response.body.getReader();
-     while(true){
-      const result=await reader.read();
-      if(result.done)break;
-      if(offset+result.value.length>buffer.length)throw new Error("素材长度不符");
-      buffer.set(result.value,offset);offset+=result.value.length;
-      loaded[index]=offset;progress();
-     }
-    }else{
-     const value=new Uint8Array(await response.arrayBuffer());
-     buffer.set(value);offset=value.length;
-    }
-    if(offset!==part.bytes)throw new Error("素材未下载完整");
-    if(globalThis.crypto&&crypto.subtle){
-     const digest=await crypto.subtle.digest("SHA-256",buffer);
-     const hex=Array.from(new Uint8Array(digest)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
-     if(hex!==part.sha256)throw new Error("素材校验失败");
-    }
-    pack.set(buffer,part.offset);
-    loaded[index]=part.bytes;progress();return;
-   }catch(error){
-    if(attempt===2)throw error;
-    await new Promise(function(resolve){setTimeout(resolve,600*(attempt+1));});
-   }
-  }
- }
- async function worker(){
-  while(next<manifest.parts.length){const index=next++;await download(manifest.parts[index],index);}
- }
- await Promise.all([worker(),worker(),worker()]);
- return pack;
+function newerVersion(manifest){
+ if(manifest.build_id===PAGE_BUILD)return false;
+ const destination=new URL(location.href);destination.searchParams.set("_v",manifest.build_id);location.replace(destination.href);return true;
 }
-button.addEventListener("click",async function(){
- button.disabled=true;
- document.getElementById("progress-area").classList.remove("hidden");
+let running=false;
+async function loadGame(){
+ if(running)return;running=true;button.disabled=true;document.getElementById("failure").textContent="";
+ let transfer=null;
  try{
-  const missing=Engine.getMissingFeatures({threads:false});
-  if(missing.length)throw new Error("当前浏览器缺少游戏运行支持。请使用最新版 Chrome、Edge 或 Firefox。");
+  if(Engine.getMissingFeatures({threads:false}).length)throw new Error("请使用最新版 Chrome、Edge 或 Firefox 打开游戏。");
   const response=await fetch("release-manifest.json",{cache:"no-cache"});
-  if(!response.ok)throw new Error("游戏版本信息暂时无法加载，请刷新重试。");
-  const manifest=await response.json();
-  if(manifest.build_id!==PAGE_BUILD){
-   const destination=new URL(location.href);destination.searchParams.set("_v",manifest.build_id);
-   location.replace(destination.href);return;
-  }
+  if(!response.ok)throw new Error("游戏版本信息暂时无法加载，请稍后重试。");
+  const manifest=await response.json();if(newerVersion(manifest))return;
   await prepareCache();
-  const wasmBytes=CONFIG.fileSizes["index.wasm"]||0;
-  CONFIG.canvas=canvas;
-  CONFIG.canvasResizePolicy=0;
-  CONFIG.focusCanvas=true;
-  CONFIG.args=["--main-pack","index.pck"];
-  const params=new URLSearchParams(location.search);
-  const chapter=Number(params.get("chapter"));
+  const wasmBytes=CONFIG.fileSizes["index.wasm"]||0;let engineLoaded=0,packLoaded=0,lastTransfer=null;
+  function progress(){
+   bar.max=wasmBytes+manifest.pack_bytes;bar.value=engineLoaded+packLoaded;
+   status.textContent="正在加载画面与声音 "+Math.min(100,Math.floor(bar.value/bar.max*100))+"%";
+   let text=(bar.value/1048576).toFixed(1)+" / "+(bar.max/1048576).toFixed(1)+" MB";
+   if(lastTransfer&&lastTransfer.speed>0)text+=" · "+(lastTransfer.speed/1048576).toFixed(1)+" MB/s";
+   if(lastTransfer&&lastTransfer.cachedBytes>0)text+=" · 已保留 "+(lastTransfer.cachedBytes/1048576).toFixed(1)+" MB";
+   detail.textContent=text;
+  }
+  CONFIG.canvas=canvas;CONFIG.canvasResizePolicy=0;CONFIG.focusCanvas=true;CONFIG.args=["--main-pack","index.pck"];
+  const params=new URLSearchParams(location.search),chapter=Number(params.get("chapter"));
   if(chapter>=1&&chapter<=4)CONFIG.args.push("--","--web-chapter="+chapter);
   if(params.get("scene")==="core")CONFIG.args=["--main-pack","index.pck","--","--preview-earth-core"];
-  CONFIG.onProgress=function(current){showProgress(current,wasmBytes+manifest.pack_bytes,"正在准备游戏");};
-  CONFIG.onPrintError=function(){
-   const message=Array.from(arguments).join(" ");
-   console.error(message);
-  };
-  const engine=new Engine(CONFIG);
-  await engine.init("index");
-  let pack=await assemblePack(manifest,wasmBytes);
-  status.textContent="正在打开故事……";detail.textContent="画面、视频与音乐已完整加载。";
-  await engine.preloadFile(pack.buffer,"index.pck");
-  pack=null;
-  await engine.start();
-  document.getElementById("loading").remove();
-  canvas.focus();
+  CONFIG.onProgress=current=>{engineLoaded=Math.min(current,wasmBytes);progress();};
+  CONFIG.onPrintError=function(){console.error(Array.from(arguments).join(" "));};
+  const engine=new Engine(CONFIG);transfer=new AbortController();
+  const connection=navigator.connection||{},maximum=connection.saveData||/2g/.test(connection.effectiveType||"")?3:8;
+  const fixed=Number(params.get("connections"));
+  const options={signal:transfer.signal,maxConcurrency:maximum,onProgress:value=>{lastTransfer=value;packLoaded=value.loaded;progress();}};
+  if([3,6,8].includes(fixed))options.concurrency=fixed;
+  const results=await Promise.all([engine.init("index"),EyesDownload.loadPack(manifest,options)]);
+  let result=results[1];console.info("Game download complete",result.stats);
+  status.textContent="正在打开故事……";detail.textContent="画面、视频与音乐已准备好。";
+  await engine.preloadFile(result.pack.buffer,"index.pck");result=null;results[1]=null;
+  await engine.start();document.getElementById("loading").remove();canvas.focus();
  }catch(error){
-  console.error(error);
-  // A deployment may replace a content-addressed fragment while an older
-  // tab is still downloading. Start the new manifest as a whole; never mix
-  // pack versions. Previously downloaded unchanged fragments stay cached.
+  if(transfer)transfer.abort(error);console.error(error);
   try{
    const latestResponse=await fetch("release-manifest.json?_check="+Date.now(),{cache:"no-store"});
-   if(latestResponse.ok){
-    const latest=await latestResponse.json();
-    if(latest.build_id!==PAGE_BUILD){
-     status.textContent="游戏已更新，正在打开新版本……";
-     const destination=new URL(location.href);destination.searchParams.set("_v",latest.build_id);
-     location.replace(destination.href);return;
-    }
-   }
-  }catch(updateError){console.info("Version check will retry on the next load",updateError);}
-  document.getElementById("failure").textContent=String(error.message||error)+"\n可刷新页面后重新尝试。";
-  button.disabled=false;button.textContent="重新加载";
+   if(latestResponse.ok&&newerVersion(await latestResponse.json()))return;
+  }catch(ignored){}
+  document.getElementById("failure").textContent=String(error.message||error)+"\n已保留下载完成的素材，点击继续加载。";
+  running=false;button.disabled=false;button.textContent="继 续 加 载";
  }
-});
+}
+button.addEventListener("click",loadGame);
+// Prepare on entry; the sole Start button is the original, active Godot menu.
+void loadGame();
 </script>
 </body>
 </html>

@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Check out game sources
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check downloader recovery and cache integrity
+        run: node --test tests/*.test.cjs
       - name: Restore official engine downloads
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
         with:
